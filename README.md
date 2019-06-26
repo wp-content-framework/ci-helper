@@ -228,3 +228,6 @@ notifications:
         - [ ] `SVN_PASS`
   - [ ] Slack
     - [ ] `SLACK_TOKEN`
+
+## Sample Plugins
+[Test Travis](https://github.com/technote-space/test-travis)  
