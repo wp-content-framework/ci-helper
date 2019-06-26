@@ -1,5 +1,6 @@
 # Scripts for Travis CI
 
+[![CodeFactor](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci/badge)](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Overview
