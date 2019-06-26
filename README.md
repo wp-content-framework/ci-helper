@@ -20,7 +20,7 @@
 - Deploy
   - GitHub releases
   - WP Directory
-  
+
 ## Usage
 ### 0. Prepare `composer.json`, `package.json`
 #### `composer.json`
@@ -147,7 +147,8 @@ _.travis.yml_
 -  GitHub release  
 1. Go to [Personal access tokens](https://github.com/settings/tokens).
 2. Generate token which has **repo** scope.
-3. Set Environment Variables _GITHUB_TOKEN_ in the settings page
+3. Run `travis encrypt` command to encrypt the token ([Details](https://docs.travis-ci.com/user/encryption-keys/)).  
+like `travis encrypt "<GitHub Token>" --com -r <owner>/<repo>`
 
 or use `travis setup releases` command.
 
@@ -167,7 +168,8 @@ _.travis.yml_
         name: ${RELEASE_TITLE}
         tag_name: ${RELEASE_TAG}
         file: ${RELEASE_FILE}
-        api_key: ${GITHUB_TOKEN}
+        api_key:
+          secure: <encrypted token>
         draft: true
         overwrite: true
         on:
@@ -195,15 +197,15 @@ _.travis.yml_
 
 ### 3. Slack
 1. Install Travis CI slack app and get `Token`.
-2. Set Environment Variables _SLACK_TOKEN_ in the settings page
-
-or use `travis encrypt` command.
+2. Run `travis encrypt` command to encrypt the token.  
+like `travis encrypt "<account>:<token>" --com -r <owner>/<repo>`
 
 _.travis.yml_
 ```yaml
 notifications:
   email: false
-  slack: ${SLACK_TOKEN}
+  slack:
+    secure: <encrypted token>
 ```
 
 ## Check List
