@@ -1,0 +1,51 @@
+{
+  "name": "travis/sample",
+  "description": "Sample",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Technote",
+      "email": "technote.space@gmail.com",
+      "homepage": "https://technote.space"
+    }
+  ],
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "*",
+    "phpmd/phpmd": "^2.6",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+    "roave/security-advisories": "dev-master",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phake/phake": "^2.3 || ^3.1",
+    "phpunit/phpunit": "^4.8 || ^5.7 || ^7.5"
+  },
+  "require": {
+    "php": ">=5.6",
+    "wp-content-framework/core": "~0.0",
+    "wp-content-framework/update": "~0.0"
+  },
+  "scripts": {
+    "test": [
+      "@phpcs",
+      "@phpmd",
+      "@phpunit"
+    ],
+    "phpunit": [
+      "phpunit"
+    ],
+    "phpcs": [
+      "phpcs --standard=./phpcs.xml"
+    ],
+    "fix": [
+      "phpcbf --standard=./phpcs.xml"
+    ],
+    "phpmd": [
+      "phpmd ./src/,./configs/,./tests/ text phpmd.xml"
+    ],
+    "coveralls": [
+      "php-coveralls -v"
+    ]
+  }
+}
