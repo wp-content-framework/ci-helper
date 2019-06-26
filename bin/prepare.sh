@@ -2,6 +2,11 @@
 
 set -e
 
+if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
+    echo "<TRAVIS_BUILD_DIR> is required"
+    exit
+fi
+
 SETTINGS_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/../settings; pwd -P)
 
 files=()
