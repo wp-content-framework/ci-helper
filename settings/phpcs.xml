@@ -36,6 +36,7 @@
 		<exclude name="WordPress.Files.FileName"/>
 	</rule>
 
+	<!-- exclude -->
 	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
 		<severity>0</severity>
 	</rule>
@@ -44,5 +45,24 @@
 	</rule>
 	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
 		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress.Arrays.ArrayIndentation.ItemNotAligned">
+		<exclude-pattern>./src/views/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Arrays.ArrayIndentation.CloseBraceNotAligned">
+		<exclude-pattern>./src/views/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Arrays.ArrayIndentation.MultiLineArrayItemNotAligned">
+		<exclude-pattern>./src/views/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.PHP.EmbeddedPhp.ContentAfterOpen">
+		<exclude-pattern>./src/views/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd">
+		<exclude-pattern>./src/views/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.PHP.EmbeddedPhp.SpacingBeforeClose">
+		<exclude-pattern>./src/views/*</exclude-pattern>
 	</rule>
 </ruleset>
