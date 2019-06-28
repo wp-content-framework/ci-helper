@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <phpunit
-	bootstrap="tests/bootstrap.php"
-	backupGlobals="false"
-	colors="true"
-	convertErrorsToExceptions="true"
-	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true"
+		bootstrap="tests/bootstrap.php"
+		backupGlobals="false"
+		colors="true"
+		convertErrorsToExceptions="true"
+		convertNoticesToExceptions="true"
+		convertWarningsToExceptions="true"
 >
 	<testsuites>
 		<testsuite name="My Test Suite">
@@ -16,6 +16,9 @@
 	<filter>
 		<whitelist processUncoveredFilesFromWhitelist="true">
 			<directory suffix=".php">./src/</directory>
+			<exclude>
+				<directory suffix=".php">./src/views/</directory>
+			</exclude>
 		</whitelist>
 	</filter>
 

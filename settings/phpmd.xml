@@ -2,9 +2,21 @@
 <ruleset name="Custom_PHPMD">
 	<description>PHPMD Ruleset for a WordPress Plugin</description>
 
-	<rule ref="rulesets/cleancode.xml"/>
-	<rule ref="rulesets/codesize.xml"/>
+	<rule ref="rulesets/cleancode.xml">
+		<exclude name="BooleanArgumentFlag"/>
+		<exclude name="StaticAccess"/>
+		<exclude name="ElseExpression"/>
+	</rule>
+	<rule ref="rulesets/codesize.xml">
+		<exclude name="ExcessiveClassComplexity"/>
+	</rule>
+	<rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+		<properties>
+			<property name="maximum" value="100"/>
+		</properties>
+	</rule>
 	<rule ref="rulesets/controversial.xml">
+		<exclude name="CamelCaseClassName"/>
 		<exclude name="CamelCaseVariableName"/>
 		<exclude name="CamelCaseParameterName"/>
 		<exclude name="CamelCaseMethodName"/>
