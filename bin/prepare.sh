@@ -12,6 +12,7 @@ SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
 TESTS_DIR=${LIBRARY_BASE_DIR}/tests
 SCRIPT_DIR=${LIBRARY_BASE_DIR}/bin
 
+echo ">> Copy files"
 files=()
 files+=( ".coveralls.yml" )
 files+=( "phpcs.xml" )
@@ -20,6 +21,7 @@ files+=( "phpunit.xml" )
 for file in "${files[@]}"
 do
     if [[ ! -f ${TRAVIS_BUILD_DIR}/${file} ]]; then
+        echo ">>>> ${file}"
         cp ${SETTINGS_DIR}/${file} ${TRAVIS_BUILD_DIR}/${file}
     fi
 done
@@ -29,23 +31,27 @@ files+=( "bootstrap.php" )
 if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
     for file in "${files[@]}"
     do
-        if [[ ! -f ${TRAVIS_BUILD_DIR}/tests/${file} ]]; then
-            cp ${TESTS_DIR}/${file} ${TRAVIS_BUILD_DIR}/tests/${file}
-        fi
+        echo ">>>> tests/${file}"
+        rm -f ${TRAVIS_BUILD_DIR}/tests/${file}
+        cp ${TESTS_DIR}/${file} ${TRAVIS_BUILD_DIR}/tests/${file}
     done
 fi
 
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]]; then
-    rm -rdf ${TESTS_DIR}/.plugin
-    bash ${SCRIPT_DIR}/plugins.sh
+    echo ">> Download plugins"
+    rm -rdf ${TRAVIS_BUILD_DIR}/tests/.plugin
+    rm -f ${TRAVIS_BUILD_DIR}/tests/plugin.zip
+    source ${SCRIPT_DIR}/plugins.sh
 
     for plugin in "${org_plugins[@]}"
     do
+        echo ">>>> ${plugin}"
         bash ${SCRIPT_DIR}/install-org-plugin.sh ${plugin}
     done
 
     for plugin in "${github_plugins[@]}"
     do
+        echo ">>>> ${plugin}"
         bash ${SCRIPT_DIR}/install-github-plugin.sh ${plugin}
     done
 fi

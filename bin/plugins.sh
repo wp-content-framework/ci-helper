@@ -19,3 +19,4 @@ org_plugins+=( "wp-multibyte-patch" )
 
 github_plugins=()
 github_plugins+=( "wp-content-framework/0-framework-test" )
+github_plugins+=( "google/site-kit-wp" )

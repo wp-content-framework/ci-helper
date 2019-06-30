@@ -7,7 +7,19 @@ if [[ -z "${PACKAGE_DIR}" ]] || [[ -z "${RELEASE_FILE}" ]]; then
 	exit 1
 fi
 
-composer update --no-dev --working-dir=${TRAVIS_BUILD_DIR}
+echo ""
+echo ">> Run composer install."
+composer install --no-dev --working-dir=${TRAVIS_BUILD_DIR}
+
+if [[ -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
+    echo ""
+    echo ">> Run npm install."
+    npm install --prefix ${TRAVIS_BUILD_DIR}/assets/js --save-dev
+
+    echo ""
+    echo ">> Run npm build."
+    npm run build --prefix ${TRAVIS_BUILD_DIR}/assets/js
+fi
 
 rm -rdf ${PACKAGE_DIR}
 rm -f ${RELEASE_FILE}

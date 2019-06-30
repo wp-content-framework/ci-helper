@@ -34,12 +34,18 @@ function _manually_load_plugin() {
 
 	/** @noinspection PhpIncludeInspection */
 	require $plugin_file;
+
+	$install = "{$plugin_dir}/install.php";
+	if ( is_readable( $install ) ) {
+		/** @noinspection PhpIncludeInspection */
+		require $install;
+	}
 }
 
 function _activate_popular_plugins() {
 	foreach ( _get_plugin_dirs() as $dir ) {
 		foreach ( _get_plugin_files( $dir ) as $file ) {
-			echo "Activate plugin: ${$file}\n";
+			echo "Activate plugin: {$file}\n";
 			/** @noinspection PhpIncludeInspection */
 			require $file;
 		}
