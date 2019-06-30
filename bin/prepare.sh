@@ -7,9 +7,9 @@ if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
     exit
 fi
 
-BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
-SETTINGS_DIR=BASE_DIR/settings
-TESTS_DIR=BASE_DIR/tests
+LIBRARY_BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
+SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
+TESTS_DIR=${LIBRARY_BASE_DIR}/tests
 
 files=()
 files+=( ".coveralls.yml" )
