@@ -50,7 +50,10 @@ if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]]; then
         bash ${SCRIPT_DIR}/install-org-plugin.sh ${plugin}
     done
 
-    echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+    if [[ ! -f ~/.ssh/config ]] || [[ -z $(cat ~/.ssh/config | grep github) ]]; then
+        echo ">> Write to ssh config"
+        echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+    fi
     for plugin in "${github_plugins[@]}"
     do
         echo ">>>> ${plugin}"
