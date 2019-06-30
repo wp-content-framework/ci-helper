@@ -7,6 +7,8 @@ if [[ $# -lt 1 ]]; then
 	exit 1
 fi
 
+set -x
+
 GITHUB_REPO=$1
 PLUGIN_SLUG=${GITHUB_REPO##*/}
 

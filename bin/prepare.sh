@@ -12,6 +12,7 @@ SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
 TESTS_DIR=${LIBRARY_BASE_DIR}/tests
 SCRIPT_DIR=${LIBRARY_BASE_DIR}/bin
 
+echo ""
 echo ">> Copy files"
 files=()
 files+=( ".coveralls.yml" )
@@ -38,6 +39,7 @@ if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
 fi
 
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]]; then
+    echo ""
     echo ">> Download plugins"
     rm -rdf ${TRAVIS_BUILD_DIR}/.plugin
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin

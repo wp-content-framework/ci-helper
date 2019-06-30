@@ -9,6 +9,8 @@ if [[ $# -lt 1 ]]; then
 	exit 1
 fi
 
+set -x
+
 PLUGIN_SLUG=$1
 PLUGIN_VERSION=${2-latest}
 
