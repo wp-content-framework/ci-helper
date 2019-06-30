@@ -21,4 +21,4 @@ github_plugins=()
 github_plugins+=( "wp-content-framework/0-framework-test" )
 
 zip_plugins=()
-zip_plugins+=( "https://sitekit.withgoogle.com/service/download/google-site-kit.zip" )
+#zip_plugins+=( "https://sitekit.withgoogle.com/service/download/google-site-kit.zip" )
