@@ -53,7 +53,7 @@ function _activate_popular_plugins() {
 }
 
 function _get_plugin_dirs() {
-	$plugins_dir = dirname( __FILE__ ) . '/.plugin';
+	$plugins_dir = dirname( dirname( __FILE__ ) ) . '/.plugin';
 	if ( getenv( 'ACTIVATE_POPULAR_PLUGINS' ) && is_dir( $plugins_dir ) ) {
 		foreach ( scandir( $plugins_dir ) as $item ) {
 			if ( substr( $item, 0, 1 ) == '.' ) {
