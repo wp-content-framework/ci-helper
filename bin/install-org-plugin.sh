@@ -20,6 +20,12 @@ else
     WP_PLUGIN=https://downloads.wordpress.org/plugin/${PLUGIN_SLUG}.${PLUGIN_VERSION}.zip
 fi
 
-curl -s ${WP_PLUGIN} -o ${TRAVIS_BUILD_DIR}/.plugin/plugin.zip
-unzip ${TRAVIS_BUILD_DIR}/.plugin/plugin.zip -d ${TRAVIS_BUILD_DIR}/.plugin
-rm -f ${TRAVIS_BUILD_DIR}/.plugin/plugin.zip
+FILE_NAME=${WP_PLUGIN##*/}
+
+if [[ ! -f ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} ]]; then
+    rm -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}.*.zip
+    rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+
+    curl -s ${WP_PLUGIN} -o ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME}
+    unzip ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -d ${TRAVIS_BUILD_DIR}/.plugin
+fi

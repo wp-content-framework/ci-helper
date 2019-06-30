@@ -12,7 +12,13 @@ set -x
 GITHUB_REPO=$1
 PLUGIN_SLUG=${GITHUB_REPO##*/}
 
-git clone --depth=1 https://github.com/${GITHUB_REPO}.git ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/.git ]]; then
+    rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+    git clone --depth=1 https://github.com/${GITHUB_REPO}.git ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+fi
+
+git reset --hard origin/master
+git pull
 
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
     composer install -n --working-dir=${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} --no-dev

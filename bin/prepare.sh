@@ -41,7 +41,6 @@ fi
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]]; then
     echo ""
     echo ">> Download plugins"
-    rm -rdf ${TRAVIS_BUILD_DIR}/.plugin
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
     source ${SCRIPT_DIR}/plugins.sh
 
