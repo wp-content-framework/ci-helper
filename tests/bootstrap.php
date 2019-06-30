@@ -45,7 +45,7 @@ function _manually_load_plugin() {
 function _activate_popular_plugins() {
 	foreach ( _get_plugin_dirs() as $dir ) {
 		foreach ( _get_plugin_files( $dir ) as $file ) {
-			echo "Activate plugin: {$file}\n";
+			echo "Plugin activated: {$file}\n";
 			/** @noinspection PhpIncludeInspection */
 			require $file;
 		}
