@@ -7,7 +7,9 @@ if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
     exit
 fi
 
-SETTINGS_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/../settings; pwd -P)
+BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
+SETTINGS_DIR=BASE_DIR/settings
+TESTS_DIR=BASE_DIR/tests
 
 files=()
 files+=( ".coveralls.yml" )
@@ -19,5 +21,16 @@ for file in "${files[@]}"
 do
     if [[ ! -f ${TRAVIS_BUILD_DIR}/${file} ]]; then
         cp ${SETTINGS_DIR}/${file} ${TRAVIS_BUILD_DIR}/${file}
+    fi
+done
+
+
+files=()
+files+=( "bootstrap.php" )
+
+for file in "${files[@]}"
+do
+    if [[ ! -f ${TRAVIS_BUILD_DIR}/${file} ]]; then
+        cp ${TESTS_DIR}/${file} ${TRAVIS_BUILD_DIR}/${file}
     fi
 done
