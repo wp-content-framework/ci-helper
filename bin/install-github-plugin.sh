@@ -20,3 +20,7 @@ if [[ -f ${TESTS_DIR}/.plugin/${PLUGIN_SLUG}/package.json ]]; then
     npm install --prefix ${TESTS_DIR}/.plugin/${PLUGIN_SLUG} --save-dev
     npm run build --prefix ${TESTS_DIR}/.plugin/${PLUGIN_SLUG}
 fi
+if [[ -f ${TESTS_DIR}/.plugin/${PLUGIN_SLUG}/assets/js/package.json ]]; then
+    npm install --prefix ${TESTS_DIR}/.plugin/${PLUGIN_SLUG}/assets/js --save-dev
+    npm run build --prefix ${TESTS_DIR}/.plugin/${PLUGIN_SLUG}/assets/js
+fi
