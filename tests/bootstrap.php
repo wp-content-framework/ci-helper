@@ -45,7 +45,7 @@ function _manually_load_plugin() {
 function _activate_popular_plugins() {
 	foreach ( _get_plugin_dirs() as $dir ) {
 		foreach ( _get_plugin_files( $dir ) as $file ) {
-			echo "Plugin activated: {$file}\n";
+			echo "Plugin activated: {$file}\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			/** @noinspection PhpIncludeInspection */
 			require $file;
 		}
@@ -56,7 +56,7 @@ function _get_plugin_dirs() {
 	$plugins_dir = dirname( dirname( __FILE__ ) ) . '/.plugin';
 	if ( getenv( 'ACTIVATE_POPULAR_PLUGINS' ) && is_dir( $plugins_dir ) ) {
 		foreach ( scandir( $plugins_dir ) as $item ) {
-			if ( substr( $item, 0, 1 ) == '.' ) {
+			if ( '.' === substr( $item, 0, 1 ) ) {
 				continue;
 			}
 
@@ -70,7 +70,7 @@ function _get_plugin_dirs() {
 
 function _get_plugin_files( $dir ) {
 	foreach ( scandir( $dir ) as $item ) {
-		if ( substr( $item, 0, 1 ) == '.' ) {
+		if ( '.' === substr( $item, 0, 1 ) ) {
 			continue;
 		}
 
@@ -82,9 +82,9 @@ function _get_plugin_files( $dir ) {
 }
 
 function _is_plugin_file( $file ) {
-	$fp        = fopen( $file, 'r' );
-	$file_data = fread( $fp, 8192 );
-	fclose( $fp );
+	$file_pointer = fopen( $file, 'r' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+	$file_data    = fread( $file_pointer, 8192 ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fread
+	fclose( $file_pointer ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose
 	$file_data = str_replace( "\r", "\n", $file_data );
 
 	return preg_match( '/^[ \t\/*#@]*Plugin Name:(.*)$/mi', $file_data, $match ) && ! empty( $match[1] );
