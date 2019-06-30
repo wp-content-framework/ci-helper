@@ -56,4 +56,10 @@ if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]]; then
         echo ">>>> ${plugin}"
         bash ${SCRIPT_DIR}/install-github-plugin.sh ${plugin}
     done
+
+    for plugin in "${zip_plugins[@]}"
+    do
+        echo ">>>> ${plugin}"
+        bash ${SCRIPT_DIR}/install-zip-plugin.sh ${plugin}
+    done
 fi

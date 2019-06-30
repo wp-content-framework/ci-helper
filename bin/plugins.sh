@@ -19,4 +19,6 @@ org_plugins+=( "wp-multibyte-patch" )
 
 github_plugins=()
 github_plugins+=( "wp-content-framework/0-framework-test" )
-github_plugins+=( "google/site-kit-wp" )
+
+zip_plugins=()
+zip_plugins+=( "https://sitekit.withgoogle.com/service/download/google-site-kit.zip" )
