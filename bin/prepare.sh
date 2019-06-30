@@ -27,10 +27,11 @@ done
 
 files=()
 files+=( "bootstrap.php" )
-
-for file in "${files[@]}"
-do
-    if [[ ! -f ${TRAVIS_BUILD_DIR}/${file} ]]; then
-        cp ${TESTS_DIR}/${file} ${TRAVIS_BUILD_DIR}/${file}
-    fi
-done
+if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
+    for file in "${files[@]}"
+    do
+        if [[ ! -f ${TRAVIS_BUILD_DIR}/tests/${file} ]]; then
+            cp ${TESTS_DIR}/${file} ${TRAVIS_BUILD_DIR}/tests/${file}
+        fi
+    done
+fi
