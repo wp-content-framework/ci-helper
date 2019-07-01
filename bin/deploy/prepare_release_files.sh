@@ -37,14 +37,11 @@ cp -r ${TRAVIS_BUILD_DIR}/src ${PACKAGE_DIR}/ 2> /dev/null || :
 cp -r ${TRAVIS_BUILD_DIR}/vendor ${PACKAGE_DIR}/ 2> /dev/null || :
 
 cp ${TRAVIS_BUILD_DIR}/*.php ${PACKAGE_DIR}/ 2> /dev/null || :
-#cp ${TRAVIS_BUILD_DIR}/*.json                ${PACKAGE_DIR}/ 2>/dev/null || :
 cp ${TRAVIS_BUILD_DIR}/*.gif ${PACKAGE_DIR}/ 2> /dev/null || :
 cp ${TRAVIS_BUILD_DIR}/*.png ${PACKAGE_DIR}/ 2> /dev/null || :
 
 cp ${TRAVIS_BUILD_DIR}/.htaccess ${PACKAGE_DIR}/ 2> /dev/null || :
-#cp ${TRAVIS_BUILD_DIR}/composer.lock         ${PACKAGE_DIR}/ 2>/dev/null || :
 cp ${TRAVIS_BUILD_DIR}/LICENSE ${PACKAGE_DIR}/ 2> /dev/null || :
-#cp ${TRAVIS_BUILD_DIR}/README.md             ${PACKAGE_DIR}/ 2>/dev/null || :
 cp ${TRAVIS_BUILD_DIR}/readme.txt ${PACKAGE_DIR}/ 2> /dev/null || :
 
 rm -f ${PACKAGE_DIR}/index.php
