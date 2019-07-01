@@ -23,8 +23,6 @@ require_once $_tests_dir . '/includes/functions.php';
  * Manually load the plugin being tested.
  */
 function _manually_load_plugin() {
-	_activate_popular_plugins();
-
 	$plugin_dir  = dirname( dirname( __FILE__ ) );
 	$plugin_file = $plugin_dir . '/autoload.php';
 	if ( ! is_readable( $plugin_file ) ) {
@@ -40,6 +38,8 @@ function _manually_load_plugin() {
 		/** @noinspection PhpIncludeInspection */
 		require $install;
 	}
+
+	_activate_popular_plugins();
 }
 
 function _activate_popular_plugins() {
