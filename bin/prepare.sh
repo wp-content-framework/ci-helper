@@ -38,7 +38,7 @@ if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
     done
 fi
 
-if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]]; then
+if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]] || [[ -n "${ACTIVATE_GUTENBERG}" ]]; then
     echo ""
     echo ">> Download plugins"
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
