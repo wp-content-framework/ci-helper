@@ -19,6 +19,7 @@ org_plugins+=( "wp-multibyte-patch" )
 org_plugins+=( "advanced-custom-fields" )
 org_plugins+=( "custom-post-type-ui" )
 org_plugins+=( "autoptimize" )
+org_plugins+=( "gutenberg" )
 
 github_plugins=()
 github_plugins+=( "wp-content-framework/0-framework-test" )

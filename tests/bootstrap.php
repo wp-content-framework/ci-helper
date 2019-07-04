@@ -57,8 +57,12 @@ function _activate_popular_plugins() {
 function _get_plugin_dirs() {
 	$plugins_dir = dirname( dirname( __FILE__ ) ) . '/.plugin';
 	if ( getenv( 'ACTIVATE_POPULAR_PLUGINS' ) && is_dir( $plugins_dir ) ) {
+		$activate_gutenberg = getenv( 'ACTIVATE_GUTENBERG' );
 		foreach ( scandir( $plugins_dir ) as $item ) {
 			if ( '.' === substr( $item, 0, 1 ) ) {
+				continue;
+			}
+			if ( 'gutenberg' === $plugins_dir && ! $activate_gutenberg ) {
 				continue;
 			}
 

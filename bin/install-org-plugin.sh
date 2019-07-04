@@ -25,7 +25,8 @@ FILE_NAME=${WP_PLUGIN##*/}
 if [[ ! -f ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} ]]; then
     rm -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}.*.zip
     rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
-
     curl -s ${WP_PLUGIN} -o ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME}
+fi
+if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} ]]; then
     unzip ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -d ${TRAVIS_BUILD_DIR}/.plugin
 fi
