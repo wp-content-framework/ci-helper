@@ -17,6 +17,8 @@ if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/.git ]]; then
     git clone --depth=1 https://github.com/${GITHUB_REPO}.git ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
 fi
 
+git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} fetch -p
+git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} reset --hard origin/master
 git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} pull
 
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
