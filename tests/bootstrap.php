@@ -30,7 +30,7 @@ function _manually_load_plugin() {
 		$plugin_file = "{$plugin_dir}/{$plugin_name}.php";
 	}
 
-	if ( ! is_readable( $plugin_file ) ) {
+	if ( is_readable( $plugin_file ) ) {
 		/** @noinspection PhpIncludeInspection */
 		require $plugin_file;
 	}
