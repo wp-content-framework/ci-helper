@@ -30,10 +30,12 @@ function _manually_load_plugin() {
 		$plugin_file = "{$plugin_dir}/{$plugin_name}.php";
 	}
 
-	/** @noinspection PhpIncludeInspection */
-	require $plugin_file;
+	if ( ! is_readable( $plugin_file ) ) {
+		/** @noinspection PhpIncludeInspection */
+		require $plugin_file;
+	}
 
-	$install = "{$plugin_dir}/install.php";
+	$install = "{$plugin_dir}/tests/install.php";
 	if ( is_readable( $install ) ) {
 		/** @noinspection PhpIncludeInspection */
 		require $install;
