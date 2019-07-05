@@ -41,10 +41,10 @@ function _manually_load_plugin() {
 		require $install;
 	}
 
-	_activate_popular_plugins();
+	_activate_plugins();
 }
 
-function _activate_popular_plugins() {
+function _activate_plugins() {
 	foreach ( _get_plugin_dirs() as $dir ) {
 		foreach ( _get_plugin_files( $dir ) as $file ) {
 			echo "Plugin activated: {$file}\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -57,12 +57,11 @@ function _activate_popular_plugins() {
 function _get_plugin_dirs() {
 	$plugins_dir = dirname( dirname( __FILE__ ) ) . '/.plugin';
 	if ( getenv( 'ACTIVATE_POPULAR_PLUGINS' ) && is_dir( $plugins_dir ) ) {
-		$activate_gutenberg = getenv( 'ACTIVATE_GUTENBERG' );
 		foreach ( scandir( $plugins_dir ) as $item ) {
 			if ( '.' === substr( $item, 0, 1 ) ) {
 				continue;
 			}
-			if ( 'gutenberg' === $plugins_dir && ! $activate_gutenberg ) {
+			if ( function_exists( 'filter_plugin' ) && ! filter_plugin( $item ) ) {
 				continue;
 			}
 
