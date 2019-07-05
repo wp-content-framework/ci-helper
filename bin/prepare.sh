@@ -39,6 +39,9 @@ if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
     done
 fi
 
+if [[ -n "${TRAVIS_BUILD_STAGE_NAME}" ]] && [[ ! "${TRAVIS_BUILD_STAGE_NAME}" =~ ^Test ]]; then
+    ${INSTALL} = ""
+fi
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]] || [[ -n "${INSTALL}" ]]; then
     echo ""
     echo ">> Download plugins"
