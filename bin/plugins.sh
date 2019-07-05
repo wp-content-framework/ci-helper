@@ -26,10 +26,6 @@ github_plugins+=( "wp-content-framework/0-framework-test" )
 zip_plugins=()
 #zip_plugins+=( "https://sitekit.withgoogle.com/service/download/google-site-kit.zip" )
 
-
-LIBRARY_BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
-TESTS_DIR=${LIBRARY_BASE_DIR}/tests
-
-if [[ -f ${TESTS_DIR}/bin/plugins.sh ]]; then
-    source ${TESTS_DIR}/bin/plugins.sh
+if [[ -n "${TRAVIS_BUILD_DIR}" && -f ${TRAVIS_BUILD_DIR}/tests/bin/plugins.sh ]]; then
+    source ${TRAVIS_BUILD_DIR}/tests/bin/plugins.sh
 fi

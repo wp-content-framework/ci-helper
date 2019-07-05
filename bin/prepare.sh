@@ -40,7 +40,7 @@ if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
 fi
 
 if [[ -n "${TRAVIS_BUILD_STAGE_NAME}" ]] && [[ ! "${TRAVIS_BUILD_STAGE_NAME}" =~ ^Test ]]; then
-    ${INSTALL} = ""
+    INSTALL=""
 fi
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]] || [[ -n "${INSTALL}" ]]; then
     echo ""
