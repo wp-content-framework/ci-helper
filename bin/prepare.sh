@@ -17,7 +17,6 @@ echo ""
 echo ">> Copy files"
 files=()
 files+=( ".coveralls.yml" )
-files+=( "phpcs.xml" )
 files+=( "phpmd.xml" )
 files+=( "phpunit.xml" )
 for file in "${files[@]}"
@@ -27,6 +26,14 @@ do
         cp ${SETTINGS_DIR}/${file} ${TRAVIS_BUILD_DIR}/${file}
     fi
 done
+if [[ ! -f ${TRAVIS_BUILD_DIR}/phpcs.xml ]]; then
+    echo ">>>> phpcs.xml"
+    if [[ -d ${TRAVIS_BUILD_DIR}/configs ]]; then
+        cp ${SETTINGS_DIR}/phpcs.xml ${TRAVIS_BUILD_DIR}/phpcs.xml
+    else
+        cp ${SETTINGS_DIR}/phpcs_no_configs.xml ${TRAVIS_BUILD_DIR}/phpcs.xml
+    fi
+fi
 
 files=()
 files+=( "bootstrap.php" )
