@@ -46,3 +46,7 @@ cp ${TRAVIS_BUILD_DIR}/readme.txt ${PACKAGE_DIR}/ 2> /dev/null || :
 
 rm -f ${PACKAGE_DIR}/index.php
 rm -rdf ${PACKAGE_DIR}/vendor/bin
+
+if [[ -n "${TRAVIS_BUILD_DIR}" && -f ${TRAVIS_BUILD_DIR}/tests/bin/deploy/prepare_release_files.sh ]]; then
+    bash ${TRAVIS_BUILD_DIR}/tests/bin/deploy/prepare_release_files.sh
+fi
