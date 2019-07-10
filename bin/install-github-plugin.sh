@@ -25,10 +25,10 @@ if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
     composer install -n --working-dir=${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} --no-dev
 fi
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/package.json ]]; then
-    yarn install --audit --prefix ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
-    yarn build --prefix ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+    yarn install --audit --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+    yarn build --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
 fi
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js/package.json ]]; then
-    yarn install --audit --prefix ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js
-    yarn build --prefix ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js
+    yarn install --audit --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js
+    yarn build --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js
 fi

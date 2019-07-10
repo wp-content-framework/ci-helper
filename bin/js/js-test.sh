@@ -7,7 +7,7 @@ if [[ ! -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     exit
 fi
 
-if [[ -z $(yarn run --prefix ${TRAVIS_BUILD_DIR}/assets/js --non-interactive | grep "\- cover$") ]]; then
+if [[ -z $(yarn run --cwd ${TRAVIS_BUILD_DIR}/assets/js --non-interactive | grep "\- cover$") ]]; then
 	echo "yarn cover command is invalid."
 	exit
 fi
@@ -18,11 +18,11 @@ ls -la ${TRAVIS_BUILD_DIR}/assets/js/node_modules/.bin/webpack
 
 echo ""
 echo ">> Run yarn test."
-yarn cover --prefix ${TRAVIS_BUILD_DIR}/assets/js
+yarn cover --cwd ${TRAVIS_BUILD_DIR}/assets/js
 
 if [[ ! -z "${COVERAGE_REPORT}" ]] && [[ ! -z "${CI}" ]]; then
 	ls -la ${TRAVIS_BUILD_DIR}/assets/js/coverage/lcov.info
 	echo ""
 	echo ">> Run yarn coveralls."
-	yarn coveralls --prefix ${TRAVIS_BUILD_DIR}/assets/js
+	yarn coveralls --cwd ${TRAVIS_BUILD_DIR}/assets/js
 fi

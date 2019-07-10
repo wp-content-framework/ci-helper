@@ -14,11 +14,11 @@ composer install --no-dev --working-dir=${TRAVIS_BUILD_DIR}
 if [[ -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     echo ""
     echo ">> Run yarn install."
-    yarn install --audit --prefix ${TRAVIS_BUILD_DIR}/assets/js
+    yarn install --audit --cwd ${TRAVIS_BUILD_DIR}/assets/js
 
     echo ""
     echo ">> Run yarn build."
-    yarn build --prefix ${TRAVIS_BUILD_DIR}/assets/js
+    yarn build --cwd ${TRAVIS_BUILD_DIR}/assets/js
 fi
 
 rm -rdf ${PACKAGE_DIR}
