@@ -11,7 +11,6 @@ LIBRARY_BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
 SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
 TESTS_DIR=${LIBRARY_BASE_DIR}/tests
 SCRIPT_DIR=${LIBRARY_BASE_DIR}/bin
-INSTALL=${1-""}
 
 echo ""
 echo ">> Copy files."
@@ -46,10 +45,11 @@ if [[ -d ${TRAVIS_BUILD_DIR}/tests ]]; then
     done
 fi
 
-if [[ -n "${TRAVIS_BUILD_STAGE_NAME}" ]] && [[ ! "${TRAVIS_BUILD_STAGE_NAME}" =~ ^Test ]]; then
-    INSTALL=""
-fi
-if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]] || [[ -n "${INSTALL}" ]]; then
+if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
+    echo ""
+    echo ">> Install latest node."
+    bash ${SCRIPT_DIR}/prepare/install-latest-node.sh
+
     echo ""
     echo ">> Download plugins."
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
