@@ -18,4 +18,4 @@ ls -la ${TRAVIS_BUILD_DIR}/assets/js/node_modules/.bin/webpack
 
 echo ""
 echo ">> Run yarn lint."
-yarn lint --cwd ${TRAVIS_BUILD_DIR}/assets/js
+yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js lint

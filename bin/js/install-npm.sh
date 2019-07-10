@@ -4,4 +4,4 @@ set -e
 
 echo ""
 echo ">> Run yarn install."
-yarn install --audit --cwd ${TRAVIS_BUILD_DIR}/assets/js
+yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js install

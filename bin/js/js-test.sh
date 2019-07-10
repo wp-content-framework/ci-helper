@@ -18,11 +18,11 @@ ls -la ${TRAVIS_BUILD_DIR}/assets/js/node_modules/.bin/webpack
 
 echo ""
 echo ">> Run yarn test."
-yarn cover --cwd ${TRAVIS_BUILD_DIR}/assets/js
+yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js cover
 
 if [[ ! -z "${COVERAGE_REPORT}" ]] && [[ ! -z "${CI}" ]]; then
 	ls -la ${TRAVIS_BUILD_DIR}/assets/js/coverage/lcov.info
 	echo ""
 	echo ">> Run yarn coveralls."
-	yarn coveralls --cwd ${TRAVIS_BUILD_DIR}/assets/js
+	yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js coveralls
 fi
