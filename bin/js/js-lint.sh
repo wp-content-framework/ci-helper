@@ -7,7 +7,7 @@ if [[ ! -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     exit
 fi
 
-if [[ -z $(yarn run --cwd ${TRAVIS_BUILD_DIR}/assets/js --non-interactive | grep "\- lint$") ]]; then
+if [[ -z $(yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js --non-interactive run | grep "\- lint$") ]]; then
 	echo "yarn lint command is invalid."
 	exit
 fi

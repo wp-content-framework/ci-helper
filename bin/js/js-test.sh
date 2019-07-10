@@ -7,7 +7,7 @@ if [[ ! -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     exit
 fi
 
-if [[ -z $(yarn run --cwd ${TRAVIS_BUILD_DIR}/assets/js --non-interactive | grep "\- cover$") ]]; then
+if [[ -z $(yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js --non-interactive run | grep "\- cover$") ]]; then
 	echo "yarn cover command is invalid."
 	exit
 fi
