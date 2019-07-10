@@ -51,11 +51,6 @@ if [[ -n "${TRAVIS_BUILD_STAGE_NAME}" ]] && [[ ! "${TRAVIS_BUILD_STAGE_NAME}" =~
 fi
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]] || [[ -n "${INSTALL}" ]]; then
     echo ""
-    echo ">> Install node11"
-    nvm install 11
-    npm install
-
-    echo ""
     echo ">> Download plugins"
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
     source ${SCRIPT_DIR}/plugins.sh
