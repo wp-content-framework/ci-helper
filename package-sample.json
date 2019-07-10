@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Sample",
   "scripts": {
-    "start": "npm run build",
-    "test": "npm run lint && npm run cover",
-    "test:update": "npm run lint && npm run cover:update",
+    "start": "yarn build",
+    "test": "yarn lint && yarn cover",
+    "test:update": "yarn lint && yarn cover:update",
     "lint": "eslint src/**/**/*.js && eslint __tests__/**/**/*.js",
     "cover": "jest --coverage",
     "cover:update": "jest --coverage --updateSnapshot",

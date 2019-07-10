@@ -13,9 +13,10 @@ branches:
     - "/^v[0-9\\.]+/"
 
 cache:
+  yarn: true
   directories:
     - "$HOME/.composer/cache"
-    - "$HOME/.npm"
+    - node_modules
 
 stages:
   - name: check

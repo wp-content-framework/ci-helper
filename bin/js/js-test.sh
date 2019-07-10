@@ -7,8 +7,8 @@ if [[ ! -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     exit
 fi
 
-if [[ -z $(npm run --prefix ${TRAVIS_BUILD_DIR}/assets/js | grep cover) ]]; then
-	echo "npm cover command is invalid."
+if [[ -z $(yarn run --prefix ${TRAVIS_BUILD_DIR}/assets/js --non-interactive | grep "\- cover$") ]]; then
+	echo "yarn cover command is invalid."
 	exit
 fi
 
@@ -17,12 +17,12 @@ bash ${SCRIPT_DIR}/js/install-npm.sh
 ls -la ${TRAVIS_BUILD_DIR}/assets/js/node_modules/.bin/webpack
 
 echo ""
-echo ">> Run npm test."
-npm run cover --prefix ${TRAVIS_BUILD_DIR}/assets/js
+echo ">> Run yarn test."
+yarn cover --prefix ${TRAVIS_BUILD_DIR}/assets/js
 
 if [[ ! -z "${COVERAGE_REPORT}" ]] && [[ ! -z "${CI}" ]]; then
 	ls -la ${TRAVIS_BUILD_DIR}/assets/js/coverage/lcov.info
 	echo ""
-	echo ">> Run npm coveralls."
-	npm run coveralls --prefix ${TRAVIS_BUILD_DIR}/assets/js
+	echo ">> Run yarn coveralls."
+	yarn coveralls --prefix ${TRAVIS_BUILD_DIR}/assets/js
 fi

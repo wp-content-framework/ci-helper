@@ -7,8 +7,8 @@ if [[ ! -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     exit
 fi
 
-if [[ -z $(npm run --prefix ${TRAVIS_BUILD_DIR}/assets/js | grep lint) ]]; then
-	echo "npm lint command is invalid."
+if [[ -z $(yarn run --prefix ${TRAVIS_BUILD_DIR}/assets/js --non-interactive | grep "\- lint$") ]]; then
+	echo "yarn lint command is invalid."
 	exit
 fi
 
@@ -17,5 +17,5 @@ bash ${SCRIPT_DIR}/js/install-npm.sh
 ls -la ${TRAVIS_BUILD_DIR}/assets/js/node_modules/.bin/webpack
 
 echo ""
-echo ">> Run npm lint."
-npm run lint --prefix ${TRAVIS_BUILD_DIR}/assets/js
+echo ">> Run yarn lint."
+yarn lint --prefix ${TRAVIS_BUILD_DIR}/assets/js
