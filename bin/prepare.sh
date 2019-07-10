@@ -14,7 +14,7 @@ SCRIPT_DIR=${LIBRARY_BASE_DIR}/bin
 INSTALL=${1-""}
 
 echo ""
-echo ">> Copy files"
+echo ">> Copy files."
 files=()
 files+=( ".coveralls.yml" )
 files+=( "phpmd.xml" )
@@ -51,29 +51,29 @@ if [[ -n "${TRAVIS_BUILD_STAGE_NAME}" ]] && [[ ! "${TRAVIS_BUILD_STAGE_NAME}" =~
 fi
 if [[ -n "${ACTIVATE_POPULAR_PLUGINS}" ]] || [[ -n "${INSTALL}" ]]; then
     echo ""
-    echo ">> Download plugins"
+    echo ">> Download plugins."
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
     source ${SCRIPT_DIR}/plugins.sh
 
     for plugin in "${org_plugins[@]}"
     do
         echo ">>>> ${plugin}"
-        bash ${SCRIPT_DIR}/install-org-plugin.sh ${plugin}
+        bash ${SCRIPT_DIR}/prepare/install-org-plugin.sh ${plugin}
     done
 
     if [[ ! -f ~/.ssh/config ]] || [[ -z $(cat ~/.ssh/config | grep github) ]]; then
-        echo ">> Write to ssh config"
+        echo ">> Write to ssh config."
         echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
     fi
     for plugin in "${github_plugins[@]}"
     do
         echo ">>>> ${plugin}"
-        bash ${SCRIPT_DIR}/install-github-plugin.sh ${plugin}
+        bash ${SCRIPT_DIR}/prepare/install-github-plugin.sh ${plugin}
     done
 
     for plugin in "${zip_plugins[@]}"
     do
         echo ">>>> ${plugin}"
-        bash ${SCRIPT_DIR}/install-zip-plugin.sh ${plugin}
+        bash ${SCRIPT_DIR}/prepare/install-zip-plugin.sh ${plugin}
     done
 fi
