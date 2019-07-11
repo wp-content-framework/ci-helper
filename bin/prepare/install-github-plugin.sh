@@ -24,6 +24,8 @@ git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} pull
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
     composer install -n --working-dir=${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} --no-dev
 fi
+
+node --version
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/package.json ]]; then
     yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} --audit install
     yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} build
