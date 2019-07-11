@@ -2,8 +2,10 @@
 
 set -e
 
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
-bash ${SCRIPT_DIR}/deploy/prepare_svn.sh
+current=$(cd $(dirname $0);
+pwd)
+
+bash ${current}/prepare_svn.sh
 
 if [[ ! -d ${SVN_DIR} ]]; then
 	exit;
@@ -17,4 +19,4 @@ svn st
 
 pushd
 
-bash ${SCRIPT_DIR}/deploy/clear_work_dir.sh
+bash ${current}/clear_work_dir.sh

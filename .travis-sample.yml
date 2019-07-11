@@ -172,7 +172,8 @@ jobs:
         name: ${RELEASE_TITLE}
         tag_name: ${RELEASE_TAG}
         file: ${RELEASE_FILE}
-        api_key: ${GITHUB_TOKEN}
+        api_key:
+          secure: <secure token>
         draft: true
         overwrite: true
         on:
@@ -189,6 +190,20 @@ jobs:
         provider: script
         skip_cleanup: true
         script: bash tests/bin/deploy/wp-release.sh
+        on:
+          tags: true
+
+    - stage: deploy
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      script: skip
+      before_deploy:
+        - source tests/bin/deploy/env.sh
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: bash tests/bin/deploy/gh-pages.sh $encrypted_xxxxxxxxxxxx_key $encrypted_yyyyyyyyyyyy_iv
         on:
           tags: true
 

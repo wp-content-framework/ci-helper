@@ -2,11 +2,12 @@
 
 set -e
 
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
+current=$(cd $(dirname $0);
+pwd)
 
 echo ""
 echo ">> Prepare release files."
-bash ${SCRIPT_DIR}/deploy/prepare_release_files.sh
+bash ${current}/prepare_release_files.sh
 
 pushd ${PACKAGE_DIR}
 echo ""
