@@ -10,16 +10,20 @@ if [[ ! -f ${GH_PAGES_DIR}/package.json ]]; then
     exit
 fi
 
-svn export https://github.com/WordPress/gutenberg/trunk/playground/src ${WORK_DIR}/playground
-svn export https://github.com/WordPress/gutenberg/trunk/assets/stylesheets ${GH_PAGES_DIR}/stylesheets
-rm -f ${WORK_DIR}/playground/index.html
-mv -f ${WORK_DIR}/playground/* ${GH_PAGES_DIR}/
-sed -i -e 's/..\/..\/assets/./g' ${GH_PAGES_DIR}/style.scss
+GH_WORK_DIR=${WORK_DIR}/playground
 
-yarn --cwd ${GH_PAGES_DIR} install
-yarn --cwd ${GH_PAGES_DIR} build
+rm -rdf ${GH_WORK_DIR}/src
+rm -rdf ${GH_WORK_DIR}/stylesheets
 
-rm -f ${GH_PAGES_DIR}/*.scss
-rm -f ${GH_PAGES_DIR}/*.json
-rm -f ${GH_PAGES_DIR}/*.config.js
-rm -f ${GH_PAGES_DIR}/.*
+svn export https://github.com/WordPress/gutenberg/trunk/playground/src ${GH_WORK_DIR}/src
+svn export https://github.com/WordPress/gutenberg/trunk/assets/stylesheets ${GH_WORK_DIR}/stylesheets
+
+sed -i -e 's/..\/..\/assets/./g' ${GH_WORK_DIR}/src/style.scss
+mv -f ${GH_WORK_DIR}/src/* ${GH_WORK_DIR}/
+mv -f ${GH_PAGES_DIR}/* ${GH_WORK_DIR}/
+
+yarn --cwd ${GH_WORK_DIR} install
+yarn --cwd ${GH_WORK_DIR} build
+
+mv -f ${GH_WORK_DIR}/index.html ${GH_PAGES_DIR}/
+mv -f ${GH_WORK_DIR}/index.min.js ${GH_PAGES_DIR}/

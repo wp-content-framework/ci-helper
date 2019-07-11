@@ -22,12 +22,16 @@ else
     mkdir -p ${GH_PAGES_DIR}
 fi
 
-if [[ -f ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE} ]]; then
-    bash ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE}
+if [[ -f ${PLUGIN_TESTS_DIR}/bin/gh-pages/pre_setup.sh ]]; then
+    bash ${PLUGIN_TESTS_DIR}/bin/gh-pages/pre_setup.sh
 fi
 
-if [[ -f ${PLUGIN_TESTS_DIR}/bin/gh-pages.sh ]]; then
-    bash ${PLUGIN_TESTS_DIR}/bin/gh-pages.sh
+if [[ -f ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE}.sh ]]; then
+    bash ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE}.sh
+fi
+
+if [[ -f ${PLUGIN_TESTS_DIR}/bin/gh-pages/setup.sh ]]; then
+    bash ${PLUGIN_TESTS_DIR}/bin/gh-pages/setup.sh
 fi
 
 find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/${__title__}/'${GH_PAGES_TITLE//\//\\/}'/g' file
