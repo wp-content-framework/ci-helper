@@ -41,5 +41,5 @@ find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file se
 if [[ -n "${GH_PAGES_PLUGIN_SCRIPT}" ]]; then
     find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/${__plugin_script__}/'${GH_PAGES_PLUGIN_SCRIPT//\//\\/}'/g' file
 else
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -e '/${__plugin_script__}/d' file
+    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e '/${__plugin_script__}/d' file
 fi

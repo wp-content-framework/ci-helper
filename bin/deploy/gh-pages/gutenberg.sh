@@ -10,7 +10,7 @@ if [[ ! -f ${GH_PAGES_DIR}/package.json ]]; then
     exit
 fi
 
-GH_WORK_DIR=${WORK_DIR}/playground
+GH_WORK_DIR=${CACHE_WORK_DIR}/playground
 
 rm -rdf ${GH_WORK_DIR}/src
 rm -rdf ${GH_WORK_DIR}/stylesheets
@@ -20,7 +20,9 @@ svn export https://github.com/WordPress/gutenberg/trunk/assets/stylesheets ${GH_
 
 sed -i -e 's/..\/..\/assets/./g' ${GH_WORK_DIR}/src/style.scss
 mv -f ${GH_WORK_DIR}/src/* ${GH_WORK_DIR}/
+mv -f ${GH_WORK_DIR}/src/.??* ${GH_WORK_DIR}/ 2> /dev/null || :
 mv -f ${GH_PAGES_DIR}/* ${GH_WORK_DIR}/
+mv -f ${GH_PAGES_DIR}/.??* ${GH_WORK_DIR}/ 2> /dev/null || :
 
 yarn --cwd ${GH_WORK_DIR} install
 yarn --cwd ${GH_WORK_DIR} build

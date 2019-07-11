@@ -8,6 +8,7 @@ if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
 fi
 
 WORK_DIR=${TRAVIS_BUILD_DIR}/.work
+CACHE_WORK_DIR=${TRAVIS_BUILD_DIR}/.work/cache
 PACKAGE_DIR=${WORK_DIR}/packages
 SVN_DIR=${WORK_DIR}/svn
 GH_PAGES_DIR=${TRAVIS_BUILD_DIR}/gh-pages
