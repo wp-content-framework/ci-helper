@@ -48,7 +48,7 @@ fi
 if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
     echo ""
     echo ">> Install latest node."
-    bash ${SCRIPT_DIR}/prepare/install-latest-node.sh
+    source ${SCRIPT_DIR}/prepare/install-latest-node.sh
     node --version
 
     echo ""

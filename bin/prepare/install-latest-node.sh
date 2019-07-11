@@ -13,6 +13,3 @@ curl -o ${NVM_DIR}/nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/master/nv
 
 nvm install ${NODE_JS_VERSION}
 nvm alias default ${NODE_JS_VERSION}
-nvm use default
-
-node -v
