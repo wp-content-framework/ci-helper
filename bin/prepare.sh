@@ -47,11 +47,6 @@ fi
 
 if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
     echo ""
-    echo ">> Install latest node."
-    source ${SCRIPT_DIR}/prepare/install-latest-node.sh
-    node --version
-
-    echo ""
     echo ">> Download plugins."
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
     source ${SCRIPT_DIR}/plugins.sh
@@ -62,6 +57,16 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
         bash ${SCRIPT_DIR}/prepare/install-org-plugin.sh ${plugin}
     done
 
+    for plugin in "${zip_plugins[@]}"
+    do
+        echo ">>>> ${plugin}"
+        bash ${SCRIPT_DIR}/prepare/install-zip-plugin.sh ${plugin}
+    done
+
+    echo ""
+    echo ">> Install latest node."
+    source ${SCRIPT_DIR}/prepare/install-latest-node.sh
+
     if [[ ! -f ~/.ssh/config ]] || [[ -z $(cat ~/.ssh/config | grep github) ]]; then
         echo ">> Write to ssh config."
         echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
@@ -70,11 +75,5 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
     do
         echo ">>>> ${plugin}"
         bash ${SCRIPT_DIR}/prepare/install-github-plugin.sh ${plugin}
-    done
-
-    for plugin in "${zip_plugins[@]}"
-    do
-        echo ">>>> ${plugin}"
-        bash ${SCRIPT_DIR}/prepare/install-zip-plugin.sh ${plugin}
     done
 fi
