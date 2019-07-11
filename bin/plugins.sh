@@ -5,7 +5,7 @@
 set -e
 
 org_plugins=()
-org_plugins+=( "wordpress-seo" )
+#org_plugins+=( "wordpress-seo" )
 org_plugins+=( "akismet" )
 org_plugins+=( "contact-form-7" )
 org_plugins+=( "jetpack" )
