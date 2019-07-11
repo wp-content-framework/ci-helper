@@ -4,6 +4,9 @@ set -e
 
 current=$(cd $(dirname $0);
 pwd)
+source ${current}/../variables.sh
+
+bash ${SCRIPT_DIR}/deploy/prepare_svn.sh
 
 if [[ ! -d ${SVN_DIR} ]]; then
 	exit;

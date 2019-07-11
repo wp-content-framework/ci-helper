@@ -2,15 +2,9 @@
 
 set -e
 
-if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
-    echo "<TRAVIS_BUILD_DIR> is required"
-    exit
-fi
-
-LIBRARY_BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
-SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
-TESTS_DIR=${LIBRARY_BASE_DIR}/tests
-SCRIPT_DIR=${LIBRARY_BASE_DIR}/bin
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/variables.sh
 
 echo ""
 echo ">> Copy files."

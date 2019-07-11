@@ -2,7 +2,10 @@
 
 set -e
 
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/../variables.sh
+
 if [[ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]]; then
 	if [[ -z "${COVERAGE_REPORT}" ]]; then
 		phpenv config-rm xdebug.ini

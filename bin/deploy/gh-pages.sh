@@ -2,59 +2,30 @@
 
 set -e
 
-if [[ $# -lt 2 ]]; then
-	echo "usage: $0 <key> <iv>"
-	exit 1
-fi
-
-if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
-    echo "<TRAVIS_BUILD_DIR> is required"
-    exit
-fi
-
-if [[ ! -f ${TRAVIS_BUILD_DIR}/tests/bin/gh-pages.sh ]]; then
-    echo "There is no setting file"
-    exit
-fi
-
 current=$(cd $(dirname $0);
 pwd)
+source ${current}/../variables.sh
 
-echo ""
-echo ">> Clone gh-pages"
-rm -rdf ${GH_PAGES_DIR}
-if [[ -n $(git -C ${TRAVIS_BUILD_DIR} branch -r | grep "gh-pages") ]]; then
-    git clone -b gh-pages "https://github.com/${TRAVIS_REPO_SLUG}.git" ${GH_PAGES_DIR}
-else
-    mkdir ${GH_PAGES_DIR}
-    git -C ${GH_PAGES_DIR} init
-    git -C ${GH_PAGES_DIR} checkout -b gh-pages
+if [[ $# -lt 1 ]]; then
+	echo "usage: $0 <template>"
+	exit 1
 fi
 
 echo ""
 echo ">> Prepare files"
-bash ${TRAVIS_BUILD_DIR}/tests/bin/gh-pages.sh
+rm -rdf ${GH_PAGES_DIR}
+template=${1}
 
-echo ""
-echo ">> Check diff"
-if [[ -z "$(git -C ${GH_PAGES_DIR} status --short)" ]]; then
-	echo "There is no diff"
-	exit
+if [[ -d ${GH_PAGES_TEMPLATE_DIR}/${template} ]]; then
+    cp -a ${GH_PAGES_TEMPLATE_DIR}/${template} ${GH_PAGES_DIR}
+else
+    mkdir -p ${GH_PAGES_DIR}
 fi
 
-if [[ -z "${CI}" ]]; then
-	git -C ${GH_PAGES_DIR} status --short
-	echo "Prevent commit if local"
-	exit
+if [[ -f ${SCRIPT_DIR}/deploy/gh-pages/${template} ]]; then
+    bash ${SCRIPT_DIR}/deploy/gh-pages/${template}
 fi
 
-echo ""
-echo ">> Commit"
-${current}/setup-git-configs.sh ${1} ${2}
-git -C ${GH_PAGES_DIR} add --all
-git -C ${GH_PAGES_DIR} status --short
-git -C ${GH_PAGES_DIR} commit -m "${GH_PAGES_COMMIT_MESSAGE}"
-
-echo ""
-echo ">> Push"
-git -C ${GH_PAGES_DIR} push -u origin gh-pages
+if [[ -f ${PLUGIN_TESTS_DIR}/bin/gh-pages.sh ]]; then
+    bash ${PLUGIN_TESTS_DIR}/bin/gh-pages.sh
+fi

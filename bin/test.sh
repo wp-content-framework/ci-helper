@@ -2,7 +2,9 @@
 
 set -e
 
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd -P)
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/variables.sh
 
 bash ${SCRIPT_DIR}/php/phpcs.sh
 bash ${SCRIPT_DIR}/php/phpmd.sh

@@ -4,6 +4,10 @@
 
 set -e
 
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/variables.sh
+
 org_plugins=()
 org_plugins+=( "wordpress-seo" )
 org_plugins+=( "akismet" )
@@ -26,6 +30,6 @@ github_plugins+=( "wp-content-framework/0-framework-test" )
 zip_plugins=()
 #zip_plugins+=( "https://sitekit.withgoogle.com/service/download/google-site-kit.zip" )
 
-if [[ -n "${TRAVIS_BUILD_DIR}" && -f ${TRAVIS_BUILD_DIR}/tests/bin/plugins.sh ]]; then
-    source ${TRAVIS_BUILD_DIR}/tests/bin/plugins.sh
+if [[ -f ${PLUGIN_TESTS_DIR}/bin/plugins.sh ]]; then
+    source ${PLUGIN_TESTS_DIR}/bin/plugins.sh
 fi

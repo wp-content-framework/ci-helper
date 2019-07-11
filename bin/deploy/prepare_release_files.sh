@@ -2,6 +2,10 @@
 
 set -e
 
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/../variables.sh
+
 if [[ -z "${PACKAGE_DIR}" ]] || [[ -z "${RELEASE_FILE}" ]]; then
 	echo "<PACKAGE_DIR> and <RELEASE_FILE> are required."
 	exit 1

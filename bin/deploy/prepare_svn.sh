@@ -2,6 +2,10 @@
 
 set -e
 
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/../variables.sh
+
 if [[ -z "${SVN_DIR}" ]]; then
 	echo "<SVN_DIR> is required."
 	exit 1

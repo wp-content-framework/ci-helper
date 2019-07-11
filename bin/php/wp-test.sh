@@ -2,12 +2,15 @@
 
 set -e
 
+current=$(cd $(dirname $0);
+pwd)
+source ${current}/../variables.sh
+
 if [[ -z $(composer list --raw --working-dir=${TRAVIS_BUILD_DIR} | grep phpunit) ]]; then
     echo "composer phpunit command is invalid."
     exit
 fi
 
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
 bash ${SCRIPT_DIR}/php/setup-wp-tests.sh
 ls -la ${TRAVIS_BUILD_DIR}/vendor/autoload.php
 

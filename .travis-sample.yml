@@ -5,7 +5,8 @@ dist: trusty
 
 notifications:
   email: false
-  slack: ${SLACK_TOKEN}
+  slack:
+    secure: <secure token>
 
 branches:
   only:
@@ -15,7 +16,7 @@ branches:
 cache:
   yarn: true
   directories:
-    - "$HOME/.composer/cache"
+    - "${HOME}/.composer/cache"
     - node_modules
 
 stages:
@@ -200,12 +201,15 @@ jobs:
       script: skip
       before_deploy:
         - source tests/bin/deploy/env.sh
+        - bash tests/bin/deploy/gh-pages.sh gutenberg
       deploy:
-        provider: script
+        provider: pages
         skip_cleanup: true
-        script: bash tests/bin/deploy/gh-pages.sh $encrypted_xxxxxxxxxxxx_key $encrypted_yyyyyyyyyyyy_iv
+        github_token: ${GITHUB_TOKEN}
+        keep_history: true
+        local_dir: ${GH_PAGES_DIR}
         on:
-          tags: true
+          branch: master
 
   allow_failures:
     - env: WP_VERSION=4.9

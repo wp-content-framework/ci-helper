@@ -4,10 +4,16 @@ set -e
 
 current=$(cd $(dirname $0);
 pwd)
+source ${current}/../variables.sh
+
+if [[ -z "${RELEASE_FILE}" ]]; then
+	echo "<RELEASE_FILE> is required."
+	exit 1
+fi
 
 echo ""
 echo ">> Prepare release files."
-bash ${current}/prepare_release_files.sh
+bash ${SCRIPT_DIR}/deploy/prepare_release_files.sh
 
 pushd ${PACKAGE_DIR}
 echo ""
