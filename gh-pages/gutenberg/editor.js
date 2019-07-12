@@ -1,25 +1,19 @@
-/**
- * WordPress dependencies
- */
-import '@wordpress/editor'; // This shouldn't be necessary
-
-import { render, useState, Fragment } from '@wordpress/element';
-import {
+const { render, useState, Fragment } = wp.element;
+const {
 	BlockEditorProvider,
 	BlockList,
 	WritingFlow,
 	ObserveTyping,
 	BlockInspector,
-} from '@wordpress/block-editor';
-import {
+} = wp.blockEditor;
+const {
 	Popover,
 	SlotFillProvider,
 	DropZoneProvider,
 	Panel,
 	PanelBody,
-} from '@wordpress/components';
-import { registerCoreBlocks } from '@wordpress/block-library';
-import '@wordpress/format-library';
+} = wp.components;
+const { registerCoreBlocks } = wp.blockLibrary;
 
 /**
  * Internal dependencies

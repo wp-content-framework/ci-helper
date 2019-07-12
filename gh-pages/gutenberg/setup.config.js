@@ -3,14 +3,14 @@ const smp = new SpeedMeasurePlugin();
 const webpack = require( 'webpack' );
 const pkg = require( './package' );
 
-const banner = `${ pkg.name } ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\nLicense: ${ pkg.license }`;
+const banner = `${ pkg.name }-setup ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\nLicense: ${ pkg.license }`;
 
 const webpackConfig = {
 	context: __dirname,
-	entry: './index.js',
+	entry: './setup.js',
 	output: {
 		path: __dirname,
-		filename: 'index.min.js',
+		filename: 'setup.min.js',
 	},
 	module: {
 		rules: [

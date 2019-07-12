@@ -21,6 +21,8 @@ svn export https://github.com/WordPress/gutenberg/trunk/assets/stylesheets ${GH_
 sed -i -e 's/..\/..\/assets/./g' ${GH_WORK_DIR}/src/style.scss
 mv -f ${GH_WORK_DIR}/src/* ${GH_WORK_DIR}/
 mv -f ${GH_WORK_DIR}/src/.??* ${GH_WORK_DIR}/ 2> /dev/null || :
+mv -n ${GH_PAGES_DIR}/yarn.lock ${GH_WORK_DIR}/ 2> /dev/null || :
+rm -f ${GH_PAGES_DIR}/yarn.lock
 mv -f ${GH_PAGES_DIR}/* ${GH_WORK_DIR}/
 mv -f ${GH_PAGES_DIR}/.??* ${GH_WORK_DIR}/ 2> /dev/null || :
 
@@ -28,4 +30,5 @@ yarn --cwd ${GH_WORK_DIR} install
 yarn --cwd ${GH_WORK_DIR} build
 
 mv -f ${GH_WORK_DIR}/index.html ${GH_PAGES_DIR}/
-mv -f ${GH_WORK_DIR}/index.min.js ${GH_PAGES_DIR}/
+mv -f ${GH_WORK_DIR}/setup.min.js ${GH_PAGES_DIR}/
+mv -f ${GH_WORK_DIR}/editor.min.js ${GH_PAGES_DIR}/
