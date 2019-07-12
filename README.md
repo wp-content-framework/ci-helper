@@ -19,6 +19,7 @@
   - Coveralls
 - Deploy
   - GitHub releases
+  - GitHub pages
   - WP Directory
 
 ## Usage
