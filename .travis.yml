@@ -45,6 +45,7 @@ jobs:
       language: php
       php: '7.2'
       script:
+        - npm install -g npm-check-updates
         - ncu -u --packageFile gh-pages/gutenberg/package.json
         - yarn --audit --cwd gh-pages/gutenberg install
         - bash bin/update/commit.sh
