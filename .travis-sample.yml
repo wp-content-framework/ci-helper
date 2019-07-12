@@ -201,7 +201,7 @@ jobs:
       script: skip
       before_deploy:
         - source tests/bin/deploy/env.sh
-        - bash tests/bin/deploy/gh-pages.sh gutenberg
+        - bash tests/bin/deploy/gh-pages.sh
       deploy:
         provider: pages
         skip_cleanup: true
