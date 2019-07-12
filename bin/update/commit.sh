@@ -6,8 +6,15 @@ current=$(cd $(dirname $0);
 pwd)
 source ${current}/../variables.sh
 
+COMMIT_TARGET_DIR=${1-""}
+
+if [[ -n "${COMMIT_TARGET_DIR}" ]] && [[ ! -d ${COMMIT_TARGET_DIR} ]]; then
+    echo "Target directory is not exist"
+    exit 1
+fi
+
 if [[ -z "${CI}" ]]; then
-	git -C ${TRAVIS_BUILD_DIR} status --short
+	git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR}
 	echo "Prevent commit if local"
 	exit
 fi
@@ -15,15 +22,19 @@ fi
 echo ""
 echo ">> Check diff"
 git -C ${TRAVIS_BUILD_DIR} checkout master
-if [[ -z "$(git -C ${TRAVIS_BUILD_DIR} status --short)" ]]; then
+if [[ -z "$(git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR})" ]]; then
 	echo "There is no diff"
 	exit
 fi
 
 echo ""
 echo ">> Commit"
-git -C ${TRAVIS_BUILD_DIR} add --all
-git -C ${TRAVIS_BUILD_DIR} status --short
+if [[ -n "${COMMIT_TARGET_DIR}" ]]; then
+    git -C ${TRAVIS_BUILD_DIR} add ${COMMIT_TARGET_DIR}
+else
+    git -C ${TRAVIS_BUILD_DIR} add --all
+fi
+git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR}
 git -C ${TRAVIS_BUILD_DIR} commit -m "${COMMIT_MESSAGE}"
 
 echo ""
