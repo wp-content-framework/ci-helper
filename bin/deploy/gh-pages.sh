@@ -7,7 +7,7 @@ pwd)
 source ${current}/../variables.sh
 
 GH_PAGES_TEMPLATE=${GH_PAGES_TEMPLATE:-"page"}
-GH_PAGES_TITLE=${GH_PAGES_TITLE:-"Sample page"}
+GH_PAGES_TITLE=${GH_PAGES_TITLE-"Sample page"}
 GH_PAGES_SETUP_SCRIPT=${GH_PAGES_SETUP_SCRIPT-"./setup.min.js"}
 GH_PAGES_EDITOR_SCRIPT=${GH_PAGES_EDITOR_SCRIPT-"./editor.min.js"}
 GH_PAGES_PLUGIN_SCRIPT=${GH_PAGES_PLUGIN_SCRIPT-"./index.min.js"}
