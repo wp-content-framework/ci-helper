@@ -10,11 +10,8 @@ if [[ ! -f ${GH_PAGES_DIR}/package.json ]]; then
 	exit
 fi
 
-GH_WORK_DIR=${CACHE_WORK_DIR}/playground
-
 rm -rdf ${GH_WORK_DIR}/src
 rm -rdf ${GH_WORK_DIR}/stylesheets
-mkdir -p ${GH_WORK_DIR}
 
 svn export https://github.com/WordPress/gutenberg/trunk/playground/src ${GH_WORK_DIR}/src
 svn export https://github.com/WordPress/gutenberg/trunk/assets/stylesheets ${GH_WORK_DIR}/stylesheets

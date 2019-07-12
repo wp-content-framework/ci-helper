@@ -17,6 +17,7 @@ GH_PAGES_APP_ID=${GH_PAGES_APP_ID:-"app"}
 echo ""
 echo ">> Prepare files"
 rm -rdf ${GH_PAGES_DIR}
+mkdir -p ${GH_WORK_DIR}
 
 if [[ -d ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ]]; then
     cp -a ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ${GH_PAGES_DIR}
