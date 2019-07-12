@@ -34,12 +34,12 @@ if [[ -f ${PLUGIN_TESTS_DIR}/bin/gh-pages/setup.sh ]]; then
     bash ${PLUGIN_TESTS_DIR}/bin/gh-pages/setup.sh
 fi
 
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/${__title__}/'${GH_PAGES_TITLE//\//\\/}'/g' file
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/${__editor_script__}/'${GH_PAGES_EDITOR_SCRIPT//\//\\/}'/g' file
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/${__app_id__}/'${GH_PAGES_APP_ID//\//\\/}'/g' file
+find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/___title___/'${GH_PAGES_TITLE//\//\\/}'/g' file
+find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/___editor_script___/'${GH_PAGES_EDITOR_SCRIPT//\//\\/}'/g' file
+find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/___app_id___/'${GH_PAGES_APP_ID//\//\\/}'/g' file
 
 if [[ -n "${GH_PAGES_PLUGIN_SCRIPT}" ]]; then
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/${__plugin_script__}/'${GH_PAGES_PLUGIN_SCRIPT//\//\\/}'/g' file
+    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e 's/___plugin_script___/'${GH_PAGES_PLUGIN_SCRIPT//\//\\/}'/g' file
 else
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e '/${__plugin_script__}/d' file
+    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e '/___plugin_script___/d' file
 fi
