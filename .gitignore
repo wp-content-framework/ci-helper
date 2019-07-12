@@ -26,3 +26,11 @@ logs
 /cache
 
 /.idea
+id_rsa
+id_rsa.pub
+node_modules
+/vendor
+/.work
+/travis-ci
+composer.lock
+travis-ci.zip

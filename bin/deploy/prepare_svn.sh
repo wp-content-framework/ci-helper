@@ -35,7 +35,6 @@ svn co -q ${SVN_URL}/trunk ${SVN_DIR}
 
 echo ""
 echo ">> Prepare release files."
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
 bash ${SCRIPT_DIR}/deploy/prepare_release_files.sh
 
 echo ""

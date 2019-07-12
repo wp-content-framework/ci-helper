@@ -1,0 +1,72 @@
+language: php
+
+sudo: false
+dist: trusty
+
+git:
+  depth: 3
+
+notifications:
+  email: false
+  slack:
+    secure: U1LHH+q9B4e0mm8L1ucRDXA0hi3aZs7nwMf0NRckLprYEptypqiIlxk+05ZZtpDw8Wu8Q3/RQkcIQT9se7nvrHbrp4x7e2T5aikWvPqF8GA9vZd/8rskElwgzyDxuBxFfMeoo8dBDbC8x/Kr1ywqgmF2bwLXp+Fvhy9Wrf0M7hEXN0oaj/+foFLxy+CxMwBdQNU3iSrkbrhJ1KHmoHcOMdghw5R3RBsbYUeiqA2av5xvkaoxMKnkN7oPTOnat9Dtopb0punw6riXnQrShEfHE5bwvEl2XqICIwJl6TSDsEft66qOD6B0h3p2Te1GIJ0TNEaLTTvAv44zqN++A4Nxx1ZbJ+WHa1UqaFhHJLu1RC0qimHBL7SBuJ3YCgZDbpqL0igivBs0R2tK3Ix+ZWWFT1KnkaIjqt5rnB04klEd10oWC2U6VXvaURvyJ5n4QjpkyVt/HmuAnoDZiNBTKt6IqJuiXeH/tIs7JoKyEwuX5aIbEj4z9z68FkPMXMySin9K0vJ4ySjGC5t96UkOLxDvxRYvrRjLD0O7IJxe5LkMcAOW4ntiWohQ0dWP+tR7uCmszRwg1m1Wl4WRMsYiAtX9t7/aFF7K0Zvew4ACMmc7wMEQ8ztQAl18/lYRkM724q6UBhU3sn//aXzMdytIg3He9IXe7Kc3sHTIb0/ZuPS+qN0=
+
+branches:
+  only:
+    - master
+    - "/^v[0-9\\.]+/"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+stages:
+  - name: update
+    if: branch = master and tag IS blank and type IN (api, cron)
+  - name: deploy
+    if: tag IS present
+
+before_install:
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then openssl aes-256-cbc -K $encrypted_5a282391fcb1_key -iv $encrypted_5a282391fcb1_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d 2>/dev/null; fi
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then chmod 600 ~/.ssh/id_rsa; fi
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config; fi
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then git config --global user.email "technote.space@gmail.com"; fi
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then git config --global user.name "Technote"; fi
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then git config --global url."git@github.com:".insteadOf "https://github.com/"; fi
+
+before_script:
+  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" != "Update" ]]; then bash bin/prepare.sh install; fi
+
+jobs:
+  fast_finish: true
+  include:
+    - stage: update
+      language: php
+      php: '7.2'
+      script:
+        - ncu -u --packageFile gh-pages/gutenberg/package.json
+        - yarn --audit --cwd gh-pages/gutenberg install
+        - bash bin/update/commit.sh
+
+
+    - stage: deploy
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      script: skip
+      before_deploy:
+        - source bin/deploy/env.sh
+        - bash bin/deploy/create.sh
+      deploy:
+        provider: releases
+        skip_cleanup: true
+        name: ${RELEASE_TITLE}
+        tag_name: ${RELEASE_TAG}
+        api_key:
+          secure: IOPbmFMpC3GYX26wiHGQcYUr1NPS4odnpeIxcHZ7O/B+LW3b4yearkS98P1D0BGszho4TZBgf/QTCAfexjrn9TgWjT6QsRBKEPFS0KbYxEn4XIh5+aAlLu7hYxzsLfPAfTXaiXHsNF1HA0nxq353UZnYa6k+F4jY1qCn1GLBd8idI7MYxfc81MxDxlWMuShXmxqFKQOvfF0+yLjxatySR+JaEKDsJIZKhRQycU5inqTS8kZA3hCXInq9O20CklOlT/VWwIc8DjNpokwK9J7cb0NR4BNlnHr8PA6niDoB2aVXbpOeUFQsvdd9eEpyGFYhFdS4FM4aB7QcCdjXjLuareX2QixVQqcu4SBgCJsy0Y1nlCfQXzQqdCkHML2bXNdH3BnQWMCI+IiQeySdxC6o8pkGG2Rat/+iO5AdnR73YcvkgRiZ+jpfZL2qmEFbuhXFggZFEy+RHJ8jc6LB/4JyKRRYgtgvjaiCzKXCs4pxkwvTWeVrywI6CT1BEaAcVtmbU0Hcwe9AlYeCOLzHuZFyljQ6/CDF9e6nrLfQn1LxxqMVRGl+/bfkWPmWxh8w8T7uMbt0r0gP8YLFKXuCUwN3Pica3KVkjDOOvPhkMuden1GA33oF0Tck4BCU9qp9dpTx8+bfGmd3Do0/U6R9QCu51wf7LK5TEDvvnA47dGE17YE=
+        file: ${RELEASE_FILE}
+        body: ${RELEASE_BODY}
+        overwrite: true
+        on:
+          tags: true

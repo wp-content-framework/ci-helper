@@ -11,9 +11,11 @@ if [[ -z "${PACKAGE_DIR}" ]] || [[ -z "${RELEASE_FILE}" ]]; then
 	exit 1
 fi
 
-echo ""
-echo ">> Run composer install."
-composer install --no-dev --working-dir=${TRAVIS_BUILD_DIR}
+if [[ -f ${TRAVIS_BUILD_DIR}/composer.json ]]; then
+    echo ""
+    echo ">> Run composer install."
+    composer install --no-dev --working-dir=${TRAVIS_BUILD_DIR}
+fi
 
 if [[ -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
     echo ""
@@ -52,5 +54,5 @@ rm -f ${PACKAGE_DIR}/index.php
 rm -rdf ${PACKAGE_DIR}/vendor/bin
 
 if [[ -n "${TRAVIS_BUILD_DIR}" && -f ${TRAVIS_BUILD_DIR}/tests/bin/deploy/prepare_release_files.sh ]]; then
-    bash ${TRAVIS_BUILD_DIR}/tests/bin/deploy/prepare_release_files.sh
+    bash ${TRAVIS_BUILD_DIR}/tests/bin/deploy/prepare_release_files.sh ${SCRIPT_DIR}
 fi
