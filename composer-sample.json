@@ -59,6 +59,6 @@
     "bin:diff": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) TRAVIS_REPO_SLUG=technote-space/travis-ci TRAVIS_TAG=v1.2.3 source ./travis-ci/bin/deploy/env.sh && bash ./travis-ci/bin/deploy/wp-check-diff.sh",
     "bin:download": "rm -rdf ./travis-ci && rm -f ./tests/bootstrap.php ./.coveralls.yml ./phpcs.xml ./phpmd.xml phpunit.xml && git clone --depth=1 https://github.com/wp-content-framework/travis-ci.git travis-ci",
     "bin:prepare": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) ACTIVATE_POPULAR_PLUGINS=1 bash ./travis-ci/bin/prepare.sh",
-    "bin:gh-pages": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) GH_PAGES_TITLE=test GH_PAGES_TEMPLATE=page GH_PAGES_PLUGIN_SCRIPT= GH_PAGES_PLUGIN_STYLE= bash ./travis-ci/bin/deploy/gh-pages.sh"
+    "bin:gh-pages": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) GH_PAGES_TITLE= GH_PAGES_TEMPLATE=page GH_PAGES_PLUGIN_SCRIPT= GH_PAGES_PLUGIN_STYLE= bash ./travis-ci/bin/deploy/gh-pages.sh"
   }
 }

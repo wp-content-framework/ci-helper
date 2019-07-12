@@ -14,6 +14,7 @@ const {
 	PanelBody,
 } = wp.components;
 const { registerCoreBlocks } = wp.blockLibrary;
+const { applyFilters } = wp.hooks;
 
 /**
  * Internal dependencies
@@ -36,7 +37,8 @@ function App() {
 	return (
 		<Fragment>
 			<div className="playground__header">
-				<h1 className="playground__logo">___title___</h1>
+				<h1 className="playground__title">{ applyFilters( 'gh-pages.renderTitle', '___title___' ) }</h1>
+				<div className="playground__content">{ applyFilters( 'gh-pages.renderContent', '' ) }</div>
 			</div>
 			<div className="playground__body">
 				<SlotFillProvider>
