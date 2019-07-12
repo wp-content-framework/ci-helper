@@ -7,7 +7,7 @@ pwd)
 source ${current}/../../variables.sh
 
 if [[ ! -f ${GH_PAGES_DIR}/package.json ]]; then
-    exit
+	exit
 fi
 
 GH_WORK_DIR=${CACHE_WORK_DIR}/playground
