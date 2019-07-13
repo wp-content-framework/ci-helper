@@ -15,7 +15,7 @@ if [[ ! -d ${GIT_DIR}/.git ]]; then
 fi
 
 if [[ -f ${BIN_DIR}/commit/git-add.sh ]]; then
-    ${BIN_DIR}/commit/git-add.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
+    bash ${BIN_DIR}/commit/git-add.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 else
     if [[ -n "${COMMIT_TARGET_DIR}" ]]; then
         git -C ${GIT_DIR} add ${COMMIT_TARGET_DIR}

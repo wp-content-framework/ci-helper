@@ -15,7 +15,7 @@ if [[ ! -d ${GIT_DIR}/.git ]]; then
 fi
 
 if [[ -f ${BIN_DIR}/commit/push.sh ]]; then
-    ${BIN_DIR}/commit/push.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
+    bash ${BIN_DIR}/commit/push.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 else
     git -C ${GIT_DIR} push origin master --tags
 fi
