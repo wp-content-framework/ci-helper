@@ -35,9 +35,6 @@ before_install:
   - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then git config --global user.name "Technote"; fi
   - if [[ "${TRAVIS_BUILD_STAGE_NAME}" == "Update" ]]; then git config --global url."git@github.com:".insteadOf "https://github.com/"; fi
 
-before_script:
-  - if [[ "${TRAVIS_BUILD_STAGE_NAME}" != "Update" ]]; then bash bin/prepare.sh install; fi
-
 jobs:
   fast_finish: true
   include:
