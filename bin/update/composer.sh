@@ -21,7 +21,7 @@ if [[ ! -f ${working_dir}/composer.json ]]; then
 fi
 
 packages=()
-${BIN_DIR}/packages.sh
+source ${BIN_DIR}/packages.sh
 
 for package in "${packages[@]}"
 do
