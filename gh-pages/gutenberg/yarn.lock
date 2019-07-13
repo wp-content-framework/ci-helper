@@ -770,6 +770,19 @@
     "@babel/runtime" "^7.4.4"
     "@wordpress/dom-ready" "^2.4.0"
 
+"@wordpress/annotations@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/annotations/-/annotations-1.4.0.tgz#542e058658429c73ae26d6e2268a943933e4797d"
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@wordpress/data" "^4.6.0"
+    "@wordpress/hooks" "^2.4.0"
+    "@wordpress/i18n" "^3.5.0"
+    "@wordpress/rich-text" "^3.4.0"
+    lodash "^4.17.11"
+    rememo "^3.0.0"
+    uuid "^3.3.2"
+
 "@wordpress/api-fetch@^3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.3.0.tgz#87ae2637bce490b4023e49d4eec91cfc8dd72774"
@@ -1122,6 +1135,18 @@
   resolved "https://registry.yarnpkg.com/@wordpress/keycodes/-/keycodes-2.4.0.tgz#b2fcca9880d685bca297a92cfc6a883affb6e623"
   dependencies:
     "@babel/runtime" "^7.4.4"
+    "@wordpress/i18n" "^3.5.0"
+    lodash "^4.17.11"
+
+"@wordpress/list-reusable-blocks@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.5.0.tgz#40690192f8d1750c6b255382c98497865143d49f"
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@wordpress/api-fetch" "^3.3.0"
+    "@wordpress/components" "^8.0.0"
+    "@wordpress/compose" "^3.4.0"
+    "@wordpress/element" "^2.5.0"
     "@wordpress/i18n" "^3.5.0"
     lodash "^4.17.11"
 
