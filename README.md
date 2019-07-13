@@ -255,6 +255,9 @@ notifications:
     - [ ] Deploy
       - [ ] GitHub release
         - [ ] `GITHUB_TOKEN`
+      - [ ] GitHub pages
+        - [ ] `GITHUB_TOKEN`
+        - [ ] `bin/gh-pages/plugin.sh`
       - [ ] WP Directory
         - [ ] `SVN_USER`
         - [ ] `SVN_PASS`
