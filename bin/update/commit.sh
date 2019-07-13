@@ -7,6 +7,12 @@ pwd)
 source ${current}/../variables.sh
 
 COMMIT_TARGET_DIR=${1-""}
+GIT_DIR=${2-${TRAVIS_BUILD_DIR}}
+
+if [[ ! -d ${GIT_DIR}/.git ]]; then
+	echo "Repository is not exist"
+	exit 1
+fi
 
 if [[ -n "${COMMIT_TARGET_DIR}" ]] && [[ ! -d ${COMMIT_TARGET_DIR} ]]; then
     echo "Target directory is not exist"
@@ -14,7 +20,7 @@ if [[ -n "${COMMIT_TARGET_DIR}" ]] && [[ ! -d ${COMMIT_TARGET_DIR} ]]; then
 fi
 
 if [[ -z "${CI}" ]]; then
-    diff=$(git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR})
+    diff=$(bash ${current}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR})
     if [[ -z "${diff}" ]]; then
         echo "There is no diff"
     else
@@ -25,27 +31,18 @@ if [[ -z "${CI}" ]]; then
 fi
 
 echo ""
-echo ">> Check diff"
-git -C ${TRAVIS_BUILD_DIR} checkout master
-if [[ -z "$(git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR})" ]]; then
+echo ">> Commit"
+bash ${current}/commit/git-add.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
+if [[ -z "$(bash ${current}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR})" ]]; then
     echo "There is no diff"
     exit
 fi
-
-echo ""
-echo ">> Commit"
-if [[ -n "${COMMIT_TARGET_DIR}" ]]; then
-    git -C ${TRAVIS_BUILD_DIR} add ${COMMIT_TARGET_DIR}
-else
-    git -C ${TRAVIS_BUILD_DIR} add --all
-fi
-git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR}
-git -C ${TRAVIS_BUILD_DIR} commit -m "${COMMIT_MESSAGE}"
+git -C ${GIT_DIR} commit -m "${COMMIT_MESSAGE}"
 
 echo ""
 echo ">> Create new tag"
-bash ${current}/commit/get-new-tag.sh | xargs --no-run-if-empty -I {} git tag -a {} -m "${TAG_MESSAGE}"
+bash ${current}/commit/create-new-tag.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 
 echo ""
 echo ">> Push"
-git -C ${TRAVIS_BUILD_DIR} push origin master --tags
+bash ${current}/commit/create-new-tag.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
