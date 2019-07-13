@@ -61,7 +61,7 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
     echo ">> Install latest node."
     source ${SCRIPT_DIR}/prepare/install-latest-node.sh
 
-    if [[ ! -f ~/.ssh/config ]] || [[ -z $(cat ~/.ssh/config | grep github) ]]; then
+    if [[ ! -f ~/.ssh/config ]] || [[ -z $(< ~/.ssh/config grep github) ]]; then
         echo ">> Write to ssh config."
         echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
     fi
