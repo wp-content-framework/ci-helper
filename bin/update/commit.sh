@@ -45,4 +45,4 @@ bash ${current}/commit/create-new-tag.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 
 echo ""
 echo ">> Push"
-bash ${current}/commit/create-new-tag.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
+bash ${current}/commit/push.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
