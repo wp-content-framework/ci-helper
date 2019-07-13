@@ -17,5 +17,5 @@ fi
 if [[ -f ${BIN_DIR}/commit/create-new-tag.sh ]]; then
     bash ${BIN_DIR}/commit/create-new-tag.sh ${COMMIT_TARGET_DIR} ${GIT_DIR} ${TAG_MESSAGE}
 else
-    bash ${current}/commit/get-new-tag.sh | xargs --no-run-if-empty -I {} git tag -a {} -m "${TAG_MESSAGE}"
+    bash ${current}/get-new-tag.sh | xargs --no-run-if-empty -I {} git tag -a {} -m "${TAG_MESSAGE}"
 fi
