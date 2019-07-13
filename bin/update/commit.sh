@@ -14,17 +14,22 @@ if [[ -n "${COMMIT_TARGET_DIR}" ]] && [[ ! -d ${COMMIT_TARGET_DIR} ]]; then
 fi
 
 if [[ -z "${CI}" ]]; then
-	git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR}
-	echo "Prevent commit if local"
-	exit
+    diff=$(git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR})
+    if [[ -z "${diff}" ]]; then
+        echo "There is no diff"
+    else
+        echo ${diff}
+    fi
+    echo "Prevent commit if local"
+    exit
 fi
 
 echo ""
 echo ">> Check diff"
 git -C ${TRAVIS_BUILD_DIR} checkout master
 if [[ -z "$(git -C ${TRAVIS_BUILD_DIR} status --short ${COMMIT_TARGET_DIR})" ]]; then
-	echo "There is no diff"
-	exit
+    echo "There is no diff"
+    exit
 fi
 
 echo ""
