@@ -31,6 +31,13 @@ if [[ -z "${CI}" ]]; then
 fi
 
 echo ""
+echo ">> Check diff"
+if [[ -z "$(bash ${current}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR})" ]]; then
+    echo "There is no diff"
+    exit
+fi
+
+echo ""
 echo ">> Commit"
 bash ${current}/commit/git-add.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 if [[ -z "$(bash ${current}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR})" ]]; then

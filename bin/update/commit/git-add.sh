@@ -17,7 +17,6 @@ fi
 if [[ -f ${BIN_DIR}/commit/git-add.sh ]]; then
     ${BIN_DIR}/commit/git-add.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 else
-    git -C ${GIT_DIR} checkout master
     if [[ -n "${COMMIT_TARGET_DIR}" ]]; then
         git -C ${GIT_DIR} add ${COMMIT_TARGET_DIR}
     else
