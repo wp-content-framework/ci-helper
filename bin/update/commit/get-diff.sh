@@ -17,6 +17,6 @@ fi
 if [[ -f ${BIN_DIR}/commit/get-diff.sh ]]; then
     bash ${BIN_DIR}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 else
-    git -C ${GIT_DIR} checkout master
+    git -C ${GIT_DIR} checkout --quiet master
     git -C ${GIT_DIR} status --short ${COMMIT_TARGET_DIR}
 fi
