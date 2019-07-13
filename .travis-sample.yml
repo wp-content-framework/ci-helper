@@ -198,6 +198,11 @@ jobs:
       language: node_js
       node_js: '11'
       dist: trusty
+      env:
+        - GH_PAGES_PLUGIN_SCRIPT="./index.min.js"
+        - GH_PAGES_PLUGIN_STYLE="./index.css"
+        - GH_PAGES_TITLE="Test"
+        - GH_PAGES_TEMPLATE=gutenberg
       script: skip
       before_deploy:
         - source tests/bin/deploy/env.sh

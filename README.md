@@ -146,7 +146,7 @@ _.travis.yml_
         - bash tests/bin/deploy/wp-check-diff.sh
 ```
 #### Deploy
--  GitHub release  
+-  GitHub releases  
 1. Go to [Personal access tokens](https://github.com/settings/tokens).
 2. Generate token which has **repo** scope.
 3. Run `travis encrypt` command to encrypt the token ([Details](https://docs.travis-ci.com/user/encryption-keys/)).  
@@ -177,6 +177,36 @@ _.travis.yml_
         on:
           tags: true
 ```
+- GitHub pages
+1. Go to [Personal access tokens](https://github.com/settings/tokens).
+2. Generate token which has **repo** scope and set as Environment Variables _GITHUB_TOKEN_ in the settings page.
+3. Create script `bin/gh-pages/plugin.sh` or `bin/gh-pages/pre_setup.sh` to setup assets.
+
+_.travis.yml_
+```yaml
+    - stage: deploy
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      env:
+        - GH_PAGES_PLUGIN_SCRIPT="./index.min.js"
+        - GH_PAGES_PLUGIN_STYLE="./index.css"
+        - GH_PAGES_TITLE="Test"
+        - GH_PAGES_TEMPLATE=gutenberg
+      script: skip
+      before_deploy:
+        - source tests/bin/deploy/env.sh
+        - bash tests/bin/deploy/gh-pages.sh
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: ${GITHUB_TOKEN}
+        keep_history: true
+        local_dir: ${GH_PAGES_DIR}
+        on:
+          branch: master
+```
+
 - WP Directory
 1. Set Environment Variables _SVN_USER_ and _SVN_PASS_ in the settings page
 
