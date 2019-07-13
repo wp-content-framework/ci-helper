@@ -45,7 +45,8 @@ jobs:
       language: php
       php: '7.2'
       script:
-        - bash bin/update/travis-ci.sh
+        - bash bin/update/package.sh gh-pages/gutenberg
+        - bash bin/update/commit.sh
 
 
     - stage: deploy

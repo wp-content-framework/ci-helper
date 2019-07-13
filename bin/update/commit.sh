@@ -18,7 +18,7 @@ if [[ -z "${CI}" ]]; then
     if [[ -z "${diff}" ]]; then
         echo "There is no diff"
     else
-        echo ${diff}
+        echo "${diff}"
     fi
     echo "Prevent commit if local"
     exit
