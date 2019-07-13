@@ -11,10 +11,7 @@
     }
   ],
   "scripts": {
-    "bin:update": "composer bin:update1 && composer bin:update2 && composer bin:update3",
-    "bin:update1": "ncu -u --packageFile gh-pages/gutenberg/package.json",
-    "bin:update2": "yarn --audit --cwd gh-pages/gutenberg install",
-    "bin:update3": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) bash bin/update/commit.sh",
+    "bin:update": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) bash bin/update/travis-ci.sh",
     "bin:deploy": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) REPO_NAME=travis-ci TRAVIS_TAG=1.2.3 TRAVIS_BUILD_WEB_URL=http://example.com source bin/deploy/env.sh && bash bin/deploy/create.sh"
   }
 }
