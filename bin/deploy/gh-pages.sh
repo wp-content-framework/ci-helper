@@ -53,16 +53,16 @@ else
     find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_style___/d" file
 fi
 
-if [[ -n "${TRACKING_ID}" ]]; then
+if [[ -n "${GH_PAGES_TRACKING_ID}" ]]; then
     SCRIPT=$(cat << EOS
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=${GH_PAGES_TRACKING_ID}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '${TRACKING_ID}');
+  gtag('config', '${GH_PAGES_TRACKING_ID}');
 </script>
 EOS
 )
