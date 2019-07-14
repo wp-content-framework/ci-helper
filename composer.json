@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "bin:update": [
-      "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) bash bin/update/package.sh gh-pages/gutenberg",
+      "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) bash bin/self/package.sh",
       "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) bash bin/update/commit.sh"
     ],
     "bin:deploy": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) REPO_NAME=travis-ci TRAVIS_TAG=1.2.3 TRAVIS_BUILD_WEB_URL=http://example.com source bin/deploy/env.sh && bash bin/deploy/create.sh"
