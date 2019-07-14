@@ -6,14 +6,18 @@ current=$(cd $(dirname $0);
 pwd)
 source ${current}/../../variables.sh
 
-if [[ ! -f ${GH_PAGES_DIR}/package.json ]]; then
+if [[ ! -f ${GH_WORK_DIR}/template/package.json ]]; then
 	exit
 fi
 
-mv -n ${GH_PAGES_DIR}/yarn.lock ${GH_WORK_DIR}/ 2> /dev/null || :
-rm -f ${GH_PAGES_DIR}/yarn.lock
-mv -f ${GH_PAGES_DIR}/* ${GH_WORK_DIR}/
-mv -f ${GH_PAGES_DIR}/.??* ${GH_WORK_DIR}/ 2> /dev/null || :
+mv -n ${GH_WORK_DIR}/template/yarn.lock ${GH_WORK_DIR}/ 2> /dev/null || :
+rm -f ${GH_WORK_DIR}/template/yarn.lock
+mv -f ${GH_WORK_DIR}/template/* ${GH_WORK_DIR}/
+mv -f ${GH_WORK_DIR}/template/.??* ${GH_WORK_DIR}/ 2> /dev/null || :
+
+if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_install.sh ]]; then
+    bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_install.sh ${SCRIPT_DIR}
+fi
 
 yarn --cwd ${GH_WORK_DIR} install
 yarn --cwd ${GH_WORK_DIR} build

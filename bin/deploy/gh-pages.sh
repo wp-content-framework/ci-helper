@@ -17,12 +17,12 @@ GH_PAGES_APP_ID=${GH_PAGES_APP_ID:-"app"}
 echo ""
 echo ">> Prepare files"
 rm -rdf ${GH_PAGES_DIR}
-mkdir -p ${GH_WORK_DIR}
+mkdir -p ${GH_PAGES_DIR}
 
 if [[ -d ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ]]; then
-    cp -a ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ${GH_PAGES_DIR}
-else
-    mkdir -p ${GH_PAGES_DIR}
+    rm -rdf ${GH_WORK_DIR}/template
+    mkdir -p ${GH_WORK_DIR}
+    cp -a ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ${GH_WORK_DIR}/template
 fi
 
 if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_setup.sh ]]; then
