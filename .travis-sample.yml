@@ -18,6 +18,8 @@ cache:
   directories:
     - "${HOME}/.composer/cache"
     - node_modules
+    - "${TRAVIS_BUILD_DIR}/.plugin"
+    - "${TRAVIS_BUILD_DIR}/.work/cache"
 
 stages:
   - name: check
