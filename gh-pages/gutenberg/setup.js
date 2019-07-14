@@ -1,3 +1,5 @@
+import './packages'
+
 const blockEditor = require( '@wordpress/block-editor' );
 const blockLibrary = require( '@wordpress/block-library' );
 const blocks = require( '@wordpress/blocks' );
@@ -12,9 +14,9 @@ const i18n = require( '@wordpress/i18n' );
 const plugins = require( '@wordpress/plugins' );
 const richText = require( '@wordpress/rich-text' );
 const url = require( '@wordpress/url' );
-const lodash = require( 'lodash' );
+const lodash = require( "lodash" );
 
-window.wp = window.wp || {};
+
 window.wp.blockEditor = window.wp.blockEditor || blockEditor;
 window.wp.blockLibrary = window.wp.blockLibrary || blockLibrary;
 window.wp.blocks = window.wp.blocks || blocks;
