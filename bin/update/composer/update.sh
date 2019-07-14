@@ -14,4 +14,4 @@ source ${current}/../../variables.sh
 package=${1}
 working_dir=${2-${TRAVIS_BUILD_DIR}}
 
-composer require --working-dir=${working_dir} ${package}
+composer require --working-dir=${working_dir} --update-no-dev ${package}
