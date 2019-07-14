@@ -52,3 +52,22 @@ if [[ -n "${GH_PAGES_PLUGIN_STYLE}" ]]; then
 else
     find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_style___/d" file
 fi
+
+if [[ -n "${TRACKING_ID}" ]]; then
+    SCRIPT=$(cat << EOS
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${TRACKING_ID}');
+</script>
+EOS
+)
+    SCRIPT=$(echo ${SCRIPT} | sed -e 's/\n//g')
+    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___google_analytics___/${SCRIPT//\//\\/}/g" file
+else
+    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___google_analytics___/d" file
+fi

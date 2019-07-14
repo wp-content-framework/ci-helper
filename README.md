@@ -180,7 +180,7 @@ _.travis.yml_
 - GitHub pages
 1. Go to [Personal access tokens](https://github.com/settings/tokens).
 2. Generate token which has **repo** scope and set as Environment Variables _GITHUB_TOKEN_ in the settings page.
-3. Create script `bin/gh-pages/plugin.sh` or `bin/gh-pages/pre_setup.sh` to setup assets.
+3. Create script `bin/gh-pages/setup.sh`, `bin/gh-pages/pre_install.sh` or `bin/gh-pages/pre_setup.sh` to setup assets.
 
 _.travis.yml_
 ```yaml
@@ -193,6 +193,7 @@ _.travis.yml_
         - GH_PAGES_PLUGIN_STYLE="./index.css"
         - GH_PAGES_TITLE="Test"
         - GH_PAGES_TEMPLATE=gutenberg
+        - GH_PAGES_TRACKING_ID=UA-XXXXXXXX-X
       script: skip
       before_deploy:
         - source tests/bin/deploy/env.sh
