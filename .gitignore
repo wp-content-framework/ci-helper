@@ -34,3 +34,4 @@ node_modules
 /travis-ci
 composer.lock
 travis-ci.zip
+memo.txt
