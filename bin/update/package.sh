@@ -6,7 +6,15 @@ current=$(cd $(dirname $0);
 pwd)
 source ${current}/../variables.sh
 
-working_dir=${1-"${TRAVIS_BUILD_DIR}/assets/js"}
+if [[ -n "${1}" ]]; then
+    working_dir=${1}
+else
+    if [[ -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
+        working_dir=${TRAVIS_BUILD_DIR}/assets/js
+    else
+        working_dir=${TRAVIS_BUILD_DIR}
+    fi
+fi
 
 if [[ ! -f ${working_dir}/package.json ]]; then
     echo ""
