@@ -8,4 +8,4 @@ source ${current}/../variables.sh
 
 echo ""
 echo ">> Run yarn install."
-yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js install
+yarn --cwd ${JS_DIR} install
