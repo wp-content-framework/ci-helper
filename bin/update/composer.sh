@@ -9,7 +9,7 @@ source ${current}/../variables.sh
 if [[ ! -f ${BIN_DIR}/packages.sh ]]; then
     echo ""
     echo "${BIN_DIR}/packages.sh is not exist"
-    exit 1
+    exit
 fi
 
 working_dir=${1-${TRAVIS_BUILD_DIR}}
