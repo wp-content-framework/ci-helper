@@ -23,8 +23,4 @@ fi
 packages=()
 source ${BIN_DIR}/packages.sh
 
-for package in "${packages[@]}"
-do
-    ${current}/composer/update.sh ${package} ${working_dir}
-done
-
+composer require --working-dir=${working_dir} --update-no-dev ${packages[@]}
