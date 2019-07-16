@@ -72,5 +72,5 @@ function App() {
 registerCoreBlocks();
 render(
 	<App/>,
-	document.querySelector( '#app' ),
+	document.querySelector( '#___app_id___' ),
 );
