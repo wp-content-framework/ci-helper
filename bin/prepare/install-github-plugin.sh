@@ -18,7 +18,7 @@ if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/.git ]]; then
 fi
 
 git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} fetch -p
-git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} reset --hard
+git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} reset --hard origin/HEAD
 git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} pull
 
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
