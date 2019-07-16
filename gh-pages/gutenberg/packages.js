@@ -16,7 +16,7 @@ const dataControls = require( "@wordpress/data-controls" );
 const date = require( "@wordpress/date" );
 const deprecated = require( "@wordpress/deprecated" );
 const dom = require( "@wordpress/dom" );
-const domReady = require( "@wordpress/dom-ready" );
+import domReady from "@wordpress/dom-ready";
 const editPost = require( "@wordpress/edit-post" );
 const editor = require( "@wordpress/editor" );
 const element = require( "@wordpress/element" );
