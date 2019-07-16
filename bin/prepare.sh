@@ -57,17 +57,25 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
         bash ${SCRIPT_DIR}/prepare/install-zip-plugin.sh ${plugin}
     done
 
-    echo ""
-    echo ">> Install latest node."
-    source ${SCRIPT_DIR}/prepare/install-latest-node.sh
-
-    if [[ ! -f ~/.ssh/config ]] || [[ -z $(< ~/.ssh/config grep github) ]]; then
-        echo ">> Write to ssh config."
-        echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-    fi
-    for plugin in "${github_plugins[@]}"
+    find ${TRAVIS_BUILD_DIR}/.plugin -mindepth 2 -maxdepth 2 -type d -name .git | sed -e 's/\/\.git//' | xargs basename | while read plugin
     do
-        echo ">>>> ${plugin}"
-        bash ${SCRIPT_DIR}/prepare/install-github-plugin.sh ${plugin}
+        if [[ ! "${github_plugins[*]} " == *"/${plugin} "* ]]; then
+            rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${plugin}
+        fi
     done
+    if [[ ${#github_plugins[@]} -gt 0 ]]; then
+        echo ""
+        echo ">> Install latest node."
+        source ${SCRIPT_DIR}/prepare/install-latest-node.sh
+
+        if [[ ! -f ~/.ssh/config ]] || [[ -z $(< ~/.ssh/config grep github) ]]; then
+            echo ">> Write to ssh config."
+            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+        fi
+        for plugin in "${github_plugins[@]}"
+        do
+            echo ">>>> ${plugin}"
+            bash ${SCRIPT_DIR}/prepare/install-github-plugin.sh ${plugin}
+        done
+    fi
 fi
