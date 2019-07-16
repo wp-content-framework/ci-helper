@@ -21,6 +21,11 @@ if [[ -z "${SVN_URL}" ]]; then
 	exit
 fi
 
+if [[ -z "${SVN_USER}" ]] || [[ -z "${SVN_PASS}" ]]; then
+	echo "<SVN_USER>, <SVN_PASS> are required."
+	exit
+fi
+
 set +e
 if [[ -z $(svn ls ${SVN_URL}) ]]; then
 	echo "repository [${SVN_URL}] is not exists."
