@@ -2,6 +2,7 @@
 
 set -e
 
+REPO_NAME=${TRAVIS_REPO_SLUG##*/}
 export RELEASE_FILE=${REPO_NAME}.zip
 export RELEASE_TITLE=${TRAVIS_TAG}
 export RELEASE_TAG=${TRAVIS_TAG}
