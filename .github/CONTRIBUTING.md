@@ -12,7 +12,6 @@ Please note we have a [Contributor Code of Conduct][code-of-conduct], please fol
 
 1. [Fork][fork] and clone the repository
 1. Create a new branch: `git checkout -b my-branch-name`
-1. Make your change, add tests, and make sure the tests still pass.
 1. Push to your fork and [submit a pull request][pr].
 1. Pat your self on the back and wait for your pull request to be reviewed and merged.
 
