@@ -19,6 +19,9 @@ BIN_DIR=${TRAVIS_BUILD_DIR}/bin
 JS_DIR=${ASSETS_DIR}/js
 CSS_DIR=${ASSETS_DIR}/css
 IMG_DIR=${ASSETS_DIR}/img
+if [[ ! -f ${JS_DIR}/package.json ]] && [[ -f ${TRAVIS_BUILD_DIR}/package.json ]]; then
+    JS_DIR=${TRAVIS_BUILD_DIR}
+fi
 
 LIBRARY_BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
 SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
