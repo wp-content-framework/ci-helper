@@ -19,13 +19,19 @@ do
         cp ${SETTINGS_DIR}/${file} ${TRAVIS_BUILD_DIR}/${file}
     fi
 done
+
 if [[ ! -f ${TRAVIS_BUILD_DIR}/phpcs.xml ]]; then
-    echo ">>>> phpcs.xml"
-    if [[ -d ${TRAVIS_BUILD_DIR}/configs ]]; then
-        cp ${SETTINGS_DIR}/phpcs.xml ${TRAVIS_BUILD_DIR}/phpcs.xml
-    else
-        cp ${SETTINGS_DIR}/phpcs_no_configs.xml ${TRAVIS_BUILD_DIR}/phpcs.xml
-    fi
+	echo ">>>> phpcs.xml"
+	sed -i -e 's/phpmd .\+\.xml/phpmd .\/src\/,.\/configs\/,.\/tests\/ text phpmd.xml/' ${TRAVIS_BUILD_DIR}/composer.json
+	cp ${SETTINGS_DIR}/phpcs.xml ${TRAVIS_BUILD_DIR}/phpcs.xml
+	if [[ ! -d ${TRAVIS_BUILD_DIR}/configs ]]; then
+		sed -i -e '/\.\/configs\//d' ${TRAVIS_BUILD_DIR}/phpcs.xml
+		sed -i -e 's/,\.\/configs\///' ${TRAVIS_BUILD_DIR}/composer.json
+	fi
+	if [[ ! -d ${TRAVIS_BUILD_DIR}/tests ]]; then
+		sed -i -e '/\.\/tests\//d' ${TRAVIS_BUILD_DIR}/phpcs.xml
+		sed -i -e 's/,\.\/tests\///' ${TRAVIS_BUILD_DIR}/composer.json
+	fi
 fi
 
 files=()
