@@ -85,3 +85,7 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
         done
     fi
 fi
+
+if [[ -n "${CI}" ]]; then
+    sed -i -e '/"php": "[\.0-9]\+"/d' ${TRAVIS_BUILD_DIR}/composer.json
+fi
