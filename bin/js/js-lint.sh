@@ -17,7 +17,7 @@ if [[ -z $(yarn --cwd ${JS_DIR} --non-interactive run | grep "\- lint$") ]]; the
 fi
 
 bash ${SCRIPT_DIR}/js/install-npm.sh
-ls -la ${JS_DIR}/node_modules
+ls -la ${JS_DIR}/node_modules/.bin
 
 echo ""
 echo ">> Run yarn lint."
