@@ -17,14 +17,14 @@ if [[ -f ${TRAVIS_BUILD_DIR}/composer.json ]]; then
     composer install --no-dev --working-dir=${TRAVIS_BUILD_DIR}
 fi
 
-if [[ -f ${TRAVIS_BUILD_DIR}/assets/js/package.json ]]; then
+if [[ -f ${JS_DIR}/package.json ]] && [[ -n $(yarn --cwd ${JS_DIR} --non-interactive run | grep "\- build$") ]]; then
     echo ""
     echo ">> Run yarn install."
-    yarn --audit --cwd ${TRAVIS_BUILD_DIR}/assets/js install
+    yarn --audit --cwd ${JS_DIR} install
 
     echo ""
     echo ">> Run yarn build."
-    yarn --cwd ${TRAVIS_BUILD_DIR}/assets/js build
+    yarn --cwd ${JS_DIR} build
 fi
 
 rm -rdf ${PACKAGE_DIR}
