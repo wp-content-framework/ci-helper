@@ -32,6 +32,9 @@ fi
 
 echo ""
 echo ">> Check diff"
+if [[ -z "${COMMIT_TARGET_DIR}" ]] && [[ -f ${GIT_DIR}/composer.json ]]; then
+	git -C ${GIT_DIR} checkout composer.json
+fi
 if [[ -z "$(bash ${current}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR})" ]]; then
     echo "There is no diff"
     exit
