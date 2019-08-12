@@ -25,3 +25,4 @@ yarn --cwd ${GH_WORK_DIR} build
 mv -f ${GH_WORK_DIR}/index.html ${GH_PAGES_DIR}/
 mv -f ${GH_WORK_DIR}/setup.min.js ${GH_PAGES_DIR}/
 mv -f ${GH_WORK_DIR}/.htaccess ${GH_PAGES_DIR}/
+mv -f ${GH_WORK_DIR}/favicon.ico ${GH_PAGES_DIR}/
