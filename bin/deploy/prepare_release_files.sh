@@ -20,8 +20,7 @@ fi
 if [[ -f ${JS_DIR}/package.json ]] && [[ -n $(yarn --cwd ${JS_DIR} --non-interactive run | grep "\- build$") ]]; then
     echo ""
     echo ">> Run yarn install."
-    yarn --audit --cwd ${JS_DIR} install
-    yarn --cwd ${JS_DIR} add --force node-sass
+    yarn --audit --force --cwd ${JS_DIR} install
 
     echo ""
     echo ">> Run yarn build."

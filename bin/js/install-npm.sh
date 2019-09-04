@@ -8,5 +8,4 @@ source ${current}/../variables.sh
 
 echo ""
 echo ">> Run yarn install."
-yarn --cwd ${JS_DIR} install
-yarn --cwd ${JS_DIR} add --force node-sass
+yarn --force --cwd ${JS_DIR} install --force
