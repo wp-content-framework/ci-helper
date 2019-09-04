@@ -8,4 +8,4 @@ source ${current}/../variables.sh
 
 echo ""
 echo ">> Run yarn install."
-yarn --force --cwd ${JS_DIR} install --force
+yarn --cwd ${JS_DIR} install

@@ -26,4 +26,4 @@ if [[ -z $(command -v ncu) ]]; then
     npm install -g npm-check-updates
 fi
 ncu -u --packageFile ${working_dir}/package.json
-yarn --audit --force --cwd ${working_dir} install
+yarn --audit --cwd ${working_dir} install
