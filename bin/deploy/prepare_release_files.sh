@@ -21,6 +21,7 @@ if [[ -f ${JS_DIR}/package.json ]] && [[ -n $(yarn --cwd ${JS_DIR} --non-interac
     echo ""
     echo ">> Run yarn install."
     yarn --audit --cwd ${JS_DIR} install
+    yarn --cwd ${JS_DIR} add --force node-sass
 
     echo ""
     echo ">> Run yarn build."

@@ -27,3 +27,4 @@ if [[ -z $(command -v ncu) ]]; then
 fi
 ncu -u --packageFile ${working_dir}/package.json
 yarn --audit --cwd ${working_dir} install
+yarn --cwd ${working_dir} add --force node-sass
