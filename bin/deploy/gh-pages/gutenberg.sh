@@ -29,6 +29,7 @@ if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_install.sh ]]; then
 fi
 
 yarn --cwd ${GH_WORK_DIR} install
+yarn --cwd ${GH_WORK_DIR} add --force node-sass
 yarn --cwd ${GH_WORK_DIR} build
 
 mv -f ${GH_WORK_DIR}/index.html ${GH_PAGES_DIR}/
