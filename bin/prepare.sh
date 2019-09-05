@@ -76,6 +76,7 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
 
         if [[ ! -f ~/.ssh/config ]] || [[ -z $(< ~/.ssh/config grep github) ]]; then
             echo ">> Write to ssh config."
+            mkdir -p ~/.ssh
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
         fi
         for plugin in "${github_plugins[@]}"
