@@ -6,6 +6,9 @@ set -e
 NODE_JS_VERSION=${NODE_JS_VERSION:-11}
 
 export NVM_DIR="${HOME}/.nvm"
+if [[ ! -d ${NVM_DIR} ]]; then
+  mkdir -p "${NVM_DIR}"
+fi
 curl -o ${NVM_DIR}/nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/master/nvm.sh
 
 [[ -s "${NVM_DIR}/nvm.sh" ]] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
