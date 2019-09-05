@@ -14,5 +14,5 @@ else
 	echo "xdebug.ini does not exist"
 fi
 
-bash ${SCRIPT_DIR}/php/install-wp-tests.sh wordpress_test root '' localhost ${WP_VERSION}
+bash ${SCRIPT_DIR}/php/install-wp-tests.sh ${DB_NAME:-wordpress_test} ${DB_USER:-root} ${DB_PASS:-''} ${DB_HOST:-localhost} ${WP_VERSION}
 bash ${SCRIPT_DIR}/php/install-composer.sh
