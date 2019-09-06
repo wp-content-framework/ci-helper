@@ -32,7 +32,7 @@ if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} ]]; then
   unzip ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -d ${TRAVIS_BUILD_DIR}/.plugin
 fi
 
-if [[ -n "${WP_VERSION}" && ${WP_VERSION} != "latest" ]]; then
+if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ ]]; then
   REQUIRED_VERSION=$(cat ${README} | grep "Requires at least" | sed -e 's/Requires at least:\s*//')
   if [[ -n "${REQUIRED_VERSION}" ]]; then
     echo "Required version: ${REQUIRED_VERSION}"
