@@ -88,5 +88,13 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
 fi
 
 if [[ -n "${CI}" ]]; then
-    sed -i -e '/"php": "[\.0-9]\+"/d' ${TRAVIS_BUILD_DIR}/composer.json
+  sed -i -e '/"php": "[\.0-9]\+"/d' ${TRAVIS_BUILD_DIR}/composer.json
+
+  if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ ]]; then
+    PHPUNIT7_VERSION=5.1
+    if [[ "${PHPUNIT7_VERSION}" != $(echo -e "${PHPUNIT7_VERSION}\n${WP_VERSION}" | sort -V | head -n1) ]]; then
+      rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+      sed -i -e 's/"phpunit\/phpunit":.\+/"phpunit\/phpunit": "^4.8 || ^5.7 || ^6"/' ${TRAVIS_BUILD_DIR}/composer.json
+    fi
+  fi
 fi
