@@ -28,8 +28,13 @@ if [[ ! -f ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} ]]; then
   rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
   curl -s ${WP_PLUGIN} -o ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME}
 fi
-if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} ]]; then
-  unzip ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -d ${TRAVIS_BUILD_DIR}/.plugin
+
+UNZIP=0
+if [[ ! -f ${README} ]]; then
+  mkdir ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+  unzip -p ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} ${PLUGIN_SLUG}/readme.txt >${README}
+  ls -la ${README}
+  UNZIP=1
 fi
 
 if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ ]]; then
@@ -40,6 +45,13 @@ if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ ]]; then
     if [[ "${REQUIRED_VERSION}" != $(echo -e "${REQUIRED_VERSION}\n${WP_VERSION}" | sort -V | head -n1) ]]; then
       echo "Not enough version..."
       rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+      UNZIP=0
     fi
   fi
+fi
+echo "${UNZIP}"
+
+if [[ ${UNZIP} == 1 ]]; then
+  rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+  unzip ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -d ${TRAVIS_BUILD_DIR}/.plugin
 fi
