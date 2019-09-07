@@ -15,10 +15,10 @@ echo ""
 echo ">> Prepare release files."
 bash ${SCRIPT_DIR}/deploy/prepare_release_files.sh
 
-pushd ${PACKAGE_DIR}
+pushd ${WORK_DIR}
 echo ""
 echo ">> Create zip file."
-zip -9 -qr ${TRAVIS_BUILD_DIR}/${RELEASE_FILE} .
+zip -9 -qr ${TRAVIS_BUILD_DIR}/${RELEASE_FILE} ${RELEASE_DIR_NAME}
 pushd
 
 ls -la ${RELEASE_FILE}
