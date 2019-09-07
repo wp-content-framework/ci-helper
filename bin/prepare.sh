@@ -51,7 +51,6 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
     mkdir -p ${TRAVIS_BUILD_DIR}/.plugin
     source ${SCRIPT_DIR}/plugins.sh
 
-    sudo apt-get install -y unar
     for plugin in "${org_plugins[@]}"
     do
         echo ">>>> ${plugin}"

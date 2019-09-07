@@ -52,5 +52,10 @@ fi
 
 if [[ ${UNZIP} == 1 ]]; then
   rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
-  unar ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -o ${TRAVIS_BUILD_DIR}/.plugin
+
+  if type unar >/dev/null 2>&1; then
+    unar ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -o ${TRAVIS_BUILD_DIR}/.plugin
+  else
+    unzip ${TRAVIS_BUILD_DIR}/.plugin/${FILE_NAME} -d ${TRAVIS_BUILD_DIR}/.plugin
+  fi
 fi
