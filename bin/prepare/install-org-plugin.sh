@@ -49,7 +49,6 @@ if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ ]]; then
     fi
   fi
 fi
-echo "${UNZIP}"
 
 if [[ ${UNZIP} == 1 ]]; then
   rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
