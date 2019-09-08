@@ -93,7 +93,7 @@ if [[ -n "${CI}" ]]; then
   if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ ]]; then
     PHPUNIT7_VERSION=5.1
     if [[ "${PHPUNIT7_VERSION}" != $(echo -e "${PHPUNIT7_VERSION}\n${WP_VERSION}" | sort -V | head -n1) ]]; then
-      sed -i -e 's/"phpunit\/phpunit":.\+/"phpunit\/phpunit": "^4.8 || ^5.7 || ^6"/' ${TRAVIS_BUILD_DIR}/composer.json
+      sed -i -e 's/"phpunit\/phpunit":[^,]\+\(,\?\)$/"phpunit\/phpunit": "^4.8 || ^5.7 || ^6"\1/' ${TRAVIS_BUILD_DIR}/composer.json
     fi
   fi
 fi
