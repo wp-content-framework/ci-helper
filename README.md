@@ -193,7 +193,6 @@ _.travis.yml_
         file: ${RELEASE_FILE}
         api_key:
           secure: <encrypted token>
-        draft: true
         overwrite: true
         on:
           tags: true

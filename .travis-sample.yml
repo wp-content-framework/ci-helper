@@ -177,7 +177,6 @@ jobs:
         file: ${RELEASE_FILE}
         api_key:
           secure: <secure token>
-        draft: true
         overwrite: true
         on:
           tags: true
