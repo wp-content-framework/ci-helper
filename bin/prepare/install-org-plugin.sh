@@ -38,14 +38,17 @@ if [[ ! -f ${README} ]]; then
 fi
 
 if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ && -z "${IGNORE_PLUGIN_VERSION}" ]]; then
-  REQUIRED_VERSION=$(cat ${README} | grep "Requires at least" | sed -e 's/Requires at least:\s*//')
-  if [[ -n "${REQUIRED_VERSION}" ]]; then
-    echo "Required version: ${REQUIRED_VERSION}"
-    echo "WP version: ${WP_VERSION}"
-    if [[ "${REQUIRED_VERSION}" != $(echo -e "${REQUIRED_VERSION}\n${WP_VERSION}" | sort -V | head -n1) ]]; then
-      echo "Not enough version..."
-      rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
-      UNZIP=0
+  IGNORE_EACH_PLUGIN_VERSION=$(eval echo '$'IGNORE_${PLUGIN_SLUG^^}_VERSION)
+  if [[ -z "${IGNORE_EACH_PLUGIN_VERSION}" ]]; then
+    REQUIRED_VERSION=$(cat ${README} | grep "Requires at least" | sed -e 's/Requires at least:\s*//')
+    if [[ -n "${REQUIRED_VERSION}" ]]; then
+      echo "Required version: ${REQUIRED_VERSION}"
+      echo "WP version: ${WP_VERSION}"
+      if [[ "${REQUIRED_VERSION}" != $(echo -e "${REQUIRED_VERSION}\n${WP_VERSION}" | sort -V | head -n1) ]]; then
+        echo "Not enough version..."
+        rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+        UNZIP=0
+      fi
     fi
   fi
 fi
