@@ -39,7 +39,7 @@ fi
 
 if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ && -z "${IGNORE_PLUGIN_VERSION}" ]]; then
   UPPER_CASE_SLUG=${PLUGIN_SLUG^^}
-  IGNORE_EACH_PLUGIN_VERSION=$(eval echo '$'IGNORE_${UPPER_CASE_SLUG/-/_}_VERSION)
+  IGNORE_EACH_PLUGIN_VERSION=$(eval echo '$'IGNORE_${UPPER_CASE_SLUG//-/_}_VERSION)
   if [[ -z "${IGNORE_EACH_PLUGIN_VERSION}" ]]; then
     REQUIRED_VERSION=$(cat ${README} | grep "Requires at least" | sed -e 's/Requires at least:\s*//')
     if [[ -n "${REQUIRED_VERSION}" ]]; then
