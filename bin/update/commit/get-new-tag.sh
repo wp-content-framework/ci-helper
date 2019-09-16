@@ -12,6 +12,6 @@ if [[ ! -d ${TRAVIS_BUILD_DIR}/.git ]]; then
 fi
 
 git -C ${TRAVIS_BUILD_DIR} fetch -p --tags
-LAST_TAG=$(git -C ${TRAVIS_BUILD_DIR} for-each-ref --sort=taggerdate --format='%(tag)' refs/tags | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+" | tail -n 1)
+LAST_TAG=$(git -C ${TRAVIS_BUILD_DIR} tag -l --sort=-v:refname | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+" | head -n 1)
 
 bash ${current}/generate-new-tag.sh ${LAST_TAG}
