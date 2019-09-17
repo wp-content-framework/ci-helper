@@ -34,7 +34,7 @@
     "@wordpress/deprecated": "^2.6.0",
     "@wordpress/dom": "^2.5.0",
     "@wordpress/dom-ready": "^2.5.0",
-    "@wordpress/edit-post": "^3.7.0",
+    "@wordpress/edit-post": "^3.8.0",
     "@wordpress/editor": "^9.6.0",
     "@wordpress/element": "^2.7.0",
     "@wordpress/escape-html": "^1.5.0",
