@@ -1,5 +1,5 @@
 const SpeedMeasurePlugin = require( 'speed-measure-webpack-plugin' );
-const smp = new SpeedMeasurePlugin();
+const TerserPlugin = require( 'terser-webpack-plugin' );
 const webpack = require( 'webpack' );
 const pkg = require( './package' );
 
@@ -28,6 +28,19 @@ const webpackConfig = {
 	plugins: [
 		new webpack.BannerPlugin( banner ),
 	],
+	optimization: {
+		minimize: true,
+		minimizer: [
+			new TerserPlugin( {
+				terserOptions: {
+					compress: {
+						reduce_vars: false,
+					},
+					mangle: true,
+				},
+			} ),
+		],
+	},
 };
 
-module.exports = smp.wrap( webpackConfig );
+module.exports = ( new SpeedMeasurePlugin() ).wrap( webpackConfig );
