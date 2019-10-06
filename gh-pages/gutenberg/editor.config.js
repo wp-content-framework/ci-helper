@@ -34,10 +34,14 @@ const webpackConfig = {
 			new TerserPlugin( {
 				terserOptions: {
 					compress: {
-						reduce_vars: false,
+						'reduce_vars': false,
 					},
 					mangle: true,
+					output: {
+						comments: /^\**!|@preserve|license|@cc_on/i,
+					},
 				},
+				extractComments: false,
 			} ),
 		],
 	},
