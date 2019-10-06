@@ -26,10 +26,10 @@ if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
 fi
 
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/package.json ]]; then
-    yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} --audit install
+    yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} install
     yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} build
 fi
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js/package.json ]]; then
-    yarn --audit --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js install
+    yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js install
     yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js build
 fi
