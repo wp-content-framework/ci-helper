@@ -8,10 +8,6 @@ if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
 fi
 
 if [[ -z "${TRAVIS_REPO_SLUG}" ]]; then
-  if [[ -z "${GITHUB_REPOSITORY}" ]]; then
-    echo "<TRAVIS_REPO_SLUG> or <GITHUB_REPOSITORY> is required"
-    exit 1
-  fi
   REPO_NAME=${GITHUB_REPOSITORY##*/}
 else
   REPO_NAME=${TRAVIS_REPO_SLUG##*/}
