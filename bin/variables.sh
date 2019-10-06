@@ -7,7 +7,15 @@ if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
 	exit 1
 fi
 
-REPO_NAME=${TRAVIS_REPO_SLUG##*/}
+if [[ -z "${TRAVIS_REPO_SLUG}" ]]; then
+  if [[ -z "${GITHUB_REPOSITORY}" ]]; then
+    echo "<TRAVIS_REPO_SLUG> or <GITHUB_REPOSITORY> is required"
+    exit 1
+  fi
+  REPO_NAME=${GITHUB_REPOSITORY##*/}
+else
+  REPO_NAME=${TRAVIS_REPO_SLUG##*/}
+fi
 WORK_DIR=${TRAVIS_BUILD_DIR}/.work
 CACHE_WORK_DIR=${TRAVIS_BUILD_DIR}/.work/cache
 GH_WORK_DIR=${CACHE_WORK_DIR}/playground
