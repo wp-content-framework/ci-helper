@@ -14,6 +14,8 @@ fi
 echo ""
 echo ">> Prepare release files."
 bash ${SCRIPT_DIR}/deploy/prepare_release_files.sh
+ls -lat ${WORK_DIR}/${PACKAGE_DIR_NAME}
+ls -lat ${PACKAGE_DIR}
 
 echo ""
 echo ">> Create zip file."
