@@ -28,6 +28,7 @@ if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_install.sh ]]; then
     bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_install.sh ${SCRIPT_DIR}
 fi
 
+yarn --cwd ${GH_WORK_DIR} cache clean
 yarn --cwd ${GH_WORK_DIR} install
 yarn --cwd ${GH_WORK_DIR} build
 

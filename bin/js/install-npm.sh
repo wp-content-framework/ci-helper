@@ -8,4 +8,5 @@ source ${current}/../variables.sh
 
 echo ""
 echo ">> Run yarn install."
+yarn --cwd ${JS_DIR} cache clean
 yarn --cwd ${JS_DIR} install
