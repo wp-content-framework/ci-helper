@@ -29,4 +29,3 @@ ncu -u --packageFile ${working_dir}/package.json
 yarn --cwd ${working_dir} cache clean
 yarn --cwd ${working_dir} install
 yarn --cwd ${working_dir} upgrade
-yarn --cwd ${working_dir} audit
