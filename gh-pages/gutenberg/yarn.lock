@@ -897,9 +897,9 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/block-serialization-spec-parser@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-serialization-spec-parser/-/block-serialization-spec-parser-3.3.0.tgz#92ff32bd8014b8f4ae518245cec8213d0d96c6fd"
+"@wordpress/block-serialization-spec-parser@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-serialization-spec-parser/-/block-serialization-spec-parser-3.3.1.tgz#ac1d6c15190bfe6c0e69e4ab70e1631ade9e36c5"
   dependencies:
     pegjs "^0.10.0"
     phpegjs "^1.0.0-beta7"
