@@ -789,9 +789,9 @@
     "@wordpress/i18n" "^3.6.1"
     "@wordpress/url" "^2.8.0"
 
-"@wordpress/autop@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/autop/-/autop-2.5.0.tgz#00fb0f219c55874adcd6a79467467f6e92c47fea"
+"@wordpress/autop@^2.5.0", "@wordpress/autop@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/autop/-/autop-2.5.1.tgz#fdf2d94e65f21c35d0dd72af1eceaa0a22cd7aed"
   dependencies:
     "@babel/runtime" "^7.4.4"
 

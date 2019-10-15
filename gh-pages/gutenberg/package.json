@@ -17,7 +17,7 @@
     "@wordpress/a11y": "^2.5.0",
     "@wordpress/annotations": "^1.7.1",
     "@wordpress/api-fetch": "^3.6.1",
-    "@wordpress/autop": "^2.5.0",
+    "@wordpress/autop": "^2.5.1",
     "@wordpress/babel-plugin-import-jsx-pragma": "^2.3.0",
     "@wordpress/blob": "^2.5.0",
     "@wordpress/block-directory": "^1.0.1",
