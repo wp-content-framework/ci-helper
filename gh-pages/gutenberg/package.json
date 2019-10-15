@@ -26,7 +26,7 @@
     "@wordpress/block-serialization-default-parser": "^3.4.0",
     "@wordpress/block-serialization-spec-parser": "^3.3.0",
     "@wordpress/blocks": "^6.7.1",
-    "@wordpress/components": "^8.3.1",
+    "@wordpress/components": "^8.3.2",
     "@wordpress/compose": "^3.7.1",
     "@wordpress/core-data": "^2.7.1",
     "@wordpress/data": "^4.9.1",
