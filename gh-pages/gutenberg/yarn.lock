@@ -761,37 +761,37 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@wordpress/a11y@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/a11y/-/a11y-2.5.0.tgz#18e3568e354fa8f9df16c1ec80c2df0c80af6bed"
+"@wordpress/a11y@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/a11y/-/a11y-2.5.1.tgz#b87e2c5c318038c182fafd8bec9516bd8d30f7a8"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/dom-ready" "^2.5.0"
+    "@wordpress/dom-ready" "^2.5.1"
 
-"@wordpress/annotations@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/annotations/-/annotations-1.7.1.tgz#ee689ad7312ce8b6af59d5f8b423dd19694084e2"
+"@wordpress/annotations@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/annotations/-/annotations-1.7.2.tgz#e431e26281d15443b1e192a8d474945ede7021ab"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/data" "^4.9.1"
+    "@wordpress/data" "^4.9.2"
     "@wordpress/hooks" "^2.6.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/rich-text" "^3.7.1"
+    "@wordpress/rich-text" "^3.7.2"
     lodash "^4.17.15"
     rememo "^3.0.0"
     uuid "^3.3.2"
 
-"@wordpress/api-fetch@^3.6.1":
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.1.tgz#e696140874c58f3c053b57f0506ae4becd3d5c70"
+"@wordpress/api-fetch@^3.6.2":
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.2.tgz#7454054c924c735d3717d81c49df8c357618f3d1"
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/url" "^2.8.0"
+    "@wordpress/url" "^2.8.1"
 
-"@wordpress/autop@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/autop/-/autop-2.5.0.tgz#00fb0f219c55874adcd6a79467467f6e92c47fea"
+"@wordpress/autop@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/autop/-/autop-2.5.1.tgz#fdf2d94e65f21c35d0dd72af1eceaa0a22cd7aed"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
@@ -799,50 +799,50 @@
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@wordpress/babel-plugin-import-jsx-pragma/-/babel-plugin-import-jsx-pragma-2.3.0.tgz#330b736fa383437ce1abc442f6cf61cd46437ee9"
 
-"@wordpress/blob@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/blob/-/blob-2.5.0.tgz#6177163e8b6b30c68fc22b2d25d080afc21f0100"
+"@wordpress/blob@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/blob/-/blob-2.5.1.tgz#ca1ab6595b185cf6f4cbfed18c17ac6c38c238e5"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/block-directory@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-directory/-/block-directory-1.0.1.tgz#327dac49b0f40f78083b7914cdd7cc95e91aea16"
+"@wordpress/block-directory@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-directory/-/block-directory-1.0.2.tgz#630840ad4c701a2fad26fdfe37a071cbd59a6949"
   dependencies:
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/block-editor" "^3.2.1"
-    "@wordpress/blocks" "^6.7.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/block-editor" "^3.2.2"
+    "@wordpress/blocks" "^6.7.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
 
-"@wordpress/block-editor@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-editor/-/block-editor-3.2.1.tgz#98fe618459cc0e5aa1ec14cf85568bd9e3c54b2a"
+"@wordpress/block-editor@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-editor/-/block-editor-3.2.2.tgz#acafe58b6b68e0f58d28053dea1f9a0f46fcfc2f"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/a11y" "^2.5.0"
-    "@wordpress/blob" "^2.5.0"
-    "@wordpress/blocks" "^6.7.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/dom" "^2.5.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/a11y" "^2.5.1"
+    "@wordpress/blob" "^2.5.1"
+    "@wordpress/blocks" "^6.7.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/dom" "^2.5.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/hooks" "^2.6.0"
     "@wordpress/html-entities" "^2.5.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/keycodes" "^2.6.1"
-    "@wordpress/rich-text" "^3.7.1"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/keycodes" "^2.6.2"
+    "@wordpress/rich-text" "^3.7.2"
     "@wordpress/token-list" "^1.6.1"
-    "@wordpress/url" "^2.8.0"
-    "@wordpress/viewport" "^2.8.1"
-    "@wordpress/wordcount" "^2.6.1"
+    "@wordpress/url" "^2.8.1"
+    "@wordpress/viewport" "^2.8.2"
+    "@wordpress/wordcount" "^2.6.2"
     classnames "^2.2.5"
     diff "^3.5.0"
     dom-scroll-into-view "^1.2.1"
@@ -857,32 +857,32 @@
     tinycolor2 "^1.4.1"
     traverse "^0.6.6"
 
-"@wordpress/block-library@^2.9.1":
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-library/-/block-library-2.9.1.tgz#5154da835d4365222d3e6d5c941e00b1b3fdc251"
+"@wordpress/block-library@^2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-library/-/block-library-2.9.2.tgz#5d62b555274ac4ab1b8a029a49fa03a13ad512bb"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/a11y" "^2.5.0"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/autop" "^2.5.0"
-    "@wordpress/blob" "^2.5.0"
-    "@wordpress/block-editor" "^3.2.1"
-    "@wordpress/blocks" "^6.7.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/core-data" "^2.7.1"
-    "@wordpress/data" "^4.9.1"
+    "@wordpress/a11y" "^2.5.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/autop" "^2.5.1"
+    "@wordpress/blob" "^2.5.1"
+    "@wordpress/block-editor" "^3.2.2"
+    "@wordpress/blocks" "^6.7.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/core-data" "^2.7.2"
+    "@wordpress/data" "^4.9.2"
     "@wordpress/date" "^3.5.0"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/editor" "^9.7.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/editor" "^9.7.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/keycodes" "^2.6.1"
-    "@wordpress/rich-text" "^3.7.1"
-    "@wordpress/server-side-render" "^1.3.1"
-    "@wordpress/url" "^2.8.0"
-    "@wordpress/viewport" "^2.8.1"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/keycodes" "^2.6.2"
+    "@wordpress/rich-text" "^3.7.2"
+    "@wordpress/server-side-render" "^1.3.2"
+    "@wordpress/url" "^2.8.1"
+    "@wordpress/viewport" "^2.8.2"
     classnames "^2.2.5"
     fast-average-color "4.3.0"
     lodash "^4.17.15"
@@ -891,35 +891,35 @@
     tinycolor2 "^1.4.1"
     url "^0.11.0"
 
-"@wordpress/block-serialization-default-parser@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-serialization-default-parser/-/block-serialization-default-parser-3.4.0.tgz#4766a8eecd57f381a60c60f770e923f07d915379"
+"@wordpress/block-serialization-default-parser@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-serialization-default-parser/-/block-serialization-default-parser-3.4.1.tgz#0eea76f37d6c9e817151956479563410423d4bb6"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/block-serialization-spec-parser@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-serialization-spec-parser/-/block-serialization-spec-parser-3.3.0.tgz#92ff32bd8014b8f4ae518245cec8213d0d96c6fd"
+"@wordpress/block-serialization-spec-parser@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-serialization-spec-parser/-/block-serialization-spec-parser-3.3.1.tgz#ac1d6c15190bfe6c0e69e4ab70e1631ade9e36c5"
   dependencies:
     pegjs "^0.10.0"
     phpegjs "^1.0.0-beta7"
 
-"@wordpress/blocks@^6.7.1":
-  version "6.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/blocks/-/blocks-6.7.1.tgz#34de2520ec2d9ed6323bac9b8a4f0f1de4615c33"
+"@wordpress/blocks@^6.7.2":
+  version "6.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/blocks/-/blocks-6.7.2.tgz#19cdb7e5be948c1604f0905eb2eac997e49ba9d4"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/autop" "^2.5.0"
-    "@wordpress/blob" "^2.5.0"
-    "@wordpress/block-serialization-default-parser" "^3.4.0"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/dom" "^2.5.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/autop" "^2.5.1"
+    "@wordpress/blob" "^2.5.1"
+    "@wordpress/block-serialization-default-parser" "^3.4.1"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/dom" "^2.5.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/hooks" "^2.6.0"
     "@wordpress/html-entities" "^2.5.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
+    "@wordpress/is-shallow-equal" "^1.6.1"
     "@wordpress/shortcode" "^2.4.1"
     hpq "^1.3.0"
     lodash "^4.17.15"
@@ -929,21 +929,21 @@
     tinycolor2 "^1.4.1"
     uuid "^3.3.2"
 
-"@wordpress/components@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/components/-/components-8.3.1.tgz#2f7304d7824325433479c8857a8e98008aad448d"
+"@wordpress/components@^8.3.2":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/components/-/components-8.3.2.tgz#d4c332f8ff07fdb777aaeb283b42fe612025b736"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/a11y" "^2.5.0"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/dom" "^2.5.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/a11y" "^2.5.1"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/dom" "^2.5.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/hooks" "^2.6.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/keycodes" "^2.6.1"
-    "@wordpress/rich-text" "^3.7.1"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/keycodes" "^2.6.2"
+    "@wordpress/rich-text" "^3.7.2"
     classnames "^2.2.5"
     clipboard "^2.0.1"
     dom-scroll-into-view "^1.2.1"
@@ -958,47 +958,47 @@
     tinycolor2 "^1.4.1"
     uuid "^3.3.2"
 
-"@wordpress/compose@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/compose/-/compose-3.7.1.tgz#9f9f7567f2e13a180b50ccf07436d3e7a484315d"
+"@wordpress/compose@^3.7.2":
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/compose/-/compose-3.7.2.tgz#2be5d42fd433aa0cab2a7283d516edef2daed9bb"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/element" "^2.8.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
+    "@wordpress/element" "^2.8.2"
+    "@wordpress/is-shallow-equal" "^1.6.1"
     lodash "^4.17.15"
 
-"@wordpress/core-data@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/core-data/-/core-data-2.7.1.tgz#2fb2a6a940e2393d5bf15d208343207070ca2b1a"
+"@wordpress/core-data@^2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/core-data/-/core-data-2.7.2.tgz#135cfd4073790766439ca89a5260e6cd23e99df8"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/url" "^2.8.0"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/url" "^2.8.1"
     equivalent-key-map "^0.2.2"
     lodash "^4.17.15"
     rememo "^3.0.0"
 
-"@wordpress/data-controls@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/data-controls/-/data-controls-1.3.1.tgz#e0ce3ac58e39afde9b8dd06e10a180d7fb1b6cb0"
+"@wordpress/data-controls@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/data-controls/-/data-controls-1.3.2.tgz#036deafcd0cfea65be31cf6bce17a4470c46a5b5"
   dependencies:
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/data" "^4.9.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/data" "^4.9.2"
 
-"@wordpress/data@^4.9.1":
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/data/-/data-4.9.1.tgz#771b178233054606a042ae8c20e9c21d8d7c4234"
+"@wordpress/data@^4.9.2":
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/data/-/data-4.9.2.tgz#74e329156bd0373f36e96bd06f9eb0a786cbfd32"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/element" "^2.8.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/priority-queue" "^1.3.0"
-    "@wordpress/redux-routine" "^3.6.1"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/element" "^2.8.2"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/priority-queue" "^1.3.1"
+    "@wordpress/redux-routine" "^3.6.2"
     equivalent-key-map "^0.2.2"
     is-promise "^2.1.0"
     lodash "^4.17.15"
@@ -1013,89 +1013,89 @@
     moment "^2.22.1"
     moment-timezone "^0.5.16"
 
-"@wordpress/deprecated@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/deprecated/-/deprecated-2.6.0.tgz#8aac16516f1b9f9f437c6ab51c37ce891a4e21b0"
+"@wordpress/deprecated@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/deprecated/-/deprecated-2.6.1.tgz#2562ee270861e7aec4ffa87598a719b0e95f7790"
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/hooks" "^2.6.0"
 
-"@wordpress/dom-ready@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/dom-ready/-/dom-ready-2.5.0.tgz#b91aa4e4da31c6eaa30f67e3b3a42e27432ce85f"
+"@wordpress/dom-ready@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/dom-ready/-/dom-ready-2.5.1.tgz#c2b7a61ea8d1a9dd5215c2a6d793ac373449286f"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/dom@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/dom/-/dom-2.5.1.tgz#f5a7193656fa3dd62162ac93e7b0b9c91d4583cc"
+"@wordpress/dom@^2.5.2":
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/dom/-/dom-2.5.2.tgz#a5785c589dd3c73a21fe6eebcf961ebcd9ba1368"
   dependencies:
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.15"
 
-"@wordpress/edit-post@^3.8.1":
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/edit-post/-/edit-post-3.8.1.tgz#e76ff80bba1ec1b14363d62432fafce649a1a607"
+"@wordpress/edit-post@^3.8.2":
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/edit-post/-/edit-post-3.8.2.tgz#65ba253cf1776a08dd4c402208ad17075e6210a0"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/a11y" "^2.5.0"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/block-editor" "^3.2.1"
-    "@wordpress/block-library" "^2.9.1"
-    "@wordpress/blocks" "^6.7.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/core-data" "^2.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/editor" "^9.7.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/a11y" "^2.5.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/block-editor" "^3.2.2"
+    "@wordpress/block-library" "^2.9.2"
+    "@wordpress/blocks" "^6.7.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/core-data" "^2.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/editor" "^9.7.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/hooks" "^2.6.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/keycodes" "^2.6.1"
-    "@wordpress/media-utils" "^1.2.1"
-    "@wordpress/notices" "^1.8.1"
-    "@wordpress/nux" "^3.7.1"
-    "@wordpress/plugins" "^2.7.1"
-    "@wordpress/url" "^2.8.0"
-    "@wordpress/viewport" "^2.8.1"
+    "@wordpress/keycodes" "^2.6.2"
+    "@wordpress/media-utils" "^1.2.2"
+    "@wordpress/notices" "^1.8.2"
+    "@wordpress/nux" "^3.7.2"
+    "@wordpress/plugins" "^2.7.2"
+    "@wordpress/url" "^2.8.1"
+    "@wordpress/viewport" "^2.8.2"
     classnames "^2.2.5"
     lodash "^4.17.15"
     memize "^1.0.5"
     refx "^3.0.0"
     rememo "^3.0.0"
 
-"@wordpress/editor@^9.7.1":
-  version "9.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/editor/-/editor-9.7.1.tgz#1602dbaaa67a2be9ffb333f31e22e098dd4ffef9"
+"@wordpress/editor@^9.7.2":
+  version "9.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/editor/-/editor-9.7.2.tgz#96b13de992d3a8f1d40291d6d6fbd64eb981ee6f"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/autop" "^2.5.0"
-    "@wordpress/blob" "^2.5.0"
-    "@wordpress/block-directory" "^1.0.1"
-    "@wordpress/block-editor" "^3.2.1"
-    "@wordpress/blocks" "^6.7.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/core-data" "^2.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/data-controls" "^1.3.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/autop" "^2.5.1"
+    "@wordpress/blob" "^2.5.1"
+    "@wordpress/block-directory" "^1.0.2"
+    "@wordpress/block-editor" "^3.2.2"
+    "@wordpress/blocks" "^6.7.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/core-data" "^2.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/data-controls" "^1.3.2"
     "@wordpress/date" "^3.5.0"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/hooks" "^2.6.0"
     "@wordpress/html-entities" "^2.5.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/keycodes" "^2.6.1"
-    "@wordpress/media-utils" "^1.2.1"
-    "@wordpress/notices" "^1.8.1"
-    "@wordpress/nux" "^3.7.1"
-    "@wordpress/rich-text" "^3.7.1"
-    "@wordpress/server-side-render" "^1.3.1"
-    "@wordpress/url" "^2.8.0"
-    "@wordpress/viewport" "^2.8.1"
-    "@wordpress/wordcount" "^2.6.1"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/keycodes" "^2.6.2"
+    "@wordpress/media-utils" "^1.2.2"
+    "@wordpress/notices" "^1.8.2"
+    "@wordpress/nux" "^3.7.2"
+    "@wordpress/rich-text" "^3.7.2"
+    "@wordpress/server-side-render" "^1.3.2"
+    "@wordpress/url" "^2.8.1"
+    "@wordpress/viewport" "^2.8.2"
+    "@wordpress/wordcount" "^2.6.2"
     classnames "^2.2.5"
     lodash "^4.17.15"
     memize "^1.0.5"
@@ -1104,36 +1104,36 @@
     refx "^3.0.0"
     rememo "^3.0.0"
 
-"@wordpress/element@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.8.1.tgz#da964c6557cca523660d683e79cbd4903b428e21"
+"@wordpress/element@^2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.8.2.tgz#57e9286a26021cb4dc116d5080a74c2c1fdc5484"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/escape-html" "^1.5.0"
+    "@wordpress/escape-html" "^1.5.1"
     lodash "^4.17.15"
     react "^16.9.0"
     react-dom "^16.9.0"
 
-"@wordpress/escape-html@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-1.5.0.tgz#f56b89a45f2051cec7c7b1c51937411f27cf5b6b"
+"@wordpress/escape-html@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-1.5.1.tgz#4c2242c4b125ab596567eb02c9ef2e95e5bab193"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/format-library@^1.9.1":
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/format-library/-/format-library-1.9.1.tgz#7c2f6b3a5a9fde17f63532c1ab822d1a35ae9baa"
+"@wordpress/format-library@^1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/format-library/-/format-library-1.9.2.tgz#cf6c31d2ecfa7451a73f482fa5fd86346829153d"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/block-editor" "^3.2.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/dom" "^2.5.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/block-editor" "^3.2.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/dom" "^2.5.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/html-entities" "^2.5.0"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/keycodes" "^2.6.1"
-    "@wordpress/rich-text" "^3.7.1"
-    "@wordpress/url" "^2.8.0"
+    "@wordpress/keycodes" "^2.6.2"
+    "@wordpress/rich-text" "^3.7.2"
+    "@wordpress/url" "^2.8.1"
     lodash "^4.17.15"
 
 "@wordpress/hooks@^2.6.0":
@@ -1159,120 +1159,120 @@
     sprintf-js "^1.1.1"
     tannin "^1.1.0"
 
-"@wordpress/is-shallow-equal@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/is-shallow-equal/-/is-shallow-equal-1.6.0.tgz#88cfc77fad06fbdf622aa0d27b1160e5e07e876d"
+"@wordpress/is-shallow-equal@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/is-shallow-equal/-/is-shallow-equal-1.6.1.tgz#3a1962a22bfbecd661594881dec2bdbcb07df51f"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/keycodes@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/keycodes/-/keycodes-2.6.1.tgz#8bde741e5c767c2dcd15f8ec0c44e8977825cf6f"
+"@wordpress/keycodes@^2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/keycodes/-/keycodes-2.6.2.tgz#6f86a2835696bfb15997e6e3a91aaa927695e7ff"
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
 
-"@wordpress/list-reusable-blocks@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.8.1.tgz#0638cd0382351fd4fb753fb2860d274263ce1a4a"
+"@wordpress/list-reusable-blocks@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.8.2.tgz#1f6230c0fbc79aaf4ae9ec5ad42bae71228353de"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
 
-"@wordpress/media-utils@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/media-utils/-/media-utils-1.2.1.tgz#c53dc0d68f949e5658a0e406b30c336f2d3c1439"
+"@wordpress/media-utils@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/media-utils/-/media-utils-1.2.2.tgz#01670b53b60554d74f30d6649b63fdfff96cd956"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/blob" "^2.5.0"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/blob" "^2.5.1"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
 
-"@wordpress/notices@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/notices/-/notices-1.8.1.tgz#c3f38b9bfccb0955394130d11a0be2b254b9d38d"
+"@wordpress/notices@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/notices/-/notices-1.8.2.tgz#ef9b898400e570ddbc2425ecdc32236a58b06599"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/a11y" "^2.5.0"
-    "@wordpress/data" "^4.9.1"
+    "@wordpress/a11y" "^2.5.1"
+    "@wordpress/data" "^4.9.2"
     lodash "^4.17.15"
 
-"@wordpress/nux@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/nux/-/nux-3.7.1.tgz#24c1f1e680db85acc0ac7986e73570420e532f72"
+"@wordpress/nux@^3.7.2":
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/nux/-/nux-3.7.2.tgz#a0a9c691e2b210809d8c9f5ef2bb7ca1ee971e50"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
     rememo "^3.0.0"
 
-"@wordpress/plugins@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/plugins/-/plugins-2.7.1.tgz#1882cab20c39331027dabc33dc776b9e3e9563c0"
+"@wordpress/plugins@^2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/plugins/-/plugins-2.7.2.tgz#140ca5a5cdbaaa4485ab4dabc7cb7277fdc3242a"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/hooks" "^2.6.0"
     lodash "^4.17.15"
 
-"@wordpress/priority-queue@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/priority-queue/-/priority-queue-1.3.0.tgz#0cd15f5e95ae605acd675200e50f286928bcc976"
+"@wordpress/priority-queue@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/priority-queue/-/priority-queue-1.3.1.tgz#7fbedc9bb665bdb6b822894cddbf7e9d83e156fc"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/redux-routine@^3.6.1":
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/redux-routine/-/redux-routine-3.6.1.tgz#3b0add199129370ad664eb22bf42ec3b64c0ec49"
+"@wordpress/redux-routine@^3.6.2":
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/redux-routine/-/redux-routine-3.6.2.tgz#5decdff7dd9ef369885154adbb1c981e25405854"
   dependencies:
     "@babel/runtime" "^7.4.4"
     is-promise "^2.1.0"
     lodash "^4.17.15"
     rungen "^0.3.2"
 
-"@wordpress/rich-text@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/rich-text/-/rich-text-3.7.1.tgz#ce7aa28c775f596ce4811ee4bf57d5e6610e5d0f"
+"@wordpress/rich-text@^3.7.2":
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/rich-text/-/rich-text-3.7.2.tgz#447e85274d87576072b585fd5dbd72ba06df7612"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/element" "^2.8.1"
-    "@wordpress/escape-html" "^1.5.0"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/element" "^2.8.2"
+    "@wordpress/escape-html" "^1.5.1"
     "@wordpress/hooks" "^2.6.0"
-    "@wordpress/is-shallow-equal" "^1.6.0"
-    "@wordpress/keycodes" "^2.6.1"
+    "@wordpress/is-shallow-equal" "^1.6.1"
+    "@wordpress/keycodes" "^2.6.2"
     classnames "^2.2.5"
     lodash "^4.17.15"
     memize "^1.0.5"
     rememo "^3.0.0"
 
-"@wordpress/server-side-render@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/server-side-render/-/server-side-render-1.3.1.tgz#0ca1a6619ecc7d63fb1bea1fe2bbb878bd93582e"
+"@wordpress/server-side-render@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/server-side-render/-/server-side-render-1.3.2.tgz#5ad35b025a8cb6c57ccc3afc986b5468fbc7e19f"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.1"
-    "@wordpress/components" "^8.3.1"
-    "@wordpress/data" "^4.9.1"
-    "@wordpress/deprecated" "^2.6.0"
-    "@wordpress/element" "^2.8.1"
+    "@wordpress/api-fetch" "^3.6.2"
+    "@wordpress/components" "^8.3.2"
+    "@wordpress/data" "^4.9.2"
+    "@wordpress/deprecated" "^2.6.1"
+    "@wordpress/element" "^2.8.2"
     "@wordpress/i18n" "^3.6.1"
-    "@wordpress/url" "^2.8.0"
+    "@wordpress/url" "^2.8.1"
     lodash "^4.17.15"
 
 "@wordpress/shortcode@^2.4.1":
@@ -1290,25 +1290,25 @@
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.15"
 
-"@wordpress/url@^2.8.0":
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/url/-/url-2.8.0.tgz#4f0f862c8dc58c67797cef2c50144c52d29f6120"
+"@wordpress/url@^2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/url/-/url-2.8.1.tgz#a09cc4642eb5f0c3c9a3b4da9d6fd6c99efa44a4"
   dependencies:
     "@babel/runtime" "^7.4.4"
     qs "^6.5.2"
 
-"@wordpress/viewport@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/viewport/-/viewport-2.8.1.tgz#9d3630447f6dbc46afa9a918149b45439ad32ac2"
+"@wordpress/viewport@^2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/viewport/-/viewport-2.8.2.tgz#10d25aae35f50e056aa9a23fe2449cc2768726cc"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/compose" "^3.7.1"
-    "@wordpress/data" "^4.9.1"
+    "@wordpress/compose" "^3.7.2"
+    "@wordpress/data" "^4.9.2"
     lodash "^4.17.15"
 
-"@wordpress/wordcount@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/wordcount/-/wordcount-2.6.1.tgz#9c214731295b9c306a3896a49c20fbc093182830"
+"@wordpress/wordcount@^2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/wordcount/-/wordcount-2.6.2.tgz#6bfecc5a5893d6c8b1476e7577202023629ea381"
   dependencies:
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.15"
@@ -1564,8 +1564,8 @@ block-stream@*:
     inherits "~2.0.0"
 
 bluebird@^3.5.5:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.0.tgz#56a6a886e03f6ae577cffedeb524f8f2450293cf"
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -2233,8 +2233,8 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.247:
-  version "1.3.282"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.282.tgz#16118ae9c79a32ea93a17591d5b16e28d10fc08d"
+  version "1.3.283"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.283.tgz#296082f4eca0f53a4c1c4f97946317b39728a5d4"
 
 elliptic@^6.0.0:
   version "6.5.1"
@@ -3568,8 +3568,8 @@ mixin-deep@^1.2.0:
     minimist "0.0.8"
 
 moment-timezone@^0.5.16:
-  version "0.5.26"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.26.tgz#c0267ca09ae84631aa3dc33f65bedbe6e8e0d772"
+  version "0.5.27"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.27.tgz#73adec8139b6fe30452e78f210f27b1f346b8877"
   dependencies:
     moment ">= 2.9.0"
 
@@ -3708,8 +3708,8 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-releases@^1.1.29:
-  version "1.1.35"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.35.tgz#32a74a3cd497aa77f23d509f483475fd160e4c48"
+  version "1.1.36"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.36.tgz#44b7cb8254138e87bdbfa47761d0f825e20900b4"
   dependencies:
     semver "^6.3.0"
 
@@ -4691,8 +4691,8 @@ schema-utils@^1.0.0:
     ajv-keywords "^3.1.0"
 
 schema-utils@^2.0.0, schema-utils@^2.0.1, schema-utils@^2.1.0, schema-utils@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.4.1.tgz#e89ade5d056dc8bcaca377574bb4a9c4e1b8be56"
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.5.0.tgz#8f254f618d402cc80257486213c8970edfd7c22f"
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
@@ -5126,8 +5126,8 @@ terser-webpack-plugin@^2.1.3:
     webpack-sources "^1.4.3"
 
 terser@^4.1.2, terser@^4.3.8:
-  version "4.3.8"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-4.3.8.tgz#707f05f3f4c1c70c840e626addfdb1c158a17136"
+  version "4.3.9"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.3.9.tgz#e4be37f80553d02645668727777687dad26bbca8"
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
@@ -5385,9 +5385,9 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.41.1:
-  version "4.41.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.1.tgz#5388dd3047d680d5d382a84249fd4750e87372fd"
+webpack@^4.41.2:
+  version "4.41.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.2.tgz#c34ec76daa3a8468c9b61a50336d8e3303dce74e"
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
