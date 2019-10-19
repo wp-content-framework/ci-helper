@@ -8,5 +8,7 @@ source ${current}/../variables.sh
 
 echo ""
 echo ">> Run yarn install."
-yarn --cwd ${JS_DIR} cache clean
+if [[ -n "${CI}" ]] || [[ -n "${GITHUB_ACTION}" ]]; then
+  yarn --cwd ${JS_DIR} cache clean
+fi
 yarn --cwd ${JS_DIR} install

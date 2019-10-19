@@ -26,12 +26,16 @@ if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/composer.json ]]; then
 fi
 
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/package.json ]]; then
-  yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} cache clean
+  if [[ -n "${CI}" ]] || [[ -n "${GITHUB_ACTION}" ]]; then
+    yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} cache clean
+  fi
   yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} install
   yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} build
 fi
 if [[ -f ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js/package.json ]]; then
-  yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js cache clean
+  if [[ -n "${CI}" ]] || [[ -n "${GITHUB_ACTION}" ]]; then
+    yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js cache clean
+  fi
   yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js install
   yarn --cwd ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/assets/js build
 fi
