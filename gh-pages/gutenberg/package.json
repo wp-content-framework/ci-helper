@@ -16,7 +16,7 @@
     "@babel/register": "^7.6.2",
     "@wordpress/a11y": "^2.5.1",
     "@wordpress/annotations": "^1.7.2",
-    "@wordpress/api-fetch": "^3.6.3",
+    "@wordpress/api-fetch": "^3.6.4",
     "@wordpress/autop": "^2.5.1",
     "@wordpress/babel-plugin-import-jsx-pragma": "^2.3.0",
     "@wordpress/blob": "^2.5.1",
