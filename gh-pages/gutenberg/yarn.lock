@@ -781,9 +781,9 @@
     rememo "^3.0.0"
     uuid "^3.3.2"
 
-"@wordpress/api-fetch@^3.6.3":
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.3.tgz#fe13028a8784b0a5376bc3a753627f9c97917284"
+"@wordpress/api-fetch@^3.6.3", "@wordpress/api-fetch@^3.6.4":
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.4.tgz#49d4710f01d5ef0f1ddf1ea75bfd9b18e79e9930"
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/i18n" "^3.6.1"
@@ -1173,12 +1173,12 @@
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
 
-"@wordpress/list-reusable-blocks@^1.8.3":
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.8.3.tgz#25b6851e37acf939625e3317129bd077ff682abc"
+"@wordpress/list-reusable-blocks@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.8.4.tgz#c3eb3040774c8e875145990dbbb6f12f28a7ee42"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.3"
+    "@wordpress/api-fetch" "^3.6.4"
     "@wordpress/components" "^8.3.2"
     "@wordpress/compose" "^3.7.2"
     "@wordpress/element" "^2.8.2"
