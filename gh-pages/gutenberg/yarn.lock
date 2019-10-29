@@ -781,9 +781,9 @@
     rememo "^3.0.0"
     uuid "^3.3.2"
 
-"@wordpress/api-fetch@^3.6.3":
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.3.tgz#fe13028a8784b0a5376bc3a753627f9c97917284"
+"@wordpress/api-fetch@^3.6.3", "@wordpress/api-fetch@^3.6.4":
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.4.tgz#49d4710f01d5ef0f1ddf1ea75bfd9b18e79e9930"
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/i18n" "^3.6.1"
@@ -967,12 +967,12 @@
     "@wordpress/is-shallow-equal" "^1.6.1"
     lodash "^4.17.15"
 
-"@wordpress/core-data@^2.7.3":
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/@wordpress/core-data/-/core-data-2.7.3.tgz#eb00a366d4f92fdd4ddc6f13fe914c9e0fb97a8e"
+"@wordpress/core-data@^2.7.3", "@wordpress/core-data@^2.7.4":
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/@wordpress/core-data/-/core-data-2.7.4.tgz#51f43f8124c58253eb09eb3655630ec5c413dced"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.3"
+    "@wordpress/api-fetch" "^3.6.4"
     "@wordpress/data" "^4.9.2"
     "@wordpress/deprecated" "^2.6.1"
     "@wordpress/is-shallow-equal" "^1.6.1"
