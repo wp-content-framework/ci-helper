@@ -46,7 +46,7 @@
     "@wordpress/is-shallow-equal": "^1.6.1",
     "@wordpress/keycodes": "^2.6.2",
     "@wordpress/list-reusable-blocks": "^1.8.3",
-    "@wordpress/media-utils": "^1.2.3",
+    "@wordpress/media-utils": "^1.2.4",
     "@wordpress/notices": "^1.8.2",
     "@wordpress/nux": "^3.7.2",
     "@wordpress/plugins": "^2.7.2",
