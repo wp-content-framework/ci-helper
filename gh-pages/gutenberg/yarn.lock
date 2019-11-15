@@ -1294,9 +1294,9 @@
     lodash "^4.17.15"
     memize "^1.0.5"
 
-"@wordpress/token-list@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/token-list/-/token-list-1.6.1.tgz#7dfedb8081b45d52a9d8a3c0a725734303f2adad"
+"@wordpress/token-list@^1.6.1", "@wordpress/token-list@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/token-list/-/token-list-1.7.0.tgz#3d0c9858fe37037c7665ebb6b1bc49c89a4f6b22"
   dependencies:
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.15"
