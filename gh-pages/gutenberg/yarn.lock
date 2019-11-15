@@ -1286,9 +1286,9 @@
     "@wordpress/url" "^2.8.2"
     lodash "^4.17.15"
 
-"@wordpress/shortcode@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/shortcode/-/shortcode-2.4.1.tgz#c52ca3cd594d883ed610830a607068df11467cb2"
+"@wordpress/shortcode@^2.4.1", "@wordpress/shortcode@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/shortcode/-/shortcode-2.5.0.tgz#af81ac2b4b2180e47a76121404a431cbed099baf"
   dependencies:
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.15"
