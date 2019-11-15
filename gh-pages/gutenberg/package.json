@@ -42,7 +42,7 @@
     "@wordpress/format-library": "^1.9.4",
     "@wordpress/hooks": "^2.6.0",
     "@wordpress/html-entities": "^2.5.0",
-    "@wordpress/i18n": "^3.6.1",
+    "@wordpress/i18n": "^3.7.0",
     "@wordpress/is-shallow-equal": "^1.6.1",
     "@wordpress/keycodes": "^2.6.2",
     "@wordpress/list-reusable-blocks": "^1.8.4",
