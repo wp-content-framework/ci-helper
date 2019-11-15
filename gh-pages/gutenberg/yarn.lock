@@ -792,12 +792,12 @@
     rememo "^3.0.0"
     uuid "^3.3.2"
 
-"@wordpress/api-fetch@^3.6.4":
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.6.4.tgz#49d4710f01d5ef0f1ddf1ea75bfd9b18e79e9930"
+"@wordpress/api-fetch@^3.6.4", "@wordpress/api-fetch@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.7.0.tgz#cedeb833122c1cffd926ecffa7c35d58f6e1be71"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/i18n" "^3.6.1"
+    "@wordpress/i18n" "^3.7.0"
     "@wordpress/url" "^2.8.2"
 
 "@wordpress/autop@^2.5.1":
@@ -1115,12 +1115,12 @@
     refx "^3.0.0"
     rememo "^3.0.0"
 
-"@wordpress/element@^2.8.2":
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.8.2.tgz#57e9286a26021cb4dc116d5080a74c2c1fdc5484"
+"@wordpress/element@^2.8.2", "@wordpress/element@^2.9.0":
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.9.0.tgz#5f374d6ea7ec18d4064b57e3e790f10354e29732"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/escape-html" "^1.5.1"
+    "@wordpress/escape-html" "^1.6.0"
     lodash "^4.17.15"
     react "^16.9.0"
     react-dom "^16.9.0"
@@ -1128,6 +1128,12 @@
 "@wordpress/escape-html@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-1.5.1.tgz#4c2242c4b125ab596567eb02c9ef2e95e5bab193"
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+
+"@wordpress/escape-html@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-1.6.0.tgz#2a5098805bc72e4ddce9c6d1aef5c4b71936ad20"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
@@ -1159,9 +1165,9 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@wordpress/i18n@^3.6.1":
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/i18n/-/i18n-3.6.1.tgz#7514e2b7452c00a0a2ae3124af4c46849dc60d3a"
+"@wordpress/i18n@^3.6.1", "@wordpress/i18n@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/i18n/-/i18n-3.7.0.tgz#b64997868fa2653477e0629ba44754cbce49453c"
   dependencies:
     "@babel/runtime" "^7.4.4"
     gettext-parser "^1.3.1"
@@ -1196,15 +1202,15 @@
     "@wordpress/i18n" "^3.6.1"
     lodash "^4.17.15"
 
-"@wordpress/media-utils@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/media-utils/-/media-utils-1.2.4.tgz#2d3a89c8e9d4f598492334dabe20333f35bfc97e"
+"@wordpress/media-utils@^1.2.4", "@wordpress/media-utils@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/media-utils/-/media-utils-1.3.0.tgz#01277f7518f5fbb36fd17a9848b0caede5fb256b"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    "@wordpress/api-fetch" "^3.6.4"
+    "@wordpress/api-fetch" "^3.7.0"
     "@wordpress/blob" "^2.5.1"
-    "@wordpress/element" "^2.8.2"
-    "@wordpress/i18n" "^3.6.1"
+    "@wordpress/element" "^2.9.0"
+    "@wordpress/i18n" "^3.7.0"
     lodash "^4.17.15"
 
 "@wordpress/notices@^1.8.2":
