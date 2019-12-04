@@ -13,8 +13,8 @@ fi
 rm -rdf ${GH_WORK_DIR}/src
 rm -rdf ${GH_WORK_DIR}/stylesheets
 
-svn export https://github.com/WordPress/gutenberg/trunk/playground/src ${GH_WORK_DIR}/src
-svn export https://github.com/WordPress/gutenberg/trunk/assets/stylesheets ${GH_WORK_DIR}/stylesheets
+svn export https://github.com/WordPress/gutenberg/tags/v6.7.0/playground/src ${GH_WORK_DIR}/src
+svn export https://github.com/WordPress/gutenberg/tags/v6.7.0/assets/stylesheets ${GH_WORK_DIR}/stylesheets
 
 sed -i -e 's/..\/..\/assets/./g' ${GH_WORK_DIR}/src/style.scss
 mv -f ${GH_WORK_DIR}/src/* ${GH_WORK_DIR}/
