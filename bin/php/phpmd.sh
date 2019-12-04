@@ -2,13 +2,15 @@
 
 set -e
 
-current=$(cd $(dirname $0);
-pwd)
+current=$(
+  cd $(dirname $0)
+  pwd
+)
 source ${current}/../variables.sh
 
 if [[ -z $(composer list --raw --working-dir=${TRAVIS_BUILD_DIR} | grep phpmd) ]]; then
-    echo "composer phpmd command is invalid."
-    exit
+  echo "composer phpmd command is invalid."
+  exit
 fi
 
 bash ${SCRIPT_DIR}/php/install-composer.sh

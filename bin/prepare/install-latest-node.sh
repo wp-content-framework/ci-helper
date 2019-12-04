@@ -11,8 +11,8 @@ if [[ ! -d ${NVM_DIR} ]]; then
 fi
 curl -o ${NVM_DIR}/nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/master/nvm.sh
 
-[[ -s "${NVM_DIR}/nvm.sh" ]] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
-[[ -s "${NVM_DIR}/bash_completion" ]] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
+[[ -s "${NVM_DIR}/nvm.sh" ]] && \. "${NVM_DIR}/nvm.sh"                   # This loads nvm
+[[ -s "${NVM_DIR}/bash_completion" ]] && \. "${NVM_DIR}/bash_completion" # This loads nvm bash_completion
 
 nvm install ${NODE_JS_VERSION}
 nvm alias default ${NODE_JS_VERSION}

@@ -3,8 +3,8 @@
 set -e
 
 if [[ $# -lt 1 ]]; then
-	echo "usage: $0 <zip url>"
-	exit 1
+  echo "usage: $0 <zip url>"
+  exit 1
 fi
 
 set -x

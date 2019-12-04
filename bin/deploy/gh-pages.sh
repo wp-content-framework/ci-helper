@@ -2,8 +2,10 @@
 
 set -e
 
-current=$(cd $(dirname $0);
-pwd)
+current=$(
+  cd $(dirname $0)
+  pwd
+)
 source ${current}/../variables.sh
 
 GH_PAGES_TEMPLATE=${GH_PAGES_TEMPLATE:-"page"}
@@ -20,21 +22,21 @@ rm -rdf ${GH_PAGES_DIR}
 mkdir -p ${GH_PAGES_DIR}
 
 if [[ -d ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ]]; then
-    rm -rdf ${GH_WORK_DIR}/template
-    mkdir -p ${GH_WORK_DIR}
-    cp -a ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ${GH_WORK_DIR}/template
+  rm -rdf ${GH_WORK_DIR}/template
+  mkdir -p ${GH_WORK_DIR}
+  cp -a ${GH_PAGES_TEMPLATE_DIR}/${GH_PAGES_TEMPLATE} ${GH_WORK_DIR}/template
 fi
 
 if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_setup.sh ]]; then
-    bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_setup.sh ${SCRIPT_DIR}
+  bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/pre_setup.sh ${SCRIPT_DIR}
 fi
 
 if [[ -f ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE}.sh ]]; then
-    bash ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE}.sh
+  bash ${SCRIPT_DIR}/deploy/gh-pages/${GH_PAGES_TEMPLATE}.sh
 fi
 
 if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/setup.sh ]]; then
-    bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/setup.sh ${SCRIPT_DIR}
+  bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/setup.sh ${SCRIPT_DIR}
 fi
 
 find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___title___/${GH_PAGES_TITLE//\//\\/}/g" file
@@ -43,18 +45,19 @@ find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file se
 find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___app_id___/${GH_PAGES_APP_ID//\//\\/}/g" file
 
 if [[ -n "${GH_PAGES_PLUGIN_SCRIPT}" ]]; then
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___plugin_script___/${GH_PAGES_PLUGIN_SCRIPT//\//\\/}/g" file
+  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___plugin_script___/${GH_PAGES_PLUGIN_SCRIPT//\//\\/}/g" file
 else
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_script___/d" file
+  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_script___/d" file
 fi
 if [[ -n "${GH_PAGES_PLUGIN_STYLE}" ]]; then
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___plugin_style___/${GH_PAGES_PLUGIN_STYLE//\//\\/}/g" file
+  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___plugin_style___/${GH_PAGES_PLUGIN_STYLE//\//\\/}/g" file
 else
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_style___/d" file
+  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_style___/d" file
 fi
 
 if [[ -n "${GH_PAGES_TRACKING_ID}" ]]; then
-    SCRIPT=$(cat << EOS
+  SCRIPT=$(
+    cat <<EOS
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GH_PAGES_TRACKING_ID}"></script>
 <script>
@@ -65,9 +68,9 @@ if [[ -n "${GH_PAGES_TRACKING_ID}" ]]; then
   gtag('config', '${GH_PAGES_TRACKING_ID}');
 </script>
 EOS
-)
-    SCRIPT=$(echo ${SCRIPT} | sed -e 's/\n//g')
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___google_analytics___/${SCRIPT//\//\\/}/g" file
+  )
+  SCRIPT=$(echo ${SCRIPT} | sed -e 's/\n//g')
+  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___google_analytics___/${SCRIPT//\//\\/}/g" file
 else
-    find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___google_analytics___/d" file
+  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___google_analytics___/d" file
 fi

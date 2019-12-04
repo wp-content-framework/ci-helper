@@ -2,13 +2,15 @@
 
 set -e
 
-current=$(cd $(dirname $0);
-pwd)
+current=$(
+  cd $(dirname $0)
+  pwd
+)
 source ${current}/../variables.sh
 
 if [[ -z "${RELEASE_FILE}" ]]; then
-	echo "<RELEASE_FILE> is required."
-	exit 1
+  echo "<RELEASE_FILE> is required."
+  exit 1
 fi
 
 echo ""

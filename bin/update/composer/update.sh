@@ -3,12 +3,14 @@
 set -e
 
 if [[ $# -lt 1 ]]; then
-	echo "usage: $0 <package> [working dir]"
-	exit 1
+  echo "usage: $0 <package> [working dir]"
+  exit 1
 fi
 
-current=$(cd $(dirname $0);
-pwd)
+current=$(
+  cd $(dirname $0)
+  pwd
+)
 source ${current}/../../variables.sh
 
 package=${1}

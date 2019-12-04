@@ -2,13 +2,15 @@
 
 set -e
 
-current=$(cd $(dirname $0);
-pwd)
+current=$(
+  cd $(dirname $0)
+  pwd
+)
 source ${current}/../../variables.sh
 
 if [[ ! -d ${TRAVIS_BUILD_DIR}/.git ]]; then
-	echo "Repository is not exist"
-	exit 1
+  echo "Repository is not exist"
+  exit 1
 fi
 
 git -C ${TRAVIS_BUILD_DIR} fetch -p --tags

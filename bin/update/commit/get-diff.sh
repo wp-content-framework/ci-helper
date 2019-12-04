@@ -2,21 +2,23 @@
 
 set -e
 
-current=$(cd $(dirname $0);
-pwd)
+current=$(
+  cd $(dirname $0)
+  pwd
+)
 source ${current}/../../variables.sh
 
 COMMIT_TARGET_DIR=${1-""}
 GIT_DIR=${2-${TRAVIS_BUILD_DIR}}
 
 if [[ ! -d ${GIT_DIR}/.git ]]; then
-	echo "Repository is not exist"
-	exit 1
+  echo "Repository is not exist"
+  exit 1
 fi
 
 if [[ -f ${BIN_DIR}/commit/get-diff.sh ]]; then
-    bash ${BIN_DIR}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
+  bash ${BIN_DIR}/commit/get-diff.sh ${COMMIT_TARGET_DIR} ${GIT_DIR}
 else
-    git -C ${GIT_DIR} checkout --quiet master
-    git -C ${GIT_DIR} status --short ${COMMIT_TARGET_DIR}
+  git -C ${GIT_DIR} checkout --quiet master
+  git -C ${GIT_DIR} status --short ${COMMIT_TARGET_DIR}
 fi

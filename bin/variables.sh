@@ -3,8 +3,8 @@
 set -e
 
 if [[ -z "${TRAVIS_BUILD_DIR}" ]]; then
-	echo "<TRAVIS_BUILD_DIR> is required"
-	exit 1
+  echo "<TRAVIS_BUILD_DIR> is required"
+  exit 1
 fi
 
 if [[ -z "${TRAVIS_REPO_SLUG}" ]]; then
@@ -26,10 +26,13 @@ JS_DIR=${ASSETS_DIR}/js
 CSS_DIR=${ASSETS_DIR}/css
 IMG_DIR=${ASSETS_DIR}/img
 if [[ ! -f ${JS_DIR}/package.json ]] && [[ -f ${TRAVIS_BUILD_DIR}/package.json ]]; then
-    JS_DIR=${TRAVIS_BUILD_DIR}
+  JS_DIR=${TRAVIS_BUILD_DIR}
 fi
 
-LIBRARY_BASE_DIR=$(cd $(dirname ${BASH_SOURCE:-$0})/..; pwd -P)
+LIBRARY_BASE_DIR=$(
+  cd $(dirname ${BASH_SOURCE:-$0})/..
+  pwd -P
+)
 SETTINGS_DIR=${LIBRARY_BASE_DIR}/settings
 TESTS_DIR=${LIBRARY_BASE_DIR}/tests
 SCRIPT_DIR=${LIBRARY_BASE_DIR}/bin
@@ -41,7 +44,7 @@ SVN_COMMIT_MESSAGE="Commit release ${TRAVIS_TAG}"
 SVN_TAG_MESSAGE="Take snapshot of ${TRAVIS_TAG}"
 TAG_MESSAGE="Auto tag by Travis CI"
 if [[ -n "${TRAVIS_BUILD_NUMBER}" ]]; then
-	COMMIT_MESSAGE="feat: Update version data (Travis build: ${TRAVIS_BUILD_WEB_URL})"
+  COMMIT_MESSAGE="feat: Update version data (Travis build: ${TRAVIS_BUILD_WEB_URL})"
 else
-	COMMIT_MESSAGE="feat: Update version data"
+  COMMIT_MESSAGE="feat: Update version data"
 fi
