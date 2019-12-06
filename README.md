@@ -38,7 +38,7 @@
   - JavaScript
     - Jest
 - Coverage
-  - Coveralls
+  - Codecov
 - Deploy
   - GitHub releases
   - GitHub pages
@@ -57,7 +57,6 @@
     "phpcompatibility/phpcompatibility-wp": "*",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "roave/security-advisories": "dev-master",
-    "php-coveralls/php-coveralls": "^2.1",
     "phake/phake": "^2.3 || ^3.1",
     "phpunit/phpunit": "^4.8 || ^5.7 || ^7.5"
   }
@@ -78,9 +77,6 @@
     ],
     "phpmd": [
       "phpmd ./src/,./configs/,./tests/ text phpmd.xml"
-    ],
-    "coveralls": [
-      "php-coveralls -v"
     ]
   }
 }
@@ -91,8 +87,7 @@
 {
   "scripts": {
     "lint": "eslint src/**/**/*.js && eslint __tests__/**/**/*.js",
-    "cover": "jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "cover": "jest --coverage"
   }
 }
 ```
@@ -129,7 +124,6 @@ jobs:
       script: bash tests/bin/js/js-lint.sh
 ```
 #### Test
-Set _COVERAGE_REPORT=1_ to run `composer coveralls`   
 
 _.travis.yml_
 ```yaml
@@ -145,14 +139,12 @@ _.travis.yml_
       env:
         - WP_VERSION=5.2
         - WP_MULTISITE=1
-        - COVERAGE_REPORT=1
       script: bash tests/bin/php/wp-test.sh
 
     - stage: test
       language: node_js
       node_js: '11'
       dist: trusty
-      env: COVERAGE_REPORT=1
       script: bash tests/bin/js/js-test.sh
 ```
 #### SVN diff

@@ -11,7 +11,6 @@ source ${current}/variables.sh
 echo ""
 echo ">> Copy files."
 files=()
-files+=(".coveralls.yml")
 files+=("phpmd.xml")
 files+=("phpunit.xml")
 for file in "${files[@]}"; do

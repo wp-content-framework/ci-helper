@@ -10,8 +10,7 @@
     "cover": "jest --coverage",
     "cover:update": "jest --coverage --updateSnapshot",
     "develop": "webpack --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "author": "Technote <technote.space@gmail.com> (https://technote.space)",
   "license": "MIT",
@@ -23,7 +22,6 @@
     "@babel/register": "^7.4.4",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
-    "coveralls": "^3.0.4",
     "eslint": "^6.0.1",
     "jest": "^24.8.0",
     "speed-measure-webpack-plugin": "^1.3.1",

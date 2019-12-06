@@ -9,9 +9,7 @@ current=$(
 source ${current}/../variables.sh
 
 if [[ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]]; then
-  if [[ -z "${COVERAGE_REPORT}" ]]; then
-    phpenv config-rm xdebug.ini
-  fi
+  phpenv config-rm xdebug.ini
 else
   echo "xdebug.ini does not exist"
 fi

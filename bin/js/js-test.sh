@@ -24,10 +24,3 @@ ls -la ${JS_DIR}/node_modules/.bin
 echo ""
 echo ">> Run yarn test."
 yarn --cwd ${JS_DIR} cover
-
-if [[ ! -z "${COVERAGE_REPORT}" ]] && [[ ! -z "${CI}" ]]; then
-  ls -la ${JS_DIR}/coverage/lcov.info
-  echo ""
-  echo ">> Run yarn coveralls."
-  yarn --cwd ${JS_DIR} coveralls
-fi
