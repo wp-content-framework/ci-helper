@@ -28,7 +28,7 @@ if [[ -z $(command -v ncu) ]]; then
   npm install -g npm-check-updates
 fi
 ncu -u --packageFile ${working_dir}/package.json
-if [[ -n "${CI}" ]] || [[ -n "${GITHUB_ACTION}" ]]; then
+if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
   yarn --cwd ${working_dir} cache clean
 fi
 yarn --cwd ${working_dir} install
