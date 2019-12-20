@@ -28,8 +28,16 @@ if [[ -z $(command -v ncu) ]]; then
   npm install -g npm-check-updates
 fi
 ncu -u --packageFile ${working_dir}/package.json
-if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
-  yarn --cwd ${working_dir} cache clean
+if [[ -n "${GITHUB_ACTION}" ]]; then
+
+else
+if [[ -n "${GITHUB_ACTION}" ]]; then
+  sudo chown -R $USER:$GROUP $HOME/.npm
+  sudo chown -R $USER:$GROUP $HOME/.config
+else
+  if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
+    yarn --cwd ${working_dir} cache clean
+  fi
 fi
 yarn --cwd ${working_dir} install
 yarn --cwd ${working_dir} upgrade
