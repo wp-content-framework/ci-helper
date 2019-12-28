@@ -10,7 +10,7 @@ source ${current}/../variables.sh
 
 echo ""
 echo ">> Run yarn install."
-if [[ -n "${CI}" ]] || [[ -n "${GITHUB_ACTION}" ]]; then
+if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
   yarn --cwd ${JS_DIR} cache clean
 fi
 yarn --cwd ${JS_DIR} install

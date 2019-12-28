@@ -22,7 +22,7 @@ fi
 if [[ -f ${JS_DIR}/package.json ]] && [[ -n $(yarn --cwd ${JS_DIR} --non-interactive run | grep "\- build$") ]]; then
   echo ""
   echo ">> Run yarn install."
-  if [[ -n "${CI}" ]] || [[ -n "${GITHUB_ACTION}" ]]; then
+  if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
     yarn --cwd ${JS_DIR} cache clean
   fi
   yarn --cwd ${JS_DIR} install
