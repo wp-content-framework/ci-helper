@@ -25,4 +25,5 @@ fi
 packages=()
 source ${BIN_DIR}/packages.sh
 
+rm -f ${working_dir}/composer.lock
 composer require --working-dir=${working_dir} --update-no-dev ${packages[@]}
