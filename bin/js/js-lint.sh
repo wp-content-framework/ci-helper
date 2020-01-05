@@ -13,7 +13,7 @@ if [[ ! -f ${JS_DIR}/package.json ]]; then
   exit
 fi
 
-if [[ -z $(yarn --cwd ${JS_DIR} --non-interactive run | grep "\- lint$") ]]; then
+if ! < "${JS_DIR}"/package.json jq -r '.scripts | keys[]' | grep -qe '^lint$'; then
   echo "yarn lint command is invalid."
   exit
 fi
