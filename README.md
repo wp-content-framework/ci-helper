@@ -76,7 +76,7 @@
       "phpcbf --standard=./phpcs.xml"
     ],
     "phpmd": [
-      "phpmd ./src/,./configs/,./tests/ text phpmd.xml"
+      "phpmd ./src/,./configs/,./tests/ ansi phpmd.xml"
     ]
   }
 }

@@ -22,7 +22,7 @@ done
 
 if [[ ! -f ${TRAVIS_BUILD_DIR}/phpcs.xml ]]; then
   echo ">>>> phpcs.xml"
-  sed -i -e 's/phpmd .\+\.xml/phpmd .\/src\/,.\/configs\/,.\/tests\/ text phpmd.xml/' ${TRAVIS_BUILD_DIR}/composer.json
+  sed -i -e 's/phpmd .\+\.xml/phpmd .\/src\/,.\/configs\/,.\/tests\/ ansi phpmd.xml/' ${TRAVIS_BUILD_DIR}/composer.json
   cp ${SETTINGS_DIR}/phpcs.xml ${TRAVIS_BUILD_DIR}/phpcs.xml
   if [[ ! -d ${TRAVIS_BUILD_DIR}/configs ]]; then
     sed -i -e '/\.\/configs\//d' ${TRAVIS_BUILD_DIR}/phpcs.xml

@@ -41,7 +41,7 @@
       "phpcbf --standard=./phpcs.xml"
     ],
     "phpmd": [
-      "phpmd ./src/,./configs/,./tests/ text phpmd.xml"
+      "phpmd ./src/,./configs/,./tests/ ansi phpmd.xml"
     ],
     "bin:wp-test": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) ./travis-ci/bin/php/wp-test.sh",
     "bin:wp-test-p": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) ACTIVATE_POPULAR_PLUGINS=1 ./travis-ci/bin/php/wp-test.sh",
