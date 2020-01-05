@@ -22,6 +22,7 @@ const webpackConfig = {
 			{
 				test: /\.(sa|sc|c)ss$/,
 				use: [ 'style-loader', 'css-loader', 'sass-loader' ],
+				sideEffects: true,
 			},
 		],
 	},
