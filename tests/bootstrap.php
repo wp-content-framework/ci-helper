@@ -92,6 +92,7 @@ function _is_plugin_file( $file ) {
 	fclose( $file_pointer ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose
 	$file_data = str_replace( "\r", "\n", $file_data );
 
+	$match = null;
 	return preg_match( '/^[ \t\/*#@]*Plugin Name:(.*)$/mi', $file_data, $match ) && ! empty( $match[1] );
 }
 
