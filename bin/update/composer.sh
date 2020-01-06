@@ -19,6 +19,9 @@ working_dir=${1-${TRAVIS_BUILD_DIR}}
 if [[ ! -f ${working_dir}/composer.json ]]; then
   echo ""
   echo "${working_dir}/composer.json is not exist"
+  if [[ -n "${CI}" ]]; then
+    exit
+  fi
   exit 1
 fi
 

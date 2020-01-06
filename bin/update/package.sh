@@ -21,6 +21,9 @@ fi
 if [[ ! -f ${working_dir}/package.json ]]; then
   echo ""
   echo "${working_dir}/package.json is not exist"
+  if [[ -n "${CI}" ]]; then
+    exit
+  fi
   exit 1
 fi
 
