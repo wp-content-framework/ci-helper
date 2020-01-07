@@ -29,5 +29,5 @@ packages=()
 source ${BIN_DIR}/packages.sh
 
 rm -f ${working_dir}/composer.lock
-composer --working-dir=${working_dir} update --no-dev
+rm -rdf ${working_dir}/vendor
 composer require --working-dir=${working_dir} --update-no-dev ${packages[@]}
