@@ -11,7 +11,7 @@ source ${current}/../variables.sh
 TARGET_DIR=${GH_PAGES_TEMPLATE_DIR}/gutenberg
 
 URL=https://api.wp-framework.dev/api/v1/summary.json
-data=$(curl $(curl ${URL} | jq -r '.gutenberg.url'))
+data=$(curl $(curl ${URL} | jq -r '.gutenberg.url') | jq -r '[to_entries[] | select(.value | test("^0") | not)] | from_entries')
 packages="$(echo "${data}" | jq -r '.|keys[]' | paste -sd " " - | sed 's/wp-/@wordpress\//g')"
 packages="${packages} @wordpress/babel-plugin-import-jsx-pragma"
 sed -i -e '/@wordpress/d' ${TARGET_DIR}/package.json
