@@ -24,7 +24,7 @@ ls -la ${JS_DIR}/node_modules/.bin
 echo ""
 echo ">> Run yarn lint."
 if [[ -n "${GIT_DIFF}" ]]; then
-  yarn --cwd ${JS_DIR} eslint ${GIT_DIFF}
+  yarn --cwd ${JS_DIR} eslint "$(eval echo "${GIT_DIFF}")"
 else
   yarn --cwd ${JS_DIR} lint
 fi;
