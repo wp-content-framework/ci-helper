@@ -74,3 +74,24 @@
 #___app_id___ .playground__header {
   display: block;
 }
+
+#___app_id___ .playground__body {
+  .components-font-size-picker__dropdown-content .components-button {
+    height: auto;
+  }
+
+  .components-toolbar {
+    .components-dropdown-button {
+      padding: 3px;
+
+      .components-button {
+        height: 30px;
+      }
+    }
+
+    .components-icon-button {
+      padding: 3px 4px;
+      margin: 0 1px;
+    }
+  }
+}
