@@ -2418,8 +2418,8 @@ diffie-hellman@^5.0.0:
     randombytes "^2.0.0"
 
 direction@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/direction/-/direction-1.0.3.tgz#5030e1e091e923904067d015dbaafd08f4d27d26"
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/direction/-/direction-1.0.4.tgz#2b86fb686967e987088caf8b89059370d4837442"
 
 document.contains@^1.0.1:
   version "1.0.1"
