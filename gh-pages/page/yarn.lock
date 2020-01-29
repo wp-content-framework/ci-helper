@@ -1605,8 +1605,8 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.338:
-  version "1.3.340"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.340.tgz#5d4fe78e984d4211194cf5a52e08069543da146f"
+  version "1.3.341"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.341.tgz#ad4c039bf621715a12dd814a95a7d89ec80b092c"
 
 elliptic@^6.0.0:
   version "6.5.2"
@@ -2055,6 +2055,10 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
 
+has-flag@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
+
 has-symbols@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.1.tgz#9f5214758a44196c406d9bd76cebf81ec2dd31e8"
@@ -2384,12 +2388,12 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jest-worker@^24.9.0:
-  version "24.9.0"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.9.0.tgz#5dbfdb5b2d322e98567898238a9697bcce67b3e5"
+jest-worker@^25.1.0:
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-25.1.0.tgz#75d038bad6fdf58eba0d2ec1835856c497e3907a"
   dependencies:
     merge-stream "^2.0.0"
-    supports-color "^6.1.0"
+    supports-color "^7.0.0"
 
 js-base64@^2.1.8:
   version "2.5.1"
@@ -2485,8 +2489,8 @@ leven@^3.1.0:
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
 
 levenary@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/levenary/-/levenary-1.1.0.tgz#fc146fe75f32dc483a0a2c64aef720f602cd6210"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/levenary/-/levenary-1.1.1.tgz#842a9ee98d2075aa7faeedbe32679e9205f46f77"
   dependencies:
     leven "^3.1.0"
 
@@ -3075,7 +3079,7 @@ p-is-promise@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/p-is-promise/-/p-is-promise-2.1.0.tgz#918cebaea248a62cf7ffab8e3bca8c5f882fc42e"
 
-p-limit@^2.0.0, p-limit@^2.2.0:
+p-limit@^2.0.0, p-limit@^2.2.0, p-limit@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.2.tgz#61279b67721f5287aa1c13a9a7fbbc48c9291b1e"
   dependencies:
@@ -3104,8 +3108,8 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
 
 pako@~1.0.5:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.10.tgz#4328badb5086a426aa90f541977d4955da5c9732"
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
 
 parallel-transform@^1.1.0:
   version "1.2.0"
@@ -3974,6 +3978,12 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
+supports-color@^7.0.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-7.1.0.tgz#68e32591df73e25ad1c4b49108a2ec507962bfd1"
+  dependencies:
+    has-flag "^4.0.0"
+
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
@@ -4012,14 +4022,15 @@ terser-webpack-plugin@^1.4.3:
     webpack-sources "^1.4.0"
     worker-farm "^1.7.0"
 
-terser-webpack-plugin@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-2.3.2.tgz#6d3d1b0590c8f729bfbaeb7fb2528b8b62db4c74"
+terser-webpack-plugin@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-2.3.3.tgz#b89043168bd414153bab86f4362ac23d537b78b0"
   dependencies:
     cacache "^13.0.1"
     find-cache-dir "^3.2.0"
-    jest-worker "^24.9.0"
-    schema-utils "^2.6.1"
+    jest-worker "^25.1.0"
+    p-limit "^2.2.2"
+    schema-utils "^2.6.4"
     serialize-javascript "^2.1.2"
     source-map "^0.6.1"
     terser "^4.4.3"
