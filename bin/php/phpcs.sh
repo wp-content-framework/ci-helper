@@ -19,7 +19,7 @@ ls -la ${TRAVIS_BUILD_DIR}/vendor/autoload.php
 echo ""
 echo ">> Run composer phpcs."
 if [[ -n "${GIT_DIFF}" ]]; then
-  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpcs --standard="${TRAVIS_BUILD_DIR}/phpcs.xml" "$(eval echo "${GIT_DIFF}")"
+  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpcs --standard="${TRAVIS_BUILD_DIR}/phpcs.xml" $(eval echo "${GIT_DIFF}")
 else
   "${TRAVIS_BUILD_DIR}"/vendor/bin/phpcs --standard="${TRAVIS_BUILD_DIR}/phpcs.xml"
 fi
