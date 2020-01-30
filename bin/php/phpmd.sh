@@ -16,6 +16,23 @@ fi
 bash ${SCRIPT_DIR}/php/install-composer.sh
 ls -la ${TRAVIS_BUILD_DIR}/vendor/autoload.php
 
+targets="./src/"
+if [[ -d "${TRAVIS_BUILD_DIR}/configs" ]]; then
+  targets="${targets},./configs/"
+fi
+if [[ -d "${TRAVIS_BUILD_DIR}/tests" ]]; then
+  targets="${targets},./tests/"
+fi
+
+exclude=""
+if [[ -d "${TRAVIS_BUILD_DIR}/src/views" ]]; then
+  exclude="--exclude ./src/views/*"
+fi
+
 echo ""
 echo ">> Run composer phpmd."
-composer phpmd --working-dir=${TRAVIS_BUILD_DIR}
+if [[ -n "${GIT_DIFF}" ]]; then
+  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpmd "$(eval echo "${GIT_DIFF}")" "${targets}" ansi "${TRAVIS_BUILD_DIR}/phpmd.xml" "${exclude}"
+else
+  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpmd "${targets}" ansi "${TRAVIS_BUILD_DIR}/phpmd.xml" "${exclude}"
+fi

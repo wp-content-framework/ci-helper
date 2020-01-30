@@ -27,4 +27,4 @@ if [[ -n "${GIT_DIFF}" ]]; then
   yarn --cwd ${JS_DIR} eslint "$(eval echo "${GIT_DIFF}")"
 else
   yarn --cwd ${JS_DIR} lint
-fi;
+fi
