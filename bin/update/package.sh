@@ -35,12 +35,8 @@ rm -f ${working_dir}/yarn.lock
 rm -f ${working_dir}/package-lock.json
 ncu -u --packageFile ${working_dir}/package.json
 
-if [[ -n "${GITHUB_ACTION}" ]]; then
-  sudo chown -R $USER $HOME/.config
-else
-  if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
-    yarn --cwd ${working_dir} cache clean
-  fi
+if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
+  yarn --cwd ${working_dir} cache clean
 fi
 
 yarn --cwd ${working_dir} install
