@@ -23,8 +23,8 @@ fi
 
 echo ""
 echo ">> Run composer phpmd."
-if [[ -n "${GIT_DIFF}" ]]; then
-  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpmd "$(eval echo "${GIT_DIFF}")" ansi "${TRAVIS_BUILD_DIR}/phpmd.xml" "${exclude}"
+if [[ -n "${GIT_DIFF_FILTERED}" ]]; then
+  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpmd "$(eval echo "${GIT_DIFF_FILTERED}")" ansi "${TRAVIS_BUILD_DIR}/phpmd.xml" "${exclude}"
 else
   targets="./src/"
   if [[ -d "${TRAVIS_BUILD_DIR}/configs" ]]; then

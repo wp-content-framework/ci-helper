@@ -18,9 +18,9 @@ ls -la ${TRAVIS_BUILD_DIR}/vendor/autoload.php
 
 echo ""
 echo ">> Run composer phpcs."
-if [[ -n "${GIT_DIFF}" ]]; then
+if [[ -n "${GIT_DIFF_FILTERED}" ]]; then
   # shellcheck disable=SC2046
-  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpcs --standard="${TRAVIS_BUILD_DIR}/phpcs.xml" $(eval echo "${GIT_DIFF}")
+  "${TRAVIS_BUILD_DIR}"/vendor/bin/phpcs --standard="${TRAVIS_BUILD_DIR}/phpcs.xml" $(eval echo "${GIT_DIFF_FILTERED}")
 else
   "${TRAVIS_BUILD_DIR}"/vendor/bin/phpcs --standard="${TRAVIS_BUILD_DIR}/phpcs.xml"
 fi
