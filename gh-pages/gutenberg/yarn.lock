@@ -38,8 +38,8 @@
     source-map "^0.5.0"
 
 "@babel/generator@^7.9.0":
-  version "7.9.3"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.9.3.tgz#7c8b2956c6f68b3ab732bd16305916fbba521d94"
+  version "7.9.4"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.9.4.tgz#12441e90c3b3c4159cdecf312075bf1a8ce2dbce"
   dependencies:
     "@babel/types" "^7.9.0"
     jsesc "^2.5.1"
@@ -229,8 +229,8 @@
     js-tokens "^4.0.0"
 
 "@babel/parser@^7.8.6", "@babel/parser@^7.9.0":
-  version "7.9.3"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.9.3.tgz#043a5fc2ad8b7ea9facddc4e802a1f0f25da7255"
+  version "7.9.4"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.9.4.tgz#68a35e6b0319bbc014465be43828300113f2f2e8"
 
 "@babel/plugin-proposal-async-generator-functions@^7.8.3":
   version "7.8.3"
@@ -518,9 +518,9 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/plugin-transform-react-jsx@^7.9.1":
-  version "7.9.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.9.1.tgz#d03af29396a6dc51bfa24eefd8005a9fd381152a"
+"@babel/plugin-transform-react-jsx@^7.9.4":
+  version "7.9.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.9.4.tgz#86f576c8540bd06d0e95e0b61ea76d55f6cbd03f"
   dependencies:
     "@babel/helper-builder-react-jsx" "^7.9.0"
     "@babel/helper-builder-react-jsx-experimental" "^7.9.0"
@@ -837,132 +837,131 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
 
-"@webassemblyjs/ast@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
+"@webassemblyjs/ast@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
   dependencies:
-    "@webassemblyjs/helper-module-context" "1.8.5"
-    "@webassemblyjs/helper-wasm-bytecode" "1.8.5"
-    "@webassemblyjs/wast-parser" "1.8.5"
+    "@webassemblyjs/helper-module-context" "1.9.0"
+    "@webassemblyjs/helper-wasm-bytecode" "1.9.0"
+    "@webassemblyjs/wast-parser" "1.9.0"
 
-"@webassemblyjs/floating-point-hex-parser@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.8.5.tgz#1ba926a2923613edce496fd5b02e8ce8a5f49721"
+"@webassemblyjs/floating-point-hex-parser@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.9.0.tgz#3c3d3b271bddfc84deb00f71344438311d52ffb4"
 
-"@webassemblyjs/helper-api-error@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-api-error/-/helper-api-error-1.8.5.tgz#c49dad22f645227c5edb610bdb9697f1aab721f7"
+"@webassemblyjs/helper-api-error@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-api-error/-/helper-api-error-1.9.0.tgz#203f676e333b96c9da2eeab3ccef33c45928b6a2"
 
-"@webassemblyjs/helper-buffer@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-buffer/-/helper-buffer-1.8.5.tgz#fea93e429863dd5e4338555f42292385a653f204"
+"@webassemblyjs/helper-buffer@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-buffer/-/helper-buffer-1.9.0.tgz#a1442d269c5feb23fcbc9ef759dac3547f29de00"
 
-"@webassemblyjs/helper-code-frame@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-code-frame/-/helper-code-frame-1.8.5.tgz#9a740ff48e3faa3022b1dff54423df9aa293c25e"
+"@webassemblyjs/helper-code-frame@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-code-frame/-/helper-code-frame-1.9.0.tgz#647f8892cd2043a82ac0c8c5e75c36f1d9159f27"
   dependencies:
-    "@webassemblyjs/wast-printer" "1.8.5"
+    "@webassemblyjs/wast-printer" "1.9.0"
 
-"@webassemblyjs/helper-fsm@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-fsm/-/helper-fsm-1.8.5.tgz#ba0b7d3b3f7e4733da6059c9332275d860702452"
+"@webassemblyjs/helper-fsm@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-fsm/-/helper-fsm-1.9.0.tgz#c05256b71244214671f4b08ec108ad63b70eddb8"
 
-"@webassemblyjs/helper-module-context@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-module-context/-/helper-module-context-1.8.5.tgz#def4b9927b0101dc8cbbd8d1edb5b7b9c82eb245"
+"@webassemblyjs/helper-module-context@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-module-context/-/helper-module-context-1.9.0.tgz#25d8884b76839871a08a6c6f806c3979ef712f07"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    mamacro "^0.0.3"
+    "@webassemblyjs/ast" "1.9.0"
 
-"@webassemblyjs/helper-wasm-bytecode@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.8.5.tgz#537a750eddf5c1e932f3744206551c91c1b93e61"
+"@webassemblyjs/helper-wasm-bytecode@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.9.0.tgz#4fed8beac9b8c14f8c58b70d124d549dd1fe5790"
 
-"@webassemblyjs/helper-wasm-section@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.8.5.tgz#74ca6a6bcbe19e50a3b6b462847e69503e6bfcbf"
+"@webassemblyjs/helper-wasm-section@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.9.0.tgz#5a4138d5a6292ba18b04c5ae49717e4167965346"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/helper-buffer" "1.8.5"
-    "@webassemblyjs/helper-wasm-bytecode" "1.8.5"
-    "@webassemblyjs/wasm-gen" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/helper-buffer" "1.9.0"
+    "@webassemblyjs/helper-wasm-bytecode" "1.9.0"
+    "@webassemblyjs/wasm-gen" "1.9.0"
 
-"@webassemblyjs/ieee754@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/ieee754/-/ieee754-1.8.5.tgz#712329dbef240f36bf57bd2f7b8fb9bf4154421e"
+"@webassemblyjs/ieee754@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/ieee754/-/ieee754-1.9.0.tgz#15c7a0fbaae83fb26143bbacf6d6df1702ad39e4"
   dependencies:
     "@xtuc/ieee754" "^1.2.0"
 
-"@webassemblyjs/leb128@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/leb128/-/leb128-1.8.5.tgz#044edeb34ea679f3e04cd4fd9824d5e35767ae10"
+"@webassemblyjs/leb128@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/leb128/-/leb128-1.9.0.tgz#f19ca0b76a6dc55623a09cffa769e838fa1e1c95"
   dependencies:
     "@xtuc/long" "4.2.2"
 
-"@webassemblyjs/utf8@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/utf8/-/utf8-1.8.5.tgz#a8bf3b5d8ffe986c7c1e373ccbdc2a0915f0cedc"
+"@webassemblyjs/utf8@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/utf8/-/utf8-1.9.0.tgz#04d33b636f78e6a6813227e82402f7637b6229ab"
 
-"@webassemblyjs/wasm-edit@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-edit/-/wasm-edit-1.8.5.tgz#962da12aa5acc1c131c81c4232991c82ce56e01a"
+"@webassemblyjs/wasm-edit@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-edit/-/wasm-edit-1.9.0.tgz#3fe6d79d3f0f922183aa86002c42dd256cfee9cf"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/helper-buffer" "1.8.5"
-    "@webassemblyjs/helper-wasm-bytecode" "1.8.5"
-    "@webassemblyjs/helper-wasm-section" "1.8.5"
-    "@webassemblyjs/wasm-gen" "1.8.5"
-    "@webassemblyjs/wasm-opt" "1.8.5"
-    "@webassemblyjs/wasm-parser" "1.8.5"
-    "@webassemblyjs/wast-printer" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/helper-buffer" "1.9.0"
+    "@webassemblyjs/helper-wasm-bytecode" "1.9.0"
+    "@webassemblyjs/helper-wasm-section" "1.9.0"
+    "@webassemblyjs/wasm-gen" "1.9.0"
+    "@webassemblyjs/wasm-opt" "1.9.0"
+    "@webassemblyjs/wasm-parser" "1.9.0"
+    "@webassemblyjs/wast-printer" "1.9.0"
 
-"@webassemblyjs/wasm-gen@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-gen/-/wasm-gen-1.8.5.tgz#54840766c2c1002eb64ed1abe720aded714f98bc"
+"@webassemblyjs/wasm-gen@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-gen/-/wasm-gen-1.9.0.tgz#50bc70ec68ded8e2763b01a1418bf43491a7a49c"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/helper-wasm-bytecode" "1.8.5"
-    "@webassemblyjs/ieee754" "1.8.5"
-    "@webassemblyjs/leb128" "1.8.5"
-    "@webassemblyjs/utf8" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/helper-wasm-bytecode" "1.9.0"
+    "@webassemblyjs/ieee754" "1.9.0"
+    "@webassemblyjs/leb128" "1.9.0"
+    "@webassemblyjs/utf8" "1.9.0"
 
-"@webassemblyjs/wasm-opt@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-opt/-/wasm-opt-1.8.5.tgz#b24d9f6ba50394af1349f510afa8ffcb8a63d264"
+"@webassemblyjs/wasm-opt@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-opt/-/wasm-opt-1.9.0.tgz#2211181e5b31326443cc8112eb9f0b9028721a61"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/helper-buffer" "1.8.5"
-    "@webassemblyjs/wasm-gen" "1.8.5"
-    "@webassemblyjs/wasm-parser" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/helper-buffer" "1.9.0"
+    "@webassemblyjs/wasm-gen" "1.9.0"
+    "@webassemblyjs/wasm-parser" "1.9.0"
 
-"@webassemblyjs/wasm-parser@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-parser/-/wasm-parser-1.8.5.tgz#21576f0ec88b91427357b8536383668ef7c66b8d"
+"@webassemblyjs/wasm-parser@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-parser/-/wasm-parser-1.9.0.tgz#9d48e44826df4a6598294aa6c87469d642fff65e"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/helper-api-error" "1.8.5"
-    "@webassemblyjs/helper-wasm-bytecode" "1.8.5"
-    "@webassemblyjs/ieee754" "1.8.5"
-    "@webassemblyjs/leb128" "1.8.5"
-    "@webassemblyjs/utf8" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/helper-api-error" "1.9.0"
+    "@webassemblyjs/helper-wasm-bytecode" "1.9.0"
+    "@webassemblyjs/ieee754" "1.9.0"
+    "@webassemblyjs/leb128" "1.9.0"
+    "@webassemblyjs/utf8" "1.9.0"
 
-"@webassemblyjs/wast-parser@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wast-parser/-/wast-parser-1.8.5.tgz#e10eecd542d0e7bd394f6827c49f3df6d4eefb8c"
+"@webassemblyjs/wast-parser@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wast-parser/-/wast-parser-1.9.0.tgz#3031115d79ac5bd261556cecc3fa90a3ef451914"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/floating-point-hex-parser" "1.8.5"
-    "@webassemblyjs/helper-api-error" "1.8.5"
-    "@webassemblyjs/helper-code-frame" "1.8.5"
-    "@webassemblyjs/helper-fsm" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/floating-point-hex-parser" "1.9.0"
+    "@webassemblyjs/helper-api-error" "1.9.0"
+    "@webassemblyjs/helper-code-frame" "1.9.0"
+    "@webassemblyjs/helper-fsm" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@webassemblyjs/wast-printer@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wast-printer/-/wast-printer-1.8.5.tgz#114bbc481fd10ca0e23b3560fa812748b0bae5bc"
+"@webassemblyjs/wast-printer@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wast-printer/-/wast-printer-1.9.0.tgz#4935d54c85fef637b00ce9f52377451d00d47899"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/wast-parser" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
 "@wordpress/a11y@^2.7.0":
@@ -972,15 +971,15 @@
     "@babel/runtime" "^7.8.3"
     "@wordpress/dom-ready" "^2.7.0"
 
-"@wordpress/annotations@^1.12.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/annotations/-/annotations-1.12.1.tgz#78a96e36b2ff2a1d396d7b32035d8bdbafdbe2fe"
+"@wordpress/annotations@^1.12.2":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/annotations/-/annotations-1.12.2.tgz#01593f73faeaed01355954d65066892525994f2a"
   dependencies:
     "@babel/runtime" "^7.8.3"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/hooks" "^2.7.0"
     "@wordpress/i18n" "^3.9.0"
-    "@wordpress/rich-text" "^3.12.1"
+    "@wordpress/rich-text" "^3.12.2"
     lodash "^4.17.15"
     rememo "^3.0.0"
     uuid "^3.3.2"
@@ -1009,33 +1008,33 @@
   dependencies:
     "@babel/runtime" "^7.8.3"
 
-"@wordpress/block-directory@^1.5.5":
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-directory/-/block-directory-1.5.5.tgz#d6322b0d80e168b98cdff28912ea5500dac6a18f"
+"@wordpress/block-directory@^1.5.6":
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-directory/-/block-directory-1.5.6.tgz#0ad4abd35f77fd26244c8dc012c1139555617697"
   dependencies:
     "@wordpress/api-fetch" "^3.11.0"
-    "@wordpress/block-editor" "^3.7.5"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/block-editor" "^3.7.6"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/element" "^2.11.0"
     "@wordpress/i18n" "^3.9.0"
     "@wordpress/icons" "^1.1.0"
     "@wordpress/plugins" "^2.12.0"
     lodash "^4.17.15"
 
-"@wordpress/block-editor@^3.7.5":
-  version "3.7.5"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-editor/-/block-editor-3.7.5.tgz#010e167e0ed5302da641bed63d53a441bd754b10"
+"@wordpress/block-editor@^3.7.6":
+  version "3.7.6"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-editor/-/block-editor-3.7.6.tgz#cff97caca1f68c44c4777da2e7c6cdcc257f0ee5"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/a11y" "^2.7.0"
     "@wordpress/blob" "^2.7.0"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/dom" "^2.8.0"
     "@wordpress/element" "^2.11.0"
@@ -1044,12 +1043,12 @@
     "@wordpress/i18n" "^3.9.0"
     "@wordpress/icons" "^1.1.0"
     "@wordpress/is-shallow-equal" "^1.8.0"
-    "@wordpress/keyboard-shortcuts" "^1.1.1"
+    "@wordpress/keyboard-shortcuts" "^1.1.2"
     "@wordpress/keycodes" "^2.9.0"
-    "@wordpress/rich-text" "^3.12.1"
+    "@wordpress/rich-text" "^3.12.2"
     "@wordpress/token-list" "^1.9.0"
     "@wordpress/url" "^2.11.0"
-    "@wordpress/viewport" "^2.13.1"
+    "@wordpress/viewport" "^2.13.2"
     "@wordpress/wordcount" "^2.7.0"
     classnames "^2.2.5"
     diff "^3.5.0"
@@ -1065,25 +1064,25 @@
     tinycolor2 "^1.4.1"
     traverse "^0.6.6"
 
-"@wordpress/block-library@^2.14.5":
-  version "2.14.5"
-  resolved "https://registry.yarnpkg.com/@wordpress/block-library/-/block-library-2.14.5.tgz#fafca8920e24f3b6ce12db16a4285a8705756189"
+"@wordpress/block-library@^2.14.6":
+  version "2.14.6"
+  resolved "https://registry.yarnpkg.com/@wordpress/block-library/-/block-library-2.14.6.tgz#2118a5182412a9a0ef9e36ff25f17e100395e8ca"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/a11y" "^2.7.0"
     "@wordpress/api-fetch" "^3.11.0"
     "@wordpress/autop" "^2.6.0"
     "@wordpress/blob" "^2.7.0"
-    "@wordpress/block-editor" "^3.7.5"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/block-editor" "^3.7.6"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/core-data" "^2.12.1"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/core-data" "^2.12.2"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/date" "^3.8.0"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/dom" "^2.8.0"
-    "@wordpress/editor" "^9.12.5"
+    "@wordpress/editor" "^9.12.6"
     "@wordpress/element" "^2.11.0"
     "@wordpress/escape-html" "^1.7.0"
     "@wordpress/i18n" "^3.9.0"
@@ -1091,10 +1090,10 @@
     "@wordpress/is-shallow-equal" "^1.8.0"
     "@wordpress/keycodes" "^2.9.0"
     "@wordpress/primitives" "^1.1.0"
-    "@wordpress/rich-text" "^3.12.1"
-    "@wordpress/server-side-render" "^1.8.4"
+    "@wordpress/rich-text" "^3.12.2"
+    "@wordpress/server-side-render" "^1.8.5"
     "@wordpress/url" "^2.11.0"
-    "@wordpress/viewport" "^2.13.1"
+    "@wordpress/viewport" "^2.13.2"
     classnames "^2.2.5"
     fast-average-color "4.3.0"
     lodash "^4.17.15"
@@ -1116,16 +1115,16 @@
     pegjs "^0.10.0"
     phpegjs "^1.0.0-beta7"
 
-"@wordpress/blocks@^6.12.1":
-  version "6.12.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/blocks/-/blocks-6.12.1.tgz#0fee83e4ab29c7179ced19f5ac137e9f51f8ac06"
+"@wordpress/blocks@^6.12.2":
+  version "6.12.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/blocks/-/blocks-6.12.2.tgz#cb4ebb217b7adbbcb4b410628127c648f03bf5c7"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/autop" "^2.6.0"
     "@wordpress/blob" "^2.7.0"
     "@wordpress/block-serialization-default-parser" "^3.5.0"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/dom" "^2.8.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/hooks" "^2.7.0"
@@ -1141,9 +1140,9 @@
     tinycolor2 "^1.4.1"
     uuid "^3.3.2"
 
-"@wordpress/components@^9.2.4":
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/components/-/components-9.2.4.tgz#14c7fbe012ccfa5dc1a1f6d3dfc1e22c6dcb101f"
+"@wordpress/components@^9.2.5":
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/@wordpress/components/-/components-9.2.5.tgz#68a2d611ca78f0c2d6356683c7d185a8e01155b6"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@emotion/core" "^10.0.22"
@@ -1161,7 +1160,7 @@
     "@wordpress/is-shallow-equal" "^1.8.0"
     "@wordpress/keycodes" "^2.9.0"
     "@wordpress/primitives" "^1.1.0"
-    "@wordpress/rich-text" "^3.12.1"
+    "@wordpress/rich-text" "^3.12.2"
     "@wordpress/warning" "^1.0.0"
     classnames "^2.2.5"
     clipboard "^2.0.1"
@@ -1190,14 +1189,14 @@
     lodash "^4.17.15"
     mousetrap "^1.6.2"
 
-"@wordpress/core-data@^2.12.1":
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/core-data/-/core-data-2.12.1.tgz#9f273bed4aec99ca3bc3f3349b50edc2dd86f963"
+"@wordpress/core-data@^2.12.2":
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/core-data/-/core-data-2.12.2.tgz#1a42cceb459475ffc4fa1b69eefb4e57b211c18a"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/api-fetch" "^3.11.0"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/is-shallow-equal" "^1.8.0"
@@ -1206,16 +1205,16 @@
     lodash "^4.17.15"
     rememo "^3.0.0"
 
-"@wordpress/data-controls@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/data-controls/-/data-controls-1.8.1.tgz#04ac4e7bc2d121e6a37a8d930948e704c64d953c"
+"@wordpress/data-controls@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/data-controls/-/data-controls-1.8.2.tgz#514e5fde01e71876057cb2f46a041d3ba1e9c874"
   dependencies:
     "@wordpress/api-fetch" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
 
-"@wordpress/data@^4.14.1":
-  version "4.14.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/data/-/data-4.14.1.tgz#dc5ae1a65404c57ad302433ff812496d47f62e09"
+"@wordpress/data@^4.14.2":
+  version "4.14.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/data/-/data-4.14.2.tgz#f6e598c688242ad72db70366451f0e4995ee119f"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/compose" "^3.11.0"
@@ -1260,73 +1259,73 @@
     "@babel/runtime" "^7.8.3"
     lodash "^4.17.15"
 
-"@wordpress/edit-post@^3.13.6":
-  version "3.13.6"
-  resolved "https://registry.yarnpkg.com/@wordpress/edit-post/-/edit-post-3.13.6.tgz#cce0113fc332b46fbcfb639e11ed0b68f9d54776"
+"@wordpress/edit-post@^3.13.7":
+  version "3.13.7"
+  resolved "https://registry.yarnpkg.com/@wordpress/edit-post/-/edit-post-3.13.7.tgz#3b71d549c141b24abfb0782d97dc74626c12681a"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/a11y" "^2.7.0"
     "@wordpress/api-fetch" "^3.11.0"
-    "@wordpress/block-editor" "^3.7.5"
-    "@wordpress/block-library" "^2.14.5"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/block-editor" "^3.7.6"
+    "@wordpress/block-library" "^2.14.6"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/core-data" "^2.12.1"
-    "@wordpress/data" "^4.14.1"
-    "@wordpress/editor" "^9.12.5"
+    "@wordpress/core-data" "^2.12.2"
+    "@wordpress/data" "^4.14.2"
+    "@wordpress/editor" "^9.12.6"
     "@wordpress/element" "^2.11.0"
     "@wordpress/hooks" "^2.7.0"
     "@wordpress/i18n" "^3.9.0"
     "@wordpress/icons" "^1.1.0"
-    "@wordpress/keyboard-shortcuts" "^1.1.1"
+    "@wordpress/keyboard-shortcuts" "^1.1.2"
     "@wordpress/keycodes" "^2.9.0"
     "@wordpress/media-utils" "^1.7.2"
-    "@wordpress/notices" "^2.0.1"
+    "@wordpress/notices" "^2.0.2"
     "@wordpress/plugins" "^2.12.0"
     "@wordpress/primitives" "^1.1.0"
     "@wordpress/url" "^2.11.0"
-    "@wordpress/viewport" "^2.13.1"
+    "@wordpress/viewport" "^2.13.2"
     classnames "^2.2.5"
     lodash "^4.17.15"
     memize "^1.0.5"
     refx "^3.0.0"
     rememo "^3.0.0"
 
-"@wordpress/edit-site@^1.3.4":
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/edit-site/-/edit-site-1.3.4.tgz#fda0547e7a7c76ef3872e16ecfeba16120e3c751"
+"@wordpress/edit-site@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@wordpress/edit-site/-/edit-site-1.3.5.tgz#55a2b06a8620b3de8d862f7a55544a8496df3778"
   dependencies:
     "@babel/runtime" "^7.8.3"
-    "@wordpress/block-editor" "^3.7.5"
-    "@wordpress/block-library" "^2.14.5"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/components" "^9.2.4"
-    "@wordpress/core-data" "^2.12.1"
-    "@wordpress/data" "^4.14.1"
-    "@wordpress/editor" "^9.12.5"
+    "@wordpress/block-editor" "^3.7.6"
+    "@wordpress/block-library" "^2.14.6"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/components" "^9.2.5"
+    "@wordpress/core-data" "^2.12.2"
+    "@wordpress/data" "^4.14.2"
+    "@wordpress/editor" "^9.12.6"
     "@wordpress/element" "^2.11.0"
     "@wordpress/hooks" "^2.7.0"
     "@wordpress/i18n" "^3.9.0"
     "@wordpress/media-utils" "^1.7.2"
-    "@wordpress/notices" "^2.0.1"
+    "@wordpress/notices" "^2.0.2"
 
-"@wordpress/editor@^9.12.5":
-  version "9.12.5"
-  resolved "https://registry.yarnpkg.com/@wordpress/editor/-/editor-9.12.5.tgz#24d091b3b7373c57b92f4015c63ea342440b0fdd"
+"@wordpress/editor@^9.12.6":
+  version "9.12.6"
+  resolved "https://registry.yarnpkg.com/@wordpress/editor/-/editor-9.12.6.tgz#99add334a230f2d6d1b20146e2a6a886dfbc17e2"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/api-fetch" "^3.11.0"
     "@wordpress/autop" "^2.6.0"
     "@wordpress/blob" "^2.7.0"
-    "@wordpress/block-directory" "^1.5.5"
-    "@wordpress/block-editor" "^3.7.5"
-    "@wordpress/blocks" "^6.12.1"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/block-directory" "^1.5.6"
+    "@wordpress/block-editor" "^3.7.6"
+    "@wordpress/blocks" "^6.12.2"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/core-data" "^2.12.1"
-    "@wordpress/data" "^4.14.1"
-    "@wordpress/data-controls" "^1.8.1"
+    "@wordpress/core-data" "^2.12.2"
+    "@wordpress/data" "^4.14.2"
+    "@wordpress/data-controls" "^1.8.2"
     "@wordpress/date" "^3.8.0"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/element" "^2.11.0"
@@ -1335,14 +1334,14 @@
     "@wordpress/i18n" "^3.9.0"
     "@wordpress/icons" "^1.1.0"
     "@wordpress/is-shallow-equal" "^1.8.0"
-    "@wordpress/keyboard-shortcuts" "^1.1.1"
+    "@wordpress/keyboard-shortcuts" "^1.1.2"
     "@wordpress/keycodes" "^2.9.0"
     "@wordpress/media-utils" "^1.7.2"
-    "@wordpress/notices" "^2.0.1"
-    "@wordpress/rich-text" "^3.12.1"
-    "@wordpress/server-side-render" "^1.8.4"
+    "@wordpress/notices" "^2.0.2"
+    "@wordpress/rich-text" "^3.12.2"
+    "@wordpress/server-side-render" "^1.8.5"
     "@wordpress/url" "^2.11.0"
-    "@wordpress/viewport" "^2.13.1"
+    "@wordpress/viewport" "^2.13.2"
     "@wordpress/wordcount" "^2.7.0"
     classnames "^2.2.5"
     equivalent-key-map "^0.2.2"
@@ -1369,21 +1368,21 @@
   dependencies:
     "@babel/runtime" "^7.8.3"
 
-"@wordpress/format-library@^1.14.5":
-  version "1.14.5"
-  resolved "https://registry.yarnpkg.com/@wordpress/format-library/-/format-library-1.14.5.tgz#02ba4b86767fdc3309296e16bb714a9d8298aa44"
+"@wordpress/format-library@^1.14.6":
+  version "1.14.6"
+  resolved "https://registry.yarnpkg.com/@wordpress/format-library/-/format-library-1.14.6.tgz#feecb155184376f5a0f5b4e99b84899e0bf98b6d"
   dependencies:
     "@babel/runtime" "^7.8.3"
-    "@wordpress/block-editor" "^3.7.5"
-    "@wordpress/components" "^9.2.4"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/block-editor" "^3.7.6"
+    "@wordpress/components" "^9.2.5"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/dom" "^2.8.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/html-entities" "^2.6.0"
     "@wordpress/i18n" "^3.9.0"
     "@wordpress/icons" "^1.1.0"
     "@wordpress/keycodes" "^2.9.0"
-    "@wordpress/rich-text" "^3.12.1"
+    "@wordpress/rich-text" "^3.12.2"
     "@wordpress/url" "^2.11.0"
     lodash "^4.17.15"
 
@@ -1424,13 +1423,13 @@
   dependencies:
     "@babel/runtime" "^7.8.3"
 
-"@wordpress/keyboard-shortcuts@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/keyboard-shortcuts/-/keyboard-shortcuts-1.1.1.tgz#a6c491aca68a7c0450e74e77a6eca2d3cb5d0a15"
+"@wordpress/keyboard-shortcuts@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/keyboard-shortcuts/-/keyboard-shortcuts-1.1.2.tgz#1dede552545e77c5711c225ba1694530786f5538"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/element" "^2.11.0"
     "@wordpress/keycodes" "^2.9.0"
     lodash "^4.17.15"
@@ -1444,13 +1443,13 @@
     "@wordpress/i18n" "^3.9.0"
     lodash "^4.17.15"
 
-"@wordpress/list-reusable-blocks@^1.13.4":
-  version "1.13.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.13.4.tgz#b42541682986df1baa1b8d29648a3241eed72dee"
+"@wordpress/list-reusable-blocks@^1.13.5":
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/@wordpress/list-reusable-blocks/-/list-reusable-blocks-1.13.5.tgz#aac21cdb8d0aea5df13b338b14f8290bf63a7ca8"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/api-fetch" "^3.11.0"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/i18n" "^3.9.0"
@@ -1467,23 +1466,23 @@
     "@wordpress/i18n" "^3.9.0"
     lodash "^4.17.15"
 
-"@wordpress/notices@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/notices/-/notices-2.0.1.tgz#4f6194582aecb03367caf97b74d3e411115ad283"
+"@wordpress/notices@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/notices/-/notices-2.0.2.tgz#6d21e136cb13825c04aa7282f704a0bd78bb0e32"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/a11y" "^2.7.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     lodash "^4.17.15"
 
-"@wordpress/nux@^3.12.4":
-  version "3.12.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/nux/-/nux-3.12.4.tgz#2f2dd02e1586ac701dc6b3fe92ab5a7457a88653"
+"@wordpress/nux@^3.12.5":
+  version "3.12.5"
+  resolved "https://registry.yarnpkg.com/@wordpress/nux/-/nux-3.12.5.tgz#ff189fc07a5527c94acd44b1e50b9c7863c9e04d"
   dependencies:
     "@babel/runtime" "^7.8.3"
-    "@wordpress/components" "^9.2.4"
+    "@wordpress/components" "^9.2.5"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/i18n" "^3.9.0"
@@ -1524,13 +1523,13 @@
     lodash "^4.17.15"
     rungen "^0.3.2"
 
-"@wordpress/rich-text@^3.12.1":
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/rich-text/-/rich-text-3.12.1.tgz#74065a64c40d3cb332160d6d4da7a55123573118"
+"@wordpress/rich-text@^3.12.2":
+  version "3.12.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/rich-text/-/rich-text-3.12.2.tgz#6b1b0f75e5528cff471719c4a57d347378c4e519"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/escape-html" "^1.7.0"
@@ -1541,14 +1540,14 @@
     memize "^1.0.5"
     rememo "^3.0.0"
 
-"@wordpress/server-side-render@^1.8.4":
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/@wordpress/server-side-render/-/server-side-render-1.8.4.tgz#00f9a2b9beffe558ce3a85f5b3f36e88cad779c6"
+"@wordpress/server-side-render@^1.8.5":
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/@wordpress/server-side-render/-/server-side-render-1.8.5.tgz#0c86682d2df0459ddfdeb32890228c95339fc6da"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/api-fetch" "^3.11.0"
-    "@wordpress/components" "^9.2.4"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/components" "^9.2.5"
+    "@wordpress/data" "^4.14.2"
     "@wordpress/deprecated" "^2.7.0"
     "@wordpress/element" "^2.11.0"
     "@wordpress/i18n" "^3.9.0"
@@ -1578,13 +1577,13 @@
     lodash "^4.17.15"
     qs "^6.5.2"
 
-"@wordpress/viewport@^2.13.1":
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/viewport/-/viewport-2.13.1.tgz#42f454bad62894d066a5aa6bc068b606c7311d64"
+"@wordpress/viewport@^2.13.2":
+  version "2.13.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/viewport/-/viewport-2.13.2.tgz#9cebe1ae16aaa58ab8ffa25de27dd61cceca2cc1"
   dependencies:
     "@babel/runtime" "^7.8.3"
     "@wordpress/compose" "^3.11.0"
-    "@wordpress/data" "^4.14.1"
+    "@wordpress/data" "^4.14.2"
     lodash "^4.17.15"
 
 "@wordpress/warning@^1.0.0":
@@ -2006,8 +2005,8 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
 cacache@^12.0.2:
-  version "12.0.3"
-  resolved "https://registry.yarnpkg.com/cacache/-/cacache-12.0.3.tgz#be99abba4e1bf5df461cd5a2c1071fc432573390"
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/cacache/-/cacache-12.0.4.tgz#668bcbd105aeb5f1d92fe25570ec9525c8faa40c"
   dependencies:
     bluebird "^3.5.5"
     chownr "^1.1.1"
@@ -2577,8 +2576,8 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.380:
-  version "1.3.381"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.381.tgz#952678ff91a5f36175a3832358a6dd2de3bf62b7"
+  version "1.3.383"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.383.tgz#8bbef55963529bfbf8344ac3620e1bcb455cffc3"
 
 elliptic@^6.0.0:
   version "6.5.2"
@@ -2805,8 +2804,8 @@ fbjs@^0.8.4:
     ua-parser-js "^0.7.18"
 
 figgy-pudding@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
 
 file-uri-to-path@1.0.0:
   version "1.0.0"
@@ -3715,10 +3714,6 @@ make-dir@^3.0.2:
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.0.2.tgz#04a1acbf22221e1d6ef43559f43e05a90dbb4392"
   dependencies:
     semver "^6.0.0"
-
-mamacro@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
 
 map-age-cleaner@^0.1.1:
   version "0.1.3"
@@ -5782,14 +5777,14 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.42.0:
-  version "4.42.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.42.0.tgz#b901635dd6179391d90740a63c93f76f39883eb8"
+webpack@^4.42.1:
+  version "4.42.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.42.1.tgz#ae707baf091f5ca3ef9c38b884287cfe8f1983ef"
   dependencies:
-    "@webassemblyjs/ast" "1.8.5"
-    "@webassemblyjs/helper-module-context" "1.8.5"
-    "@webassemblyjs/wasm-edit" "1.8.5"
-    "@webassemblyjs/wasm-parser" "1.8.5"
+    "@webassemblyjs/ast" "1.9.0"
+    "@webassemblyjs/helper-module-context" "1.9.0"
+    "@webassemblyjs/wasm-edit" "1.9.0"
+    "@webassemblyjs/wasm-parser" "1.9.0"
     acorn "^6.2.1"
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
@@ -5801,7 +5796,7 @@ webpack@^4.42.0:
     loader-utils "^1.2.3"
     memory-fs "^0.4.1"
     micromatch "^3.1.10"
-    mkdirp "^0.5.1"
+    mkdirp "^0.5.3"
     neo-async "^2.6.1"
     node-libs-browser "^2.2.1"
     schema-utils "^1.0.0"
