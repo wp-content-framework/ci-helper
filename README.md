@@ -8,23 +8,19 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+<details>
+<summary>Details</summary>
 
 - [Overview](#overview)
 - [Usage](#usage)
   - [0. Prepare `composer.json`, `package.json`](#0-prepare-composerjson-packagejson)
-    - [`composer.json`](#composerjson)
-    - [`package.json`](#packagejson)
   - [1. Prepare scripts](#1-prepare-scripts)
   - [2. Use](#2-use)
-    - [Check coding style](#check-coding-style)
-    - [Test](#test)
-    - [SVN diff](#svn-diff)
-    - [Deploy](#deploy)
   - [3. Slack](#3-slack)
 - [Check List](#check-list)
 - [Sample Plugins](#sample-plugins)
 
+</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Overview
