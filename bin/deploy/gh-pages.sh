@@ -39,20 +39,20 @@ if [[ -f ${TRAVIS_BUILD_DIR}/bin/gh-pages/setup.sh ]]; then
   bash ${TRAVIS_BUILD_DIR}/bin/gh-pages/setup.sh ${SCRIPT_DIR}
 fi
 
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___title___/${GH_PAGES_TITLE//\//\\/}/g" file
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___setup_script___/${GH_PAGES_SETUP_SCRIPT//\//\\/}/g" file
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___editor_script___/${GH_PAGES_EDITOR_SCRIPT//\//\\/}/g" file
-find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___app_id___/${GH_PAGES_APP_ID//\//\\/}/g" file
+find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___title___/${GH_PAGES_TITLE//\//\\/}/g" file
+find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___setup_script___/${GH_PAGES_SETUP_SCRIPT//\//\\/}/g" file
+find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___editor_script___/${GH_PAGES_EDITOR_SCRIPT//\//\\/}/g" file
+find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___app_id___/${GH_PAGES_APP_ID//\//\\/}/g" file
 
 if [[ -n "${GH_PAGES_PLUGIN_SCRIPT}" ]]; then
-  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___plugin_script___/${GH_PAGES_PLUGIN_SCRIPT//\//\\/}/g" file
+  find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___plugin_script___/${GH_PAGES_PLUGIN_SCRIPT//\//\\/}/g" file
 else
-  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_script___/d" file
+  find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "/___plugin_script___/d" file
 fi
 if [[ -n "${GH_PAGES_PLUGIN_STYLE}" ]]; then
-  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___plugin_style___/${GH_PAGES_PLUGIN_STYLE//\//\\/}/g" file
+  find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___plugin_style___/${GH_PAGES_PLUGIN_STYLE//\//\\/}/g" file
 else
-  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___plugin_style___/d" file
+  find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "/___plugin_style___/d" file
 fi
 
 if [[ -n "${GH_PAGES_TRACKING_ID}" ]]; then
@@ -70,7 +70,7 @@ if [[ -n "${GH_PAGES_TRACKING_ID}" ]]; then
 EOS
   )
   SCRIPT=$(echo ${SCRIPT} | sed -e 's/\n//g')
-  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "s/___google_analytics___/${SCRIPT//\//\\/}/g" file
+  find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "s/___google_analytics___/${SCRIPT//\//\\/}/g" file
 else
-  find ${GH_PAGES_DIR} -type f -print0 | xargs -n1 --no-run-if-empty -0 -I file sed -i -e "/___google_analytics___/d" file
+  find ${GH_PAGES_DIR} -type f \( -name "*.html" -or -name "*.js" \) -print0 | xargs -n1 -0 -I file sed -i -e "/___google_analytics___/d" file
 fi
