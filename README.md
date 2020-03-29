@@ -1,28 +1,26 @@
 # Scripts for Travis CI
 
-[![Build Status](https://travis-ci.com/wp-content-framework/travis-ci.svg?branch=master)](https://travis-ci.com/wp-content-framework/travis-ci)
+[![Update dependencies](https://github.com/wp-content-framework/travis-ci/workflows/Update%20dependencies/badge.svg)](https://github.com/wp-content-framework/travis-ci/actions?query=workflow%3A%22Update+dependencies%22)
 [![CodeFactor](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci/badge)](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/technote-space/jquery.marker-animation/blob/master/LICENSE)
 
+## Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+<details>
+<summary>Details</summary>
 
 - [Overview](#overview)
 - [Usage](#usage)
   - [0. Prepare `composer.json`, `package.json`](#0-prepare-composerjson-packagejson)
-    - [`composer.json`](#composerjson)
-    - [`package.json`](#packagejson)
   - [1. Prepare scripts](#1-prepare-scripts)
   - [2. Use](#2-use)
-    - [Check coding style](#check-coding-style)
-    - [Test](#test)
-    - [SVN diff](#svn-diff)
-    - [Deploy](#deploy)
   - [3. Slack](#3-slack)
 - [Check List](#check-list)
 - [Sample Plugins](#sample-plugins)
 
+</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Overview

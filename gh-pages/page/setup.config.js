@@ -1,9 +1,9 @@
-const SpeedMeasurePlugin = require( 'speed-measure-webpack-plugin' );
-const TerserPlugin = require( 'terser-webpack-plugin' );
-const webpack = require( 'webpack' );
-const pkg = require( './package' );
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const TerserPlugin       = require('terser-webpack-plugin');
+const webpack            = require('webpack');
+const pkg                = require('./package');
 
-const banner = `${ pkg.name }-setup ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\nLicense: ${ pkg.license }`;
+const banner = `${pkg.name}-setup ${pkg.version}\nCopyright (c) ${new Date().getFullYear()} ${pkg.author}\nLicense: ${pkg.license}`;
 
 const webpackConfig = {
 	context: __dirname,
@@ -21,18 +21,18 @@ const webpackConfig = {
 			},
 			{
 				test: /\.(sa|sc|c)ss$/,
-				use: [ 'style-loader', 'css-loader', 'sass-loader' ],
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 				sideEffects: true,
 			},
 		],
 	},
 	plugins: [
-		new webpack.BannerPlugin( banner ),
+		new webpack.BannerPlugin(banner),
 	],
 	optimization: {
 		minimize: true,
 		minimizer: [
-			new TerserPlugin( {
+			new TerserPlugin({
 				terserOptions: {
 					compress: {
 						'reduce_vars': false,
@@ -43,9 +43,9 @@ const webpackConfig = {
 					},
 				},
 				extractComments: false,
-			} ),
+			}),
 		],
 	},
 };
 
-module.exports = ( new SpeedMeasurePlugin() ).wrap( webpackConfig );
+module.exports = (new SpeedMeasurePlugin()).wrap(webpackConfig);
