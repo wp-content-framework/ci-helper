@@ -1,6 +1,6 @@
 # Scripts for Travis CI
 
-[![Build Status](https://travis-ci.com/wp-content-framework/travis-ci.svg?branch=master)](https://travis-ci.com/wp-content-framework/travis-ci)
+[![Update dependencies](https://github.com/wp-content-framework/travis-ci/workflows/Update%20dependencies/badge.svg)](https://github.com/wp-content-framework/travis-ci/actions?query=workflow%3A%22Update+dependencies%22)
 [![CodeFactor](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci/badge)](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/technote-space/jquery.marker-animation/blob/master/LICENSE)
 
