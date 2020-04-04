@@ -66,7 +66,7 @@ if [[ -n "$(bash ${SCRIPT_DIR}/prepare/check-install.sh ${1-""})" ]]; then
     bash ${SCRIPT_DIR}/prepare/install-zip-plugin.sh ${plugin}
   done
 
-  find ${TRAVIS_BUILD_DIR}/.plugin -mindepth 2 -maxdepth 2 -type d -name .git | sed -e 's/\/\.git//' | xargs --no-run-if-empty basename | while read -r plugin; do
+  find ${TRAVIS_BUILD_DIR}/.plugin -mindepth 2 -maxdepth 2 -type d -name .git | sed -e 's/\/\.git//' | xargs basename | while read -r plugin; do
     if [[ ! "${github_plugins[*]} " == *"/${plugin} "* ]]; then
       rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${plugin}
     fi
