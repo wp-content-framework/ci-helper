@@ -3,7 +3,7 @@
 set -e
 
 #NODE_JS_VERSION=${NODE_JS_VERSION:-node}
-NODE_JS_VERSION=${NODE_JS_VERSION:-11}
+NODE_JS_VERSION=${NODE_JS_VERSION:-12}
 
 export NVM_DIR="${HOME}/.nvm"
 if [[ ! -d ${NVM_DIR} ]]; then
