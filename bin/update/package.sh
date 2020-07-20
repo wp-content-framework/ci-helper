@@ -27,7 +27,7 @@ if [[ ! -f ${working_dir}/package.json ]]; then
   exit 1
 fi
 
-if [[ -z $(command -v ncu) ]]; then
+if [[ -z "${GITHUB_ACTION}" ]] && [[ -z $(command -v ncu) ]]; then
   npm install -g npm-check-updates
 fi
 
