@@ -20,8 +20,10 @@ jobs:
             rm -rdf .github/workflows/.tmp
             mkdir -p .github/workflows/.tmp
             git clone --depth=1 https://github.com/technote-space/github-actions-workflows.git .github/workflows/.tmp/workflows
+            cp -f .github/workflows/update-dependencies.yml .github/workflows/.tmp/ > /dev/null 2>&1 || :
 
             bash .github/workflows/.tmp/workflows/common/copy.sh
+            cp -f .github/workflows/.tmp/ci.yml .github/workflows/update-dependencies.yml > /dev/null 2>&1 || :
 
             rm -rdf .github/workflows/.tmp
           COMMIT_MESSAGE: 'chore: sync workflows'
