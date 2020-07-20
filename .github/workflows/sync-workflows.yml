@@ -23,7 +23,7 @@ jobs:
             cp -f .github/workflows/update-dependencies.yml .github/workflows/.tmp/ > /dev/null 2>&1 || :
 
             bash .github/workflows/.tmp/workflows/common/copy.sh
-            cp -f .github/workflows/.tmp/ci.yml .github/workflows/update-dependencies.yml > /dev/null 2>&1 || :
+            cp -f .github/workflows/.tmp/update-dependencies.yml .github/workflows/update-dependencies.yml > /dev/null 2>&1 || :
 
             rm -rdf .github/workflows/.tmp
           COMMIT_MESSAGE: 'chore: sync workflows'
