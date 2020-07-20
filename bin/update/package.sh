@@ -27,13 +27,9 @@ if [[ ! -f ${working_dir}/package.json ]]; then
   exit 1
 fi
 
-if [[ -z "${GITHUB_ACTION}" ]] && [[ -z $(command -v ncu) ]]; then
-  npm install -g npm-check-updates
-fi
-
 rm -f ${working_dir}/yarn.lock
 rm -f ${working_dir}/package-lock.json
-ncu -u --packageFile ${working_dir}/package.json
+npx npm-check-updates -u --packageFile ${working_dir}/package.json
 
 if [[ -n "${CI}" ]] && [[ -z "${GITHUB_ACTION}" ]]; then
   yarn --cwd ${working_dir} cache clean
