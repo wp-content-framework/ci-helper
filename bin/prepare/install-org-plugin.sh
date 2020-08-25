@@ -54,6 +54,24 @@ if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ && -z "${IGNORE_PL
   fi
 fi
 
+PHP_VERSION=$(php -r 'echo PHP_VERSION;')
+if [[ -n "${PHP_VERSION}" && -z "${IGNORE_PHP_VERSION}" ]]; then
+  UPPER_CASE_SLUG=$(echo ${PLUGIN_SLUG} | tr "[a-z]" "[A-Z]")
+  IGNORE_EACH_PHP_VERSION=$(eval echo '$'IGNORE_${UPPER_CASE_SLUG//-/_}_PHP_VERSION)
+  if [[ -z "${IGNORE_EACH_PHP_VERSION}" ]]; then
+    REQUIRED_VERSION=$(cat ${README} | grep "Requires PHP" | sed -e 's/Requires PHP: *//')
+    if [[ -n "${REQUIRED_VERSION}" ]]; then
+      echo "Required PHP version: ${REQUIRED_VERSION}"
+      echo "PHP version: ${PHP_VERSION}"
+      if [[ "${REQUIRED_VERSION}" != $(echo -e "${REQUIRED_VERSION}\n${PHP_VERSION}" | sort -V | head -n1) ]]; then
+        echo "Not enough version..."
+        rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+        UNZIP=0
+      fi
+    fi
+  fi
+fi
+
 if [[ ${UNZIP} == 1 ]]; then
   rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
 
