@@ -38,10 +38,10 @@ if [[ ! -f ${README} ]]; then
 fi
 
 if [[ -n "${WP_VERSION}" && ${WP_VERSION} =~ ^[0-9]+\.[0-9]+$ && -z "${IGNORE_PLUGIN_VERSION}" ]]; then
-  UPPER_CASE_SLUG=$(echo ${PLUGIN_SLUG} | tr "[a-z]" "[A-Z]")
+  UPPER_CASE_SLUG=$(echo ${PLUGIN_SLUG} | tr "[:lower:]" "[:upper:]")
   IGNORE_EACH_PLUGIN_VERSION=$(eval echo '$'IGNORE_${UPPER_CASE_SLUG//-/_}_VERSION)
   if [[ -z "${IGNORE_EACH_PLUGIN_VERSION}" ]]; then
-    REQUIRED_VERSION=$(cat ${README} | grep "Requires at least" | sed -e 's/Requires at least: *//')
+    REQUIRED_VERSION=$(< ${README} grep "Requires at least" | sed -e 's/Requires at least: *//')
     if [[ -n "${REQUIRED_VERSION}" ]]; then
       echo "Required version: ${REQUIRED_VERSION}"
       echo "WP version: ${WP_VERSION}"
@@ -56,10 +56,10 @@ fi
 
 PHP_VERSION=$(php -r 'echo PHP_VERSION;')
 if [[ -n "${PHP_VERSION}" && -z "${IGNORE_PHP_VERSION}" ]]; then
-  UPPER_CASE_SLUG=$(echo ${PLUGIN_SLUG} | tr "[a-z]" "[A-Z]")
+  UPPER_CASE_SLUG=$(echo ${PLUGIN_SLUG} | tr "[:lower:]" "[:upper:]")
   IGNORE_EACH_PHP_VERSION=$(eval echo '$'IGNORE_${UPPER_CASE_SLUG//-/_}_PHP_VERSION)
   if [[ -z "${IGNORE_EACH_PHP_VERSION}" ]]; then
-    REQUIRED_VERSION=$(cat ${README} | grep "Requires PHP" | sed -e 's/Requires PHP: *//')
+    REQUIRED_VERSION=$(< ${README} grep "Requires PHP" | sed -e 's/Requires PHP: *//')
     if [[ -n "${REQUIRED_VERSION}" ]]; then
       echo "Required PHP version: ${REQUIRED_VERSION}"
       echo "PHP version: ${PHP_VERSION}"
