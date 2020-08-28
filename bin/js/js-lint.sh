@@ -23,7 +23,7 @@ ls -la ${JS_DIR}/node_modules/.bin
 
 echo ""
 echo ">> Run yarn lint."
-if [[ -n "${GIT_DIFF_FILTERED}" ]]; then
+if [[ -n "${GIT_DIFF_FILTERED}" ]] && [[ -z "${MATCHED_FILES}" ]]; then
   # shellcheck disable=SC2046
   yarn --cwd ${JS_DIR} eslint $(eval echo "${GIT_DIFF_FILTERED}" | tr ' ' '\n' | sed 's/^assets\/js\///' | tr '\n' ' ')
 else
