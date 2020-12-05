@@ -39,6 +39,7 @@ mkdir -p ${PACKAGE_DIR}/assets/js/
 cp -r ${TRAVIS_BUILD_DIR}/assets/css ${PACKAGE_DIR}/assets/ 2>/dev/null || :
 cp -r ${TRAVIS_BUILD_DIR}/assets/img ${PACKAGE_DIR}/assets/ 2>/dev/null || :
 cp ${TRAVIS_BUILD_DIR}/assets/js/*.min.js ${PACKAGE_DIR}/assets/js/ 2>/dev/null || :
+cp ${TRAVIS_BUILD_DIR}/assets/js/*.LICENSE.txt ${PACKAGE_DIR}/assets/js/ 2>/dev/null || :
 cp ${TRAVIS_BUILD_DIR}/assets/js/.htaccess ${PACKAGE_DIR}/assets/js/ 2>/dev/null || :
 cp ${TRAVIS_BUILD_DIR}/assets/.htaccess ${PACKAGE_DIR}/assets/ 2>/dev/null || :
 
