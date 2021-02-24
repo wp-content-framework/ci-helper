@@ -1,7 +1,7 @@
 # Scripts for Travis CI
 
-[![Update dependencies](https://github.com/wp-content-framework/travis-ci/workflows/Update%20dependencies/badge.svg)](https://github.com/wp-content-framework/travis-ci/actions?query=workflow%3A%22Update+dependencies%22)
-[![CodeFactor](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci/badge)](https://www.codefactor.io/repository/github/wp-content-framework/travis-ci)
+[![Update dependencies](https://github.com/wp-content-framework/ci-helper/workflows/Update%20dependencies/badge.svg)](https://github.com/wp-content-framework/ci-helper/actions?query=workflow%3A%22Update+dependencies%22)
+[![CodeFactor](https://www.codefactor.io/repository/github/wp-content-framework/ci-helper/badge)](https://www.codefactor.io/repository/github/wp-content-framework/ci-helper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/technote-space/jquery.marker-animation/blob/master/LICENSE)
 
 ## Table of Contents
@@ -95,8 +95,8 @@ Download and run `prepare.sh` to create test configs.
 _.travis.yml_
 ```yaml
 before_script:
-  - git clone --depth=1 https://github.com/wp-content-framework/travis-ci.git travis-ci
-  - bash travis-ci/bin/prepare.sh
+  - git clone --depth=1 https://github.com/wp-content-framework/ci-helper.git ci-helper
+  - bash ci-helper/bin/prepare.sh
 ```
 ### 2. Use
 #### Check coding style
@@ -160,7 +160,7 @@ _.travis.yml_
 -  GitHub releases  
 1. Go to [Personal access tokens](https://github.com/settings/tokens).
 2. Generate token which has **repo** scope.
-3. Run `travis encrypt` command to encrypt the token ([Details](https://docs.travis-ci.com/user/encryption-keys/)).  
+3. Run `travis encrypt` command to encrypt the token ([Details](https://docs.ci-helper.com/user/encryption-keys/)).  
 like `travis encrypt "<GitHub Token>" --com -r <owner>/<repo>`
 
 or use `travis setup releases` command.

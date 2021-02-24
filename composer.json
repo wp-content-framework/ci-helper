@@ -1,5 +1,5 @@
 {
-  "name": "wp-content-framework/travis-ci",
+  "name": "wp-content-framework/ci-helper",
   "description": "Scripts for Travis CI",
   "type": "library",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "bin:update": [
       "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) bash bin/self/package.sh"
     ],
-    "bin:deploy": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) REPO_NAME=travis-ci TRAVIS_TAG=1.2.3 TRAVIS_BUILD_WEB_URL=http://example.com source bin/deploy/env.sh && bash bin/deploy/create.sh"
+    "bin:deploy": "TRAVIS_BUILD_DIR=$(cd $(dirname $0); pwd) REPO_NAME=ci-helper TRAVIS_TAG=1.2.3 TRAVIS_BUILD_WEB_URL=http://example.com source bin/deploy/env.sh && bash bin/deploy/create.sh"
   },
   "config": {
     "process-timeout": 1200

@@ -29,5 +29,5 @@ logs
 node_modules
 /vendor
 /.work
-/travis-ci
+/ci-helper
 composer.lock
