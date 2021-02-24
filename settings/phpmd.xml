@@ -6,6 +6,7 @@
         <exclude name="BooleanArgumentFlag"/>
         <exclude name="StaticAccess"/>
         <exclude name="ElseExpression"/>
+        <exclude name="UndefinedVariable"/>
     </rule>
     <rule ref="rulesets/codesize.xml">
         <exclude name="ExcessiveClassComplexity"/>

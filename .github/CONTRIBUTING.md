@@ -1,7 +1,7 @@
 # Contributing
-[issues]: https://github.com/wp-content-framework/travis-ci/issues
-[fork]: https://github.com/wp-content-framework/travis-ci/fork
-[pr]: https://github.com/wp-content-framework/travis-ci/compare
+[issues]: https://github.com/wp-content-framework/ci-helper/issues
+[fork]: https://github.com/wp-content-framework/ci-helper/fork
+[pr]: https://github.com/wp-content-framework/ci-helper/compare
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
 When contributing to this repository, please first discuss the change you wish to make via [issue][issues] with the owners of this repository before making a change. 
