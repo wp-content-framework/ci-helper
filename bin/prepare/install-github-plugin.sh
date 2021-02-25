@@ -14,7 +14,7 @@ PLUGIN_SLUG=${GITHUB_REPO##*/}
 
 if [[ ! -d ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}/.git ]]; then
   rm -rdf ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
-  git clone --depth=1 https://github.com/${GITHUB_REPO}.git ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
+  git clone --recursive --depth=1 https://github.com/${GITHUB_REPO}.git ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG}
 fi
 
 git -C ${TRAVIS_BUILD_DIR}/.plugin/${PLUGIN_SLUG} fetch -p
