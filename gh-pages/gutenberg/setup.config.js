@@ -1,4 +1,3 @@
-const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const TerserPlugin       = require('terser-webpack-plugin');
 const webpack            = require('webpack');
 const pkg                = require('./package');
@@ -48,4 +47,4 @@ const webpackConfig = {
 	},
 };
 
-module.exports = (new SpeedMeasurePlugin()).wrap(webpackConfig);
+module.exports = webpackConfig;
